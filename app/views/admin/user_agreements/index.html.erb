@@ -1,0 +1,22 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: UserAgreement.model_name.human %></h1>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @user_agreements.each do |user_agreement| %>
+    <tr>
+      <td><%= user_agreement.title %></td>
+      <td class="control span4">
+        <%= link_to t('crud.edit'), edit_admin_user_agreement_path(user_agreement) %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

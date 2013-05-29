@@ -23,6 +23,7 @@ gem 'activemerchant', '~> 1.21.0', require: "active_merchant"
 gem 'activemerchant_patch_for_china', git: "https://github.com/kingaxis/activemerchant_patch_for_china.git"
 gem 'gmaps4rails', '~> 1.5.2'
 gem 'ancestry', '~> 1.3.0'
+gem "ckeditor"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
