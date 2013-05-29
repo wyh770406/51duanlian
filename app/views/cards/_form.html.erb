@@ -1,0 +1,22 @@
+<%= simple_form_for(@card, html: { class: 'form-horizontal' }) do |f| %>
+  <% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :card_type_id, value: @card.card_type_id %>
+  <%= f.input :username %>
+  <%= f.input :email %>
+  <%= f.input :mobile %>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

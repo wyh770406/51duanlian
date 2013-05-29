@@ -1,0 +1,23 @@
+<% content_for :html_title do %>
+  <%= sign_up_title(params[:role] || resource.role) %>
+<% end -%>
+
+<h2><%= sign_up_title(params[:role] || resource.role) %></h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal' }) do |f| %>
+  <div class="inputs">
+    <%= f.hidden_field :role, value: resource.role || params[:role] || '' %>
+    <%= f.input :email, :required => true, :autofocus => true %>
+    <%= f.input :login_name, :required => true %>
+    <%= f.input :password, :required => true %>
+    <%= f.input :password_confirmation, :required => true %>
+    <%= f.input :mobile %>
+    <%= f.input :name %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, t('sign_up'), class: 'btn btn-large btn-primary' %>
+  </div>
+<% end %>
+
+<%= render "links" %>

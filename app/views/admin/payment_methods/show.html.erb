@@ -1,0 +1,25 @@
+<% content_for :title do %>
+<h1><%= @payment_method.name %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.edit'), edit_admin_payment_method_path(@payment_method), class: 'btn btn-primary' %>
+  <%= link_to t('crud.back'), admin_payment_methods_path, class: 'btn' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= PaymentMethod.human_attribute_name(:type) %></th>
+      <td><%= @payment_method.class.model_name.human %></td>
+    </tr>
+    <tr>
+      <th><%= PaymentMethod.human_attribute_name(:display_on) %></th>
+      <td><%= t "display_on.#{@payment_method.display_on? ? @payment_method.display_on : 'both'}" %></td>
+    </tr>
+    <tr>
+      <th><%= PaymentMethod.human_attribute_name(:active) %></th>
+      <td><%= t @payment_method.active.to_s %></td>
+    </tr>
+    <%= render resource_view_path(@payment_method, namespace: 'admin', partial: 'details'), { payment_method: @payment_method } %>
+  </tbody>
+</table>

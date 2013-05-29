@@ -1,0 +1,13 @@
+<% if current_user.cards.by_gym(order.gym).count > 0 %>
+  <% if payable_cards(order).count > 0 %>
+    <%= link_to payment_method.name, new_order_payment_path(order, payment_method_id: payment_method.id), class: 'btn' %>
+  <% else %>
+    <% current_user.cards.by_gym(order.gym).each do |card| %>
+      <%= link_to t('charge_card', number: card.number), card_path(card), class: 'btn' %>
+    <% end %>
+  <% end -%>
+<% else %>
+  <% if order.gym.cards.on_sale.count > 0 %>
+    <%= link_to t('new_card'), gym_path(order.gym), class: 'btn' %>
+  <% end -%>
+<% end -%>

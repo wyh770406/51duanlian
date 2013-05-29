@@ -1,0 +1,33 @@
+<%% content_for :title do %>
+<h1><%%= t 'crud.listing', <%= key_value :model, "#{class_name}.model_name.human" %> %></h1>
+<div class="toolbar">
+  <%%= link_to t('crud.new'), new_admin_<%= singular_table_name %>_path, <%= key_value :class, "'btn btn-primary'" %> %>
+</div>
+<%% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+  <% attributes.each do |attribute| -%>
+      <th><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></th>
+  <% end -%>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+    <tr>
+<% attributes.each do |attribute| -%>
+      <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+<% end -%>
+      <td class="control span4">
+        <%%= link_to t('crud.show'), admin_<%= singular_table_name %>_path(<%= singular_table_name %>) %>
+        <%%= link_to t('crud.edit'), edit_admin_<%= singular_table_name %>_path(<%= singular_table_name %>) %>
+        <%%= link_to t('crud.destroy'), admin_<%= singular_table_name %>_path(<%= singular_table_name %>), <%= key_value :confirm, "t('crud.destroy_confirmation')" %>, <%= key_value :method, ":delete" %> %>
+      </td>
+    </tr>
+<%% end %>
+  </tbody>
+</table>
+
+<%%= paginate @<%= plural_table_name %> %>

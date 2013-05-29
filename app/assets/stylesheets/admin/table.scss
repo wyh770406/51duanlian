@@ -1,0 +1,20 @@
+table {
+  td.control {
+    text-align: right;
+
+    a {
+      margin: 0 10px;
+    }
+  }
+}
+
+table.table-nobordered {
+  th, td {
+    border: 0 none;
+  }
+
+  th {
+    text-align: right;
+    width: 130px;
+  }
+}

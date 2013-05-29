@@ -1,0 +1,35 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: PaymentMethod.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.new'), new_admin_payment_method_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= PaymentMethod.human_attribute_name(:name) %></th>
+        <th><%= PaymentMethod.human_attribute_name(:type) %></th>
+        <th><%= PaymentMethod.human_attribute_name(:display_on) %></th>
+        <th><%= PaymentMethod.human_attribute_name(:active) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @payment_methods.each do |payment_method| %>
+    <tr>
+      <td><%= payment_method.name %></td>
+      <td><%= payment_method.class.model_name.human %></td>
+      <td><%= t "display_on.#{payment_method.display_on? ? payment_method.display_on : 'both'}" %></td>
+      <td><%= t payment_method.active.to_s %></td>
+      <td class="control span4">
+        <%= link_to t('crud.show'), admin_payment_method_path(payment_method) %>
+        <%= link_to t('crud.edit'), edit_admin_payment_method_path(payment_method) %>
+        <%= link_to t('crud.destroy'), admin_payment_method_path(payment_method), confirm: t('crud.destroy_confirmation'), method: :delete %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= paginate @payment_methods %>

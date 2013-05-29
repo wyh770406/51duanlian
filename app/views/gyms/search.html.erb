@@ -1,0 +1,22 @@
+<%= render_cell(:venues, :search,
+  {
+    city: @city,
+    area: @area,
+    venue_type: @venue_type,
+    gym_name: @gym_name,
+    date: @date,
+    time: @time
+  }
+) %>
+
+<div class="gyms">
+  <div class="gyms-search-result">
+    <h2><%= t("gyms_search_result", count: @gyms.size) %></h2>
+    <%= render "list", { gyms: @gyms } %>
+  </div>
+
+  <div class="gyms-recommended">
+    <h2><%= t("gyms_recommended", count: Gym.count) %></h2>
+    <%= render "list", { gyms: Gym.all.map { |gym| { gym: gym, price: nil, times: [] } } } %>
+  </div>
+</div>

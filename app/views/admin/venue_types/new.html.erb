@@ -1,0 +1,8 @@
+<% content_for :title do %>
+<h1><%= t 'crud.creating', model: VenueType.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_venue_types_path, class: 'btn' %>
+</div>
+<% end %>
+
+<%= render 'form' %>

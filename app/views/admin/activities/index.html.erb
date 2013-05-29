@@ -1,0 +1,66 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: Activity.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to '#', class: "btn btn-success dropdown-toggle", id: 'btn-publish-venues', data: { date: Date.today.to_s } do %>
+    <%= t('publish_venues') %>
+    <span class="caret"></span>
+  <% end %>
+
+  <%= form_tag publish_admin_venues_path, method: :post, id: 'form-publish-venues' do %>
+    <%= hidden_field_tag "stop", nil, id: "input-date-publish-venues" %>
+    <%= submit_tag 'submit', class: 'hidden' %>
+  <% end -%>
+
+  <%= link_to t('crud.new'), new_admin_activity_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= Activity.human_attribute_name(:name) %></th>
+      <th><%= Activity.human_attribute_name(:venue_type) %></th>
+      <th><%= Activity.human_attribute_name(:start_date) %></th>
+      <th><%= Activity.human_attribute_name(:end_date) %></th>
+      <th><%= Activity.human_attribute_name(:active) %></th>
+      <th><%= Activity.human_attribute_name(:published_to) %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td>
+          <%= activity.name %>
+          <% if activity.children.present? %>
+            <span class="label"><%= t('has_child_activities') %></span>
+          <% end -%>
+        </td>
+        <td><%= activity.venue_type %></td>
+        <td><%= activity.start_date %></td>
+        <td><%= activity.end_date %></td>
+        <td><%= activity.active %></td>
+        <td><%= l(activity.published_to.to_date, format: :long) if activity.published_to %></td>
+        <td class="control span4">
+          <%= activity.link_to_show %>
+          <%= activity.link_to_edit %>
+          <%= activity.link_to_destroy %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @activities %>
+
+<%= javascript_tag do %>
+  $('#btn-publish-venues').datepicker({
+    language: 'zh-CN',
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    startDate: new Date()
+  }).on('changeDate', function(ev) {
+    $('#input-date-publish-venues').val($('#btn-publish-venues').data('date'));
+    $('#form-publish-venues').submit();
+  });
+<% end -%>

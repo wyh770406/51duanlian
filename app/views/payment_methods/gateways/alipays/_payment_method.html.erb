@@ -1,0 +1,15 @@
+<%= simple_form_for([:order, @payment], html: { class: 'form-horizontal', id: 'new-payment-form' }) do |f| %>
+  <%= f.hidden_field :payment_method_id, value: @payment_method.id %>
+  <%= f.hidden_field :amount %>
+  <%= f.button :submit, class: 'hidden' %>
+<% end -%>
+
+<div class="alert alert-info">
+  <strong><%= t('redirecting_to', target: payment_method.name) %></strong>
+</div>
+
+<%= javascript_tag do %>
+  $(function() {
+    $('#new-payment-form').submit();
+  });
+<% end %>

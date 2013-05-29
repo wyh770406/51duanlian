@@ -1,0 +1,13 @@
+<ul>
+  <% children.each do |activity| %>
+    <li>
+      <% if activity.id == @activity.id %>
+        <%= activity.name %>
+      <% else %>
+        <%= link_to activity.name, admin_activity_path(activity) %>
+      <% end -%>
+      <%= render 'children', { children: activity.children } if activity.children.present? %>
+    </li>
+
+  <% end -%>
+</ul>

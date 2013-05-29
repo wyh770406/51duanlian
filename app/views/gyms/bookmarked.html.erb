@@ -1,0 +1,23 @@
+<%= render '/shared/user_tabs' %>
+
+<h1></h1>
+<div class="titlebar">
+  <h1><%= t('bookmarked_gyms') %></h1>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= Gym.human_attribute_name(:name) %></th>
+      <th class="span2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @gyms.each do |gym| %>
+      <tr>
+        <td><%= link_to gym.name, gym_path(gym) %></td>
+        <td><%= link_to t('unbookmark_gym'), unbookmark_gym_path(gym), method: :post %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

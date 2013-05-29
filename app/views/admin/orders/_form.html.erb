@@ -1,0 +1,16 @@
+<%= simple_form_for(@order, as: :order, url: admin_order_path(@order), method: :put, html: { class: 'form-horizontal' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
+  <%= f.input :username %>
+  <%= f.input :mobile %>
+  <%= f.input :special_instructions, input_html: { class: 'span8', rows: 3 } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

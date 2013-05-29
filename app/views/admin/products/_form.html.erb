@@ -1,0 +1,18 @@
+<%= simple_form_for([:admin, @product], html: { class: 'form-horizontal' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <%= f.error_notification %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { class: 'span8' } %>
+  <%= f.input :sku %>
+  <%= f.input :price, input_html: { class: 'span1' } %>
+  <%= f.input :count_on_hand, input_html: { class: 'span1' } %>
+  <%= f.input :description, input_html: { class: 'span8', rows: 5 } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

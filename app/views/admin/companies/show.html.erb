@@ -1,0 +1,23 @@
+<% content_for :title do %>
+<h1><%= @company.name %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.edit'), edit_admin_company_path(@company), class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= Company.human_attribute_name(:address) %></th>
+      <td><%= @company.address %></td>
+    </tr>
+    <tr>
+      <th><%= Company.human_attribute_name(:phone) %></th>
+      <td><%= @company.phone %></td>
+    </tr>
+  </tbody>
+</table>
+
+<% if @company.gyms.blank? && can?(:create, Gym) %>
+  您还没有场馆，立即添加一个吧：<%= link_to '新增场馆', new_admin_gym_path, class: 'btn' %>
+<% end -%>

@@ -1,0 +1,23 @@
+<% if real_venue.line_items.count > 0 %>
+  <div id='<%= "#{dom_id(real_venue)}_modal" %>' class="modal hide fade">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal">×</a>
+      <h3><%= real_venue.to_s %></h3>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <% real_venue.line_items.map(&:order).uniq.each do |order| %>
+          <li>
+            <%= link_to order.number, admin_order_path(order) %>
+            <%= order.human_state_name %>
+          </li>
+        <% end -%>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal"><%= t("close") %></a>
+    </div>
+  </div>
+
+  <%= link_to t("related_order"), "##{dom_id(real_venue)}_modal", data: { toggle: "modal" } %>
+<% end -%>

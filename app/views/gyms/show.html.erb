@@ -1,0 +1,52 @@
+<%= render_cell(:venues, :search) %>
+
+<div id="gym">
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="gym-base">
+        <div class="inner">
+          <div class="row-fluid">
+            <div class="span6 gym-info">
+              <h1><%= @gym.name %></h1>
+
+              <div class="gym-description">
+                <%= @gym.description %>
+              </div>
+              
+              <ul class="unstyled">
+                <li><%= Gym.human_attribute_name(:business_hours) %>: <%= @gym.business_hours %></li>
+                <li><%= Gym.human_attribute_name(:phone) %>: <%= @gym.phone %></li>
+                <li><%= Gym.human_attribute_name(:full_address) %>: <%= @gym.full_address %></li>
+              </ul>
+
+              <%= bookmark_gym_button(@gym) %>
+            </div>
+            <div class="span6 gym-key-image">
+              <% unless @gym.key_image.blank? %>
+                <div class="pull-right">
+                  <%= image_tag(@gym.key_image.image_url(:thumb).to_s) %>
+                </div>
+              <% end -%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gym-images">
+      </div>
+      <%= render 'cards/new_cards', { gym: @gym } %>
+    </div>
+    <div class="span4">
+      <div class="gym-map">
+        <%= render '/shared/map', { location: @gym.location } %>
+      </div>
+      <div class="gym-venue-types">
+        <h2><%= VenueType.model_name.human %></h2>
+        <ul class="nav nav-tabs nav-stacked">
+          <% @gym.venue_types.each do |venue_type| %>
+            <li><%= link_to venue_type.name, search_gym_venues_path(@gym, date: Date.today, venue_type_id: venue_type.id) %></li>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

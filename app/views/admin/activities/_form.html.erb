@@ -1,0 +1,21 @@
+<%= simple_form_for([:admin, @activity], html: { class: 'form-horizontal' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <%= f.error_notification %>
+    </div>
+  <% end %>
+
+  <%= f.input :parent_id, collection: @other_activities %>
+  <%= f.input :name, input_html: { class: 'span8' } %>
+  <%= f.association :venue_type, collection: current_gym.venue_types %>
+  <%= f.input :quantity, input_html: { class: 'span1' } %>
+  <%= render resource_view_path(f.object.date_rule, namespace: 'admin', partial: 'form'), { f: f } %>
+  <%= render resource_view_path(f.object.time_rule, namespace: 'admin', partial: 'form'), { f: f } %>
+  <%= render 'venue_rule_form', { f: f } %>
+  <%= f.input :description, input_html: { class: 'span8', rows: 5 } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

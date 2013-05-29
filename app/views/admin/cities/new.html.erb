@@ -1,0 +1,8 @@
+<% content_for :title do %>
+<h1><%= t 'crud.creating', model: City.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_cities_path, class: 'btn' %>
+</div>
+<% end %>
+
+<%= render 'form' %>

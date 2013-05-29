@@ -1,0 +1,12 @@
+ul#gym-image-thumb-list {
+  li {
+    position: relative;
+
+    a.delete {
+      display: none;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}

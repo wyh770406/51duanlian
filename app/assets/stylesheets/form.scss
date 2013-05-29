@@ -1,0 +1,90 @@
+form {
+  .submit {
+    background: image-url('btn_bg_red.png') repeat-x left center;
+    color: #FFF;
+    padding: 4px 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .text-instead-input {
+    padding: 5px;
+  }
+}
+
+#user-nav {
+  input, textarea, select, .uneditable-input {
+    height: 14px;
+    padding: 2px;
+  }
+
+  input.btn-mini {
+    height: 20px;
+    padding: 2px 6px;
+    background: image-url('btn_bg_red.png') repeat-x left center;
+    color: #FFF;
+  }
+
+  form {
+    margin-bottom: 0;
+
+    label {
+      color: #FFF;
+    }
+  }
+}
+
+.venue-search {
+  color: #42382C;
+
+  form {
+    label {
+      margin: 0 0 10px 40px;
+      font-size: 15px;
+      color: #42382C;
+    }
+
+    .input-group {
+      overflow: hidden;
+      border-left: 1px dotted #FFF;
+      padding: 10px 0;
+    }
+
+    .input-group-area {
+      border-left: 0 none;
+    }
+
+    .input {
+      margin: 0 0 10px 40px;
+    }
+
+    .input-city, .input-area {
+      select {
+        width: 140px;
+      }
+    }
+
+    .input-venue-type, .input-gym-name {
+      input, select {
+        width: 300px;
+      }
+    }
+  }
+
+}
+
+.venue-list {
+  form {
+    margin-bottom: 0;
+  }
+}
+
+#line_items form {
+  margin-bottom: 0;
+
+  input {
+    margin-bottom: 0;
+  }
+}

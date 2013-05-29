@@ -1,0 +1,60 @@
+<table class="venue-grid">
+  <tbody>
+    <% venue_groups.each do |period, venues| %>
+      <% if period[:start_at] < Time.now %>
+        <tr class="period expired">
+          <td class="time">
+            <%= l(period[:start_at], format: :time) %> - <%= l(period[:stop_at], format: :time) %>
+          </td>
+          <% venues.each do |venue| %>
+            <% venue.capacity.times do |i| %>
+              <td class="item">
+                <%= link_to t("expired"), "#", title: t("expired_venue"), data: { content: t("cannot_order_venue") } %>
+              </td>
+            <% end -%>
+          <% end -%>
+        </tr>
+      <% else -%>
+        <tr class="period">
+          <td class="time">
+            <%= l(period[:start_at], format: :time) %> - <%= l(period[:stop_at], format: :time) %>
+          </td>
+          <% index = 0 %>
+          <% venues.each do |venue| %>
+            <% if venue.real_venues.count > 0 %>
+              <% venue.real_venues.each do |real_venue| %>
+                <% if real_venue.in_stock? %>
+                  <td class="item">
+                    <%= link_to populate_cart_path(type: 'Order::VenueOrder', items_attributes: [ real_venue.to_line_item ], gym_id: gym.id), method: :post, title: venue.activity.venue_rule.class.model_name.human, data: { content: "#{t('price')}: #{number_to_currency(venue.price)}, #{t('member_price')}: #{number_to_currency(venue.member_price)}, #{RealVenue.human_attribute_name(:count_on_hand)}: #{real_venue.count_on_hand}, #{RealVenue.human_attribute_name(:max_people)}: #{real_venue.max_people}" }, remote: true do %>
+                      <%= t("venue_no", index: real_venue.id) %>
+                    <% end -%>
+                  </td>
+                <% else %>
+                  <td class="item item-ordered">
+                    <%= link_to '#', method: :post, title: t("ordered_venue"), data: { content: t("cannot_order_venue") } do %>
+                      <%= t("venue_no", index: real_venue.id) %>
+                    <% end -%>
+                  </td>
+                <% end -%>
+              <% end -%>
+            <% else %>
+              <% venue.count_on_hand.times do |i| %>
+                <% index += 1 %>
+                <td class="item">
+                  <%= link_to t("venue_no", index: index), populate_cart_path(type: 'Order::VenueOrder', items_attributes: [ venue.to_line_item ], gym_id: gym.id), method: :post, title: venue.activity.venue_rule.class.model_name.human, data: { content: "#{t('price')}: #{number_to_currency(venue.price)}, #{t('member_price')}: #{number_to_currency(venue.member_price)}" }, remote: true %>
+                </td>
+              <% end -%>
+              <% venue.count_ordered.times do |i| %>
+                <% index += 1 %>
+                <td class="item item-ordered">
+                  <%= link_to t("venue_no", index: index), "#", title: t("ordered_venue"), data: { content: t("cannot_order_venue") } %>
+                </td>
+              <% end -%>
+            
+            <% end -%>
+          <% end -%>
+        </tr>
+      <% end -%>
+    <% end -%>
+  </tbody>
+</table>

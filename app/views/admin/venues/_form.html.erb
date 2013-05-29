@@ -1,0 +1,5 @@
+<%= form_tag admin_venues_path, method: :get, class: "form-search" do %>
+  <%= hidden_field_tag :venue_type_id, @venue_type.id %>
+  <%= text_field_tag :on_date, @on_date, class: 'span2 auto-date-input search-query' %>
+  <%= submit_tag t('helpers.submit.refresh'), class: 'btn btn-primary' %>
+<% end %>

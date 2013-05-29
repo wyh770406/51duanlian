@@ -1,0 +1,8 @@
+<div id="<%= venue_rule.class.to_s.parameterize %>">
+  <%= f.simple_fields_for :venue_rule, venue_rule do |venue_rule_form| %>
+    <%= venue_rule_form.hidden_field :type %>
+    <%= venue_rule_form.input :price %>
+    <%= venue_rule_form.input :member_price %>
+    <%= venue_rule_form.input :max_people %>
+  <% end %>
+</div>

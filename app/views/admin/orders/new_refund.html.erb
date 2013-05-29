@@ -1,0 +1,33 @@
+<% content_for :title do %>
+<h1>
+  <%= t 'refund_order' %>
+  <small><%= @order.number %></small>
+</h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_orders_path, class: 'btn' %>
+</div>
+<% end %>
+
+<%= form_tag(refund_admin_order_path(@order), method: :post, class: 'form-horizontal') do %>
+  <div class="control-group string optional">
+    <div class="control-label">
+      <%= label_tag t("refund_to") %>
+    </div>
+    <div class="controls">
+      <%= refund_to_select_tag :card_id, @cards %>
+    </div>
+  </div>
+  
+  <div class="control-group string optional">
+    <div class="control-label">
+      <%= label_tag t("amount") %>
+    </div>
+    <div class="controls">
+      <%= text_field_tag :amount, @amount %>
+    </div>
+  </div>
+  
+  <div class="form-actions">
+    <%= submit_tag t('refund_order'), class: 'btn btn-primary' %>
+  </div>
+<% end %>

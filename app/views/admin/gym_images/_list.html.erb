@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span12">
+    <ul class="thumbnails" id="gym-image-thumb-list">
+      <% images.each do |image| %>
+        <li class="span3">
+          <%= link_to image_tag(image.image_url(:thumb).to_s), image.image_url.to_s, class: "thumbnail", target: "_blank" %>
+          <%= link_to admin_gym_gym_image_path(gym, image), confirm: t('crud.destroy_confirmation'), method: :delete, class: "btn btn-danger delete" do %>
+            <i class="icon-remove icon-white"></i>
+          <% end -%>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+<%= link_to t('crud.upload'), new_admin_gym_gym_image_path(gym), class: 'btn btn-primary' %>

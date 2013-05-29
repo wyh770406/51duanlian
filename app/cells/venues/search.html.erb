@@ -1,0 +1,41 @@
+<div class="venue-search">
+  <%= form_tag search_gyms_path, method: "get", class: "form-horizontal" do %>
+    <div class="row-fluid">
+      <div class="span3">
+        <div class="input-group input-group-area">
+          <%= label_tag t("choose_area") %>
+          <div class="input input-city">
+            <%= city_select_tag "city_id", @options[:city], id: 'city_for_dynamic_area' %>
+          </div>
+          <div class="input input-area">
+            <%= area_select_tag "area_id", @options[:area], { include_blank: true, id: 'dynamic_area' } %>
+          </div>
+        </div>
+      </div>
+      <div class="span5">
+        <div class="input-group input-group-venue-type">
+          <%= label_tag t("choose_venue_type") %>
+          <div class="input input-venue-type">
+            <%= select_tag "venue_type_id", options_for_select(VenueType.all.map { |vt| [vt.name, vt.id] }, @options[:venue_type].try(:id)) %>
+          </div>
+          <div class="input input-gym-name">
+            <%= text_field_tag "gym_name", @options[:gym_name], placeholder: t("type_gym_name") %>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="input-group input-group-datetime">
+          <%= label_tag t("choose_time") %>
+
+          <div class="input input-datetime">
+            <%= text_field_tag "date", @options[:date], class: "date-input input-small" %>
+            <%= select_tag "time", options_for_select(("00".."23").map { |h| "#{h}:00" }, @options[:time]), class: "input-small" %>
+          </div>
+          <div class="input">
+            <%= submit_tag t("search"), class: "submit btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end -%>
+</div>

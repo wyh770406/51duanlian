@@ -1,0 +1,10 @@
+<% content_for :title do %>
+<h1>
+  <%= t 'checkout' %>
+  <small><%= current_order.number %></small>
+</h1>
+<div class="toolbar">
+</div>
+<% end %>
+
+<%= render 'form' %>

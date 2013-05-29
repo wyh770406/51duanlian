@@ -1,0 +1,59 @@
+<%= render '/shared/user_tabs' %>
+
+<div class="titlebar">
+  <h1>
+    <%= link_to @order.gym.name, gym_path(@order.gym) %> <%= @order.class.model_name.human %>
+    <small><%= @order.number %></small>
+  </h1>
+
+  <div class="toolbar">
+    <%= link_to t('crud.back'), orders_path, class: 'btn' %>
+  </div>
+</div>
+
+<%= render 'payment_methods', { order: @order } %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= Order.human_attribute_name(:total) %></th>
+      <td><%= @order.payable? ? @order.total : @order.payment_total %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:payment_total) %></th>
+      <td><%= @order.payment_total %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:payment_method) %></th>
+      <td><%= @order.payment_method.try(:name) %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:checked_in_at) %></th>
+      <td>
+        <% if @order.checked_in? %>
+          <%=l @order.checked_in_at, format: :short %>
+        <% else %>
+          <span class="label label-warning"><%= t("have_not_checked_in") %></span>
+        <% end -%>
+      </td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:username) %></th>
+      <td><%= @order.username %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:mobile) %></th>
+      <td><%= @order.mobile %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:verification_code) %></th>
+      <td><%= @order.verification_code %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:special_instructions) %></th>
+      <td><%= @order.special_instructions %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= render '/line_items/list', { order: @order, editable: false } %>

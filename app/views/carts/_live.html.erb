@@ -1,0 +1,13 @@
+<div id="live-cart" class="modal fade">
+  <div class="modal-header">
+    <%= link_to raw("&times;"), '#', class: "close", data: { dismiss: "modal" } %>
+    <h3><%= t("cart") %></h3>
+  </div>
+  <div class="modal-body">
+    <%= raw(content) if local_assigns[:content].present? %>
+  </div>
+  <div class="modal-footer">
+    <%= link_to t('continue_shopping'), '#', class: "btn", data: { dismiss: "modal" } %>
+    <%= link_to t('go_to_cart'), edit_cart_path, class: "btn btn-primary" %>
+  </div>
+</div>

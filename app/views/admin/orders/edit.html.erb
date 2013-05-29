@@ -1,0 +1,11 @@
+<% content_for :title do %>
+<h1>
+  <%= t 'crud.editing', model: @order.class.model_name.human %>
+  <small><%= @order.number %></small>
+</h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_orders_path, class: 'btn' %>
+</div>
+<% end %>
+
+<%= render 'form' %>

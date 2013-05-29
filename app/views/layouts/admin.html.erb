@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= t :administration %></title>
+  <%= stylesheet_link_tag    "admin/application" %>
+  <%= javascript_include_tag "admin/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="wrapper">
+    <%= render '/admin/shared/topnav' %>
+
+    <div class="container">
+
+      <div class="content">
+
+
+        <% if content_for?(:title) || content_for?(:tabs) %>
+          <div class="page-header <%= content_for?(:tabs) ? 'with-tabs' : '' %>">
+            <div class="titlebar">
+              <%= yield :title %>
+            </div>
+            <%= yield :tabs %>
+          </div>
+        <% end %>
+
+        <% unless alert.blank? %>
+          <div class="alert alert-error fade in">
+            <a class="close" data-dismiss="alert">&times;</a>
+            <%= alert %>
+          </div>
+        <% end %>
+
+        <% unless notice.blank? %>
+          <div class="alert alert-success fade in">
+            <a class="close" data-dismiss="alert">&times;</a>
+            <%= notice %>
+          </div>
+        <% end %>
+
+        <div class="row">
+          <div class="span12">
+            <%= yield %>
+          </div>
+        </div>
+  
+        <footer>
+          <div class="pull-right">
+            <%= link_to '/' do %>
+              <%= image_tag "powered_by.png" %>
+            <% end -%>
+          </div>
+          <p class="links">
+            <a href="#">关于我们</a> |
+            <a href="#">联系我们</a> |
+            <a href="#">意见反馈</a> |
+            <a href="#">使用帮助</a>
+          </p>
+          <p class="powered_by"><%== t :powered_by %></p>
+        </footer>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

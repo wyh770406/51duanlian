@@ -1,0 +1,22 @@
+<% payment_service_for order.number, payment_method.gateway_id, service: payment_method.gateway_service, html: { id: 'payment-gateway-form', method: :get } do |service| %>
+  <% service.total_fee payment.amount %>
+  <% service.seller email: payment_method.gateway_user %>
+  <% service.notify_url notify_order_payment_url(order, payment) %>
+  <% service.return_url done_order_payment_url(order, payment) %>
+  <% service.charset "utf-8" %>
+  <% service.service payment_method.gateway_service_type %>
+  <% service.payment_type payment_method.gateway_payment_type %>
+  <% service.subject order.class.model_name.human %>
+  <% service.sign(payment_method.gateway_key) %>
+<% end -%>
+
+<div class="alert alert-info">
+  <strong><%= t('redirecting_to', target: payment_method.name) %></strong>
+</div>
+
+<%= javascript_tag do %>
+  $(function() {
+    $('#payment-gateway-form div:first-child').remove();
+    $('#payment-gateway-form').submit();
+  });
+<% end %>

@@ -1,0 +1,330 @@
+body {
+  background: #000 image-url('bg.jpg') no-repeat center top;
+}
+
+.container {
+  #header {
+    color: #FFF;
+
+    a {
+      @include link-colors(#FFF);
+    }
+
+    #user-nav {
+      padding-top: 5px;
+      text-align: right;
+    }
+
+    .content {
+      background: transparent image-url('header_bg.png') repeat left top;
+      margin-top: 5px;
+
+      .header-banner {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  #content {
+    background: #FFF;
+    padding: 5px;
+    @include min-height(700px);
+
+    h1 {
+      font-size: 16px;
+
+      small {
+        font-size: 12px;
+      }
+    }
+
+    .titlebar {
+      display: block;
+
+      h1 {
+        @include float-left;
+      }
+
+      .toolbar {
+        @include float-right;
+        line-height: 36px;
+      }
+
+      &::after {
+        clear: both;
+      }
+
+      &::before, &::after {
+        display: table;
+        content: "";
+      }
+    }
+    
+    .navbar {
+      margin-bottom: 5px;
+
+      .navbar-inner {
+        border-bottom: 3px solid #890304;
+      }
+
+      .brand {
+        background: #890304;
+        font-size: 15px;
+        text-shadow: none;
+      }
+    }
+
+    #banner {
+      margin-bottom: 5px;
+    }
+    
+    .venue-search {
+      background: image-url('search_bg.jpg') repeat left top;
+      margin-bottom: 5px;
+
+      form {
+        margin-bottom: 0;
+      }
+    }
+
+    .gyms {
+
+      .gyms-search-result {
+        margin-bottom: 5px;
+        background: #FEF8E9;
+        border: 1px solid #BF5820;
+
+        h2 {
+          background: darken(#FEF8E9, 5%);
+          color: #BF5820;
+          border-bottom: 1px solid #BF5820;
+          font-size: 16px;
+          padding: 0 5px;
+          margin: 0;
+        }
+      }
+
+      .gyms-recommended {
+        margin-bottom: 5px;
+        border: 1px solid #61584E;
+
+        h2 {
+          background: #e9f0dd;
+          color: #61584E;
+          border-bottom: 1px solid #61584E;
+          font-size: 16px;
+          padding: 0 5px;
+          margin: 0;
+        }
+      }
+
+      .times {
+        .btn {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  #footer {
+    background: #000 image-url('footer_bg.png') repeat left top;
+    line-height: 2em;
+    padding-top: 1.5em;
+    color: #999;
+
+    a {
+      @include link-colors(#999, #FFF);
+    }
+
+    .footer-nav {
+      text-align: right;
+      background: #000;
+      margin-left: 300px;
+    }
+  }
+}
+
+#gym {
+  margin-bottom: 5px;
+  .gym-base {
+    border: 4px solid #FFF1E1;
+
+    .inner {
+      border: 1px solid #F8CFA5;
+      padding: 20px;
+    }
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+    padding: 0 10px;
+    color: #BF5820;
+  }
+
+  .gym-info ul {
+    margin-bottom: 10px;
+  }
+
+  .gym-cards {
+    margin-bottom: 5px;
+  }
+
+  .gym-venue-types {
+    margin-bottom: 5px;
+
+    .nav-tabs.nav-stacked > li > a {
+      @include link-colors(#61584E);
+    }
+  }
+}
+
+#venues {
+  margin-bottom: 5px;
+
+  .venue-list {
+    border: 1px solid #61584E;
+
+    .title {
+      background: #e9f0dd;
+      color: #61584E;
+      border-bottom: 1px solid #61584E;
+      padding: 0 5px;
+      text-align: center;
+      position: relative;
+      
+      a {
+        @include link-colors(#61584E);
+      }
+
+      h1 {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .previous {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+      }
+
+      .next {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+
+    .venue-grid-container {
+      overflow: auto;
+    }
+  }
+
+  .gym {
+    border: 1px solid #F8CFA5;
+    padding: 20px;
+    margin-bottom: 5px;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .gym-map {
+    margin-bottom: 5px;
+  }
+
+  .gym-venue-types {
+
+    h2 {
+      font-size: 16px;
+      padding: 0 10px;
+      color: #BF5820;
+    }
+  }
+}
+
+#sidebar {
+  .well {
+    padding: 10px 0;
+  }
+}
+
+#home-content {
+  background: image-url('main_bg.jpg') repeat-x top left;
+
+  h2 {
+    color: #BF5820;
+    font-size: 16px;
+  }
+
+  .help {
+    padding: 20px;
+    border-right: 2px dashed #FFF;
+  }
+
+  .gyms {
+    padding: 20px;
+
+    a {
+      @include link-colors(#000);
+    }
+
+    .nav {
+      margin-bottom: 0;
+    }
+
+    .nav-tabs {
+      border-bottom: 1px solid #BF5820;
+    
+      > .active {
+        > a, a:hover {
+          border: 1px solid #BF5820;
+          border-bottom-color: transparent;
+        }
+      }
+
+      li > a:hover {
+        border: 1px solid #BF5820;
+        border-bottom-color: transparent;
+        background: #FFF;
+      }
+    }
+
+    .tab-content {
+      border: 1px solid #BF5820;
+      border-top: 0 none;
+      background: #FFF;
+      padding: 10px;
+
+      ol {
+        margin-bottom: 0;
+        
+        li {
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
+
+#live-cart {
+  display: none;
+  width: 400px;
+}
+
+#legend {
+  padding: 10px;
+
+  span {
+    margin-right: 10px;
+  }
+
+  .label {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

@@ -1,0 +1,49 @@
+body#devise {
+  #main {
+    background: url('main_bg.jpg') repeat-x top left;
+    height: 700px;
+  }
+}
+
+#login {
+  margin-top: 0;
+  width: 640px;
+  padding: 60px 0;
+
+  .login {
+    background: #FFF;
+    border: 1px solid #CCC;
+    @include border-radius(4px);
+
+    h2 {
+      font-size: 15px;
+      padding: 0 10px;
+      line-height: 36px;
+      border-bottom: 1px solid #CCC;
+      color: #555;
+      background: #F7F7F7;
+      @include border-radius(4px 4px 0 0);
+    }
+
+    form {
+      margin: 20px 60px;
+
+      .form-actions {
+        border: 0 none;
+        background: none;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .links {
+      padding: 10px 20px;
+      border-top: 1px solid #CCC;
+      text-align: right;
+
+      a {
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: User.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.new'), new_admin_user_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= User.human_attribute_name(:login_name) %></th>
+        <th><%= User.human_attribute_name(:name) %></th>
+        <th><%= User.human_attribute_name(:gyms) %></th>
+        <th><%= User.human_attribute_name(:roles) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @users.each do |user| %>
+    <tr>
+      <td><%= user.login_name %></td>
+      <td><%= user.name %></td>
+      <td>
+        <% user.gyms.each do |gym| %>
+          <%= link_to(gym.name, admin_gym_session_path(gym), method: :put, title: t('crud.enter') ) %>
+        <% end -%>
+      </td>
+      <td><%= user.roles.map { |role| t(role, scope: "roles") }.join(', ') %></td>
+      <td class="control span4">
+        <%= link_to t('crud.show'), admin_user_path(user) %>
+        <%= link_to t('crud.edit'), edit_admin_user_path(user) %>
+        <% if can?(:destroy, user) %>
+          <%= link_to t('crud.destroy'), admin_user_path(user), confirm: t('crud.destroy_confirmation'), method: :delete %>
+        <% end -%>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>

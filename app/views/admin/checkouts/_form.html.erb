@@ -1,0 +1,16 @@
+<%= simple_form_for(@order, as: :order, url: admin_checkout_path, method: :put, html: { class: 'form-horizontal' }) do |f| %>
+
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
+  <%= render resource_view_path(@order, namespace: 'admin', partial: 'form'), { f: f } %>
+
+  <%= render '/admin/line_items/list', { order: current_order, editable: false } %>
+
+  <%= link_to t('back_to_cart'), edit_admin_cart_path, class: 'btn' %>
+  <%= f.button :submit, t("complete_order"), class: 'btn btn-success pull-right' %>
+<% end %>

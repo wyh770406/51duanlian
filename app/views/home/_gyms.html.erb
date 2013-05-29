@@ -1,0 +1,23 @@
+<div class="gyms">
+  <h2><%= t("hot_gyms") %></h2>
+  <div class="tabbable">
+    <ul class="nav nav-tabs">
+      <% VenueType.all.each_with_index do |venue_type, index| %>
+        <li class="<%= 'active' if index == 0 %>"><%= link_to venue_type.name, "##{dom_id(venue_type)}", data: { toggle: "tab" } %></li>
+      <% end %>
+    </ul>
+    <div class="tab-content">
+      <% VenueType.all.each_with_index do |venue_type, index| %>
+        <div class="tab-pane <%= 'active' if index == 0 %>" id="<%= dom_id(venue_type) %>">
+          <ol>
+            <% venue_type.gyms.each do |gym| %>
+              <li>
+                <%= link_to gym.name, gym_path(gym) %>
+              </li>
+            <% end -%>
+          </ol>
+        </div>
+      <% end -%>
+    </div>
+  </div>
+</div>

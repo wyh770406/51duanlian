@@ -1,0 +1,56 @@
+<%= render_cell(:venues, :search) %>
+
+<div id="venues">
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="venue-list">
+        <div class="title">
+          <h1><%= link_to @gym.name, @gym %> - <%= @venue_type.name %></h1>
+          <div class="date">
+            <%= form_tag search_gym_venues_path(@gym, date: Date.today, venue_type_id: @venue_type.id), method: :get, id: "form-search-gym-navigator" do %>
+              <%= hidden_field_tag "venue_type_id", @venue_type.id %>
+              <%= text_field_tag "date", @date, class: "input-small", id: "venue-grid-date-input" %>
+              <%= submit_tag nil, class: "hidden" %>
+            <% end %>
+            <% if @date - 1.day >= Date.today %>
+              <%= link_to raw(t 'previous_day'), search_gym_venues_path(@gym, date: @date - 1.day, venue_type_id: @venue_type.id), class: 'previous btn' %>
+            <% end -%>
+            <%= link_to raw(t 'next_day'), search_gym_venues_path(@gym, date: @date + 1.day, venue_type_id: @venue_type.id), class: 'next btn' %>
+          </div>
+        </div>
+        <div class="venue-grid-container">
+          <%= render "grid", { venue_groups: @venue_groups, gym: @gym } %>
+        </div>
+        <div id="legend">
+          <span><%= t('legend') %>: </span>
+          <span class="label label-success"><%= t('available_venue') %></span>
+          <span class="label label-important"><%= t('ordered_venue') %></span>
+          <span class="label"><%= t('expired_venue') %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="span4">
+      <div class="gym">
+        <ul class="unstyled">
+          <li><%= Gym.human_attribute_name(:business_hours) %>: <%= @gym.business_hours %></li>
+          <li><%= Gym.human_attribute_name(:phone) %>: <%= @gym.phone %></li>
+          <li><%= Gym.human_attribute_name(:full_address) %>: <%= @gym.full_address %></li>
+        </ul>
+      </div>
+      <div class="gym-venue-types">
+        <h2><%= VenueType.model_name.human %></h2>
+        <ul class="nav nav-tabs nav-stacked">
+          <% @gym.venue_types.each do |venue_type| %>
+            <li><%= link_to venue_type.name, search_gym_venues_path(@gym, date: @date, venue_type_id: venue_type.id) %></li>
+          <% end -%>
+        </ul>
+      </div>
+      <div class="gym-map">
+        <%= render '/shared/map', { location: @gym.location } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

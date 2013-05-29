@@ -1,0 +1,60 @@
+form {
+  p.error_notification {
+    margin: 0;
+  }
+
+  .control-line {
+    &::after {
+      clear: both;
+    }
+
+    &::before, &::after {
+      display: table;
+      content: "";
+    }
+  }
+
+  hr {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .control-group-inline {
+  	float: left;
+  	margin-right: 30px;
+
+  	label {
+      margin-right: 5px;
+  	}
+  }
+}
+
+form.form-embeded {
+  margin: 0;
+
+  input {
+    margin: 0;
+  }
+}
+
+form#order_search {
+  #q_number_cont {
+    width: 120px;
+  }
+
+  #q_mobile_cont {
+    width: 120px;
+  }
+
+  #q_state_eq, #q_payment_state_eq {
+    width: 120px;
+  }
+
+  #q_payment_method_id_eq {
+    width: 160px;
+  }
+  
+  .date-input {
+    width: 120px;
+  }
+}

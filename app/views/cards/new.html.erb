@@ -1,0 +1,11 @@
+<%= render '/shared/user_tabs' %>
+
+<h1></h1>
+<div class="titlebar">
+  <h1>
+    <%= t 'new_card' %>
+    <small><%= @gym.try(:name) %> - <%= @card.card_type.try(:name) %></small>
+  </h1>
+</div>
+
+<%= render 'form' %>

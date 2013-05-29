@@ -1,0 +1,3 @@
+<%= f.input :username, input_html: { data: { provide: "typeahead", source: current_gym.cards.map(&:username).uniq } } %>
+<%= f.input :mobile, input_html: { data: { provide: "typeahead", source: current_gym.cards.map(&:mobile).uniq } } %>
+<%= f.input :special_instructions, as: :text, input_html: { class: 'span10', rows: 3 } %>

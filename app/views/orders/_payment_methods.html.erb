@@ -1,0 +1,16 @@
+<% if @order.payable? && @order.state?(:completed) && @payment_methods.any? %>
+  <div class="well">
+    <div>
+      <%= Order.human_attribute_name(:remained_to_pay) %>: <%= number_to_currency @order.remained_to_pay %>
+    </div>
+    <% if @order.expired_at.present? %>
+      <div>
+        <%= t("order_will_expire_at", expired_at: l(@order.expired_at, format: :short)) %>
+      </div>
+    <% end -%>
+
+    <% @payment_methods.each do |payment_method| %>
+      <%= render resource_view_path(payment_method, partial: 'button'), { order: @order, payment_method: payment_method } %>
+    <% end -%>
+  </div>
+<% end -%>

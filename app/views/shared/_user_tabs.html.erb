@@ -1,0 +1,29 @@
+<% content_for :sidebar do %>
+  <div class="well">
+    <ul class="nav nav-list">
+      <% unless current_user.is?('admin') || current_user.is?('manager') %>
+        <li class="nav-header">
+          <%= t("my_records") %>
+        </li>
+        <li class="<%= 'active' if request.fullpath =~ /^#{orders_path}/ %>">
+          <%= link_to t("my_orders"), orders_path %>
+        </li>
+        <li class="<%= 'active' if request.fullpath =~ /^#{cards_path}/ %>">
+          <%= link_to t("my_cards"), cards_path %>
+        </li>
+        <li class="<%= 'active' if request.fullpath =~ /^#{bookmarked_gyms_path}/ %>">
+          <%= link_to t("bookmarked_gyms"), bookmarked_gyms_path %>
+        </li>
+      <% end -%>
+      <li class="nav-header">
+        <%= t("my_info") %>
+      </li>
+      <li class="<%= 'active' if request.fullpath =~ /^#{profile_path}/ %>">
+        <%= link_to t("profile"), edit_profile_path %>
+      </li>
+      <li class="<%= 'active' if request.fullpath =~ /^#{user_registration_path}/ %>">
+        <%= link_to t("change_password"), edit_user_registration_path %>
+      </li>
+    </ul>
+  </div>
+<% end -%>

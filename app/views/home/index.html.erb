@@ -1,0 +1,24 @@
+<% content_for :banner do %>
+  <div class="content banner-<%= rand(6) + 1 %>">
+    <%= link_to new_registration_path('user'), class: "btn-sign-up" do %>
+      <%= image_tag('button_sign_up.jpg') %>
+    <% end -%>
+  </div>
+<% end -%>
+
+<%= render_cell(:venues, :search) %>
+
+<div id="home-content">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="help">
+        <h2><%= t("website_help.title") %></h2>
+        <%== t("website_help.description") %>
+        <%= link_to t("help"), '#', class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="span6">
+      <%= render "gyms" %>
+    </div>
+  </div>
+</div>

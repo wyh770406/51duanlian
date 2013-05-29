@@ -1,0 +1,7 @@
+<ul class="nav nav-tabs">
+  <% Order.subclasses.each do |order_klass| %>
+    <li class="<%= 'active' if order_klass.to_s == @order_klass %>">
+      <%= link_to order_klass.model_name.human, admin_orders_path(order_klass: order_klass) %>
+    </li>
+  <% end %>
+</ul>

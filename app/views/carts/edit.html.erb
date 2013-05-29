@@ -1,0 +1,22 @@
+<h1><%= t 'cart' %></h1>
+
+<%= render 'form' unless current_order.empty? %>
+
+<%= render '/line_items/list', { order: current_order, editable: true } %>
+
+<%= link_to t('continue_shopping'), root_url, class: 'btn' %>
+
+<%= link_to t('empty_cart'), empty_cart_path, class: 'btn btn-danger', confirm: t('empty_cart_confirmation'), method: :post %>
+
+<%= link_to '#', class: 'btn btn-success pull-right', id: 'btn-complete-order' do %>
+  <i class="icon-shopping-cart icon-white"></i>
+  <%= t("complete_order") %>
+<% end %>
+
+<%= javascript_tag do %>
+  $(function() {
+    $('#btn-complete-order').click(function() {
+      $('form#edit_order').submit();
+    });
+  });
+<% end -%>

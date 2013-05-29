@@ -1,0 +1,17 @@
+<%= render '/shared/user_tabs' %>
+
+<h1><%= t('profile') %></h1>
+
+<%= simple_form_for(@user, url: profile_path, method: :put, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :mobile %>
+
+  <div class="form-actions">
+    <%= f.button :submit, t('update_profile') %>
+    <% unless @user.mobile_verified? %>
+      <%= link_to t('verify_mobile'), edit_mobile_path, class: 'btn btn-warning' %>
+    <% end -%>
+  </div>
+<% end %>

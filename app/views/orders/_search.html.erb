@@ -1,0 +1,13 @@
+<%= search_form_for @q, html: { class: "well form-inline form-horizontal" } do |f| %>
+  <%= f.hidden_field :type_eq, value: @order_klass %>
+
+  <div class="control-line">
+    <div class="control-group-inline pull-left">
+      <%= f.label :created_at %>
+      <%= f.text_field :created_at_gteq, value: @q.created_at_gteq.blank? ? '' : @q.created_at_gteq.to_date, class: "date-input-full span3" %> - 
+      <%= f.text_field :created_at_lteq, value: @q.created_at_lteq.blank? ? '' : @q.created_at_lteq.to_date, class: "date-input-full span3" %>
+    </div>
+    <%= f.submit t('helpers.submit.search'), class: 'btn btn-primary pull-right' %>
+  </div>
+
+<% end %>

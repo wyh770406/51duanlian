@@ -1,0 +1,31 @@
+<%= render '/shared/user_tabs' %>
+
+<h1></h1>
+<div class="titlebar">
+  <h1>
+    <%= t 'crud.listing', model: Card.model_name.human %>
+  </h1>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= Card.human_attribute_name(:gyms) %></th>
+      <th><%= Card.human_attribute_name(:number) %></th>
+      <th><%= Card.human_attribute_name(:stop_on) %></th>
+      <th><%= Card.human_attribute_name(:balance) %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.gyms.map(&:name).join(', ') %></td>
+        <td><%= link_to card.number, card_path(card) %></td>
+        <td><%= card.stop_on %></td>
+        <td><%= number_to_currency card.balance %></td>
+        <td><%= link_to t('add_card_line_item'), card_path(card) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,64 @@
+<% content_for :title do %>
+<h1>Card</h1>
+<div class="toolbar">
+  <div class="btn-group">
+    <%= link_to '#', class: "btn btn-success dropdown-toggle", data: { toggle: "dropdown" } do %>
+      <%= t('charge') %>
+      <span class="caret"></span>
+    <% end %>
+    <ul class="dropdown-menu">
+      <% @card_charges.each do |card_charge| %>
+        <li><%= link_to card_charge.name, charge_admin_card_path(@card, card_charge_id: card_charge.id), method: :post %></li>
+      <% end -%>
+    </ul>
+  </div>
+  <%= link_to t('crud.edit'), edit_admin_card_path(@card), class: 'btn btn-primary' %>
+  <%= link_to t('crud.back'), admin_cards_path, class: 'btn' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= Card.human_attribute_name(:card_type) %></th>
+      <td><%= @card.card_type.name %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:number) %></th>
+      <td>
+        <%= @card.number %>
+        <% unless @card.available? %>
+          <span class="label"><%= t('invalid') %></span>
+        <% end %>
+
+      </td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:start_on) %></th>
+      <td><%= @card.start_on %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:stop_on) %></th>
+      <td><%= @card.stop_on %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:username) %></th>
+      <td><%= @card.username %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:email) %></th>
+      <td><%= @card.email %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:mobile) %></th>
+      <td><%= @card.mobile %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:balance) %></th>
+      <td><%= number_to_currency @card.balance %></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<%= render '/admin/card_line_items/list', { card_line_items: @card_line_items } %>

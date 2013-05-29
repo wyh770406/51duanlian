@@ -1,0 +1,4 @@
+<%= form_for([:cart, line_item], remote: true, html: { class: "form-embeded" }) do |f| %>
+  <%= f.text_field :quantity, class: "span1" %>
+  <%= f.submit class: 'submit hidden' %>
+<% end -%>

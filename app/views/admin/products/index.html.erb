@@ -1,0 +1,38 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: Product.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.new'), new_admin_product_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= Product.human_attribute_name(:name) %></th>
+        <th><%= Product.human_attribute_name(:sku) %></th>
+        <th><%= Product.human_attribute_name(:price) %></th>
+        <th><%= Product.human_attribute_name(:count_on_hand) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @products.each do |product| %>
+    <tr>
+      <td><%= link_to product.name, edit_admin_product_path(product) %></td>
+      <td><%= product.sku %></td>
+      <td><%= number_to_currency product.price %></td>
+      <td><%= product.count_on_hand %></td>
+      <td class="control span4">
+        <% if product.out_of_stock? %>
+          <span class="label"><%= t('out_of_stock') %></span>
+        <% else %>
+          <%= link_to populate_admin_cart_path(type: 'Order::ProductOrder', items_attributes: [ { id: product.id, quantity: 1 } ], back_to_url: request.url), method: :post do %>
+            <i class="icon-plus"></i>
+            <%= t('add_to_cart') %>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

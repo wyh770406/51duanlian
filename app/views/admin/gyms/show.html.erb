@@ -1,0 +1,48 @@
+<% content_for :title do %>
+<h1>
+  <%= @gym.name %>
+</h1>
+<div class="toolbar">
+  <%= @gym.confirm_button %>
+  <%= link_to t('crud.edit'), edit_admin_gym_path(@gym), class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= Gym.human_attribute_name(:phone) %></th>
+      <td><%= @gym.phone %></td>
+    </tr>
+    <tr>
+      <th><%= Gym.human_attribute_name(:full_address) %></th>
+      <td><%= @gym.full_address %></td>
+    </tr>
+    <tr>
+      <th><%= Gym.human_attribute_name(:zip_code) %></th>
+      <td><%= @gym.zip_code %></td>
+    </tr>
+    <tr>
+      <th><%= Gym.human_attribute_name(:open_at) %></th>
+      <td><%= @gym.open_at %></td>
+    </tr>
+    <tr>
+      <th><%= Gym.human_attribute_name(:close_at) %></th>
+      <td><%= @gym.close_at %></td>
+    </tr>
+    <tr>
+      <th><%= Gym.human_attribute_name(:venue_types) %></th>
+      <td><%= @gym.venue_types %></td>
+    </tr>
+    <tr>
+      <th><%= Gym.human_attribute_name(:description) %></th>
+      <td><%= @gym.description %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-header">
+  <h2><%= Gym.human_attribute_name(:images) %></h2>
+</div>
+<%= render '/admin/gym_images/list', { gym: @gym, images: @images } %>
+

@@ -1,0 +1,30 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= CardLineItem.human_attribute_name(:updated_at) %></th>
+      <th><%= CardLineItem.human_attribute_name(:reason) %></th>
+      <th><%= CardLineItem.human_attribute_name(:validity) %></th>
+      <th class="price"><%= CardLineItem.human_attribute_name(:amount) %></th>
+      <th><%= CardLineItem.human_attribute_name(:order) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% card_line_items.each do |card_line_item| %>
+      <tr>
+        <td><%= l card_line_item.updated_at, format: :long %></td>
+        <td><%= card_line_item.reason %></td>
+        <td><%= card_line_item.validity %></td>
+        <td class="price"><%= number_to_currency card_line_item.amount %></td>
+        <td>
+          <% if card_line_item.order.present? %>
+            <% if card_line_item.order.user == current_user %>
+              <%= link_to card_line_item.order.number, order_path(card_line_item.order) %>
+            <% else %>
+              <%= link_to card_line_item.order.number, '#', rel: "tooltip", title: t('order_by_manager') %>
+            <% end -%>
+          <% end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

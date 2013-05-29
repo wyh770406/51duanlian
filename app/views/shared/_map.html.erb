@@ -1,0 +1,12 @@
+<%= gmaps({
+  "map_options" => {
+    "language" => 'zh-CN',
+    "region" => 'China',
+    "auto_zoom" => false,
+    "zoom" => 15,
+    "auto_adjust" => true
+  },
+  "markers" => {
+    "data" => location.to_gmaps4rails
+  }
+}) %>

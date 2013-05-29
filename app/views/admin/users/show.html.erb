@@ -1,0 +1,48 @@
+<% content_for :title do %>
+<h1>User</h1>
+<div class="toolbar">
+  <%= link_to t('crud.edit'), edit_admin_user_path(@user), class: 'btn btn-primary' %>
+  <%= link_to t('crud.back'), admin_users_path, class: 'btn' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <th><%= User.human_attribute_name(:login_name) %></th>
+      <td><%= @user.login_name %></td>
+    </tr>
+    <tr>
+      <th><%= User.human_attribute_name(:name) %></th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <th><%= User.human_attribute_name(:mobile) %></th>
+      <td><%= @user.mobile %></td>
+    </tr>
+    <tr>
+      <th><%= User.human_attribute_name(:gyms) %></th>
+      <td>
+        <% @user.gyms.each do |gym| %>
+          <%= link_to(gym.name, admin_gym_session_path(gym), method: :put, title: t('crud.enter') ) %>
+        <% end -%>
+      </td>
+    </tr>
+    <tr>
+      <th><%= User.human_attribute_name(:roles) %></th>
+      <td>
+        <%= @user.roles.map { |role| t(role, scope: "roles") }.join(', ') %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= User.human_attribute_name(:created_at) %></th>
+      <td>
+        <%= l @user.created_at, format: :long %>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,20 @@
+<% content_for :title do %>
+<h1>CardCharge</h1>
+<div class="toolbar">
+  <%= link_to t('crud.edit'), edit_admin_card_charge_path(@card_charge), class: 'btn btn-primary' %>
+  <%= link_to t('crud.back'), admin_card_charges_path, class: 'btn' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= CardCharge.human_attribute_name(:name) %></th>
+      <td><%= @card_charge.name %></td>
+    </tr>
+    <tr>
+      <th><%= CardCharge.human_attribute_name(:price) %></th>
+      <td><%= number_to_currency @card_charge.price %></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,69 @@
+<% content_for :title do %>
+<h1>
+  <%= @order.class.model_name.human %>
+  <small><%= @order.number %></small>
+</h1>
+<div class="toolbar">
+  <%= render 'payment_methods', { order: @order } %>
+  <% if @order.can_check_in? %>
+    <%= link_to t('check_in'), check_in_admin_order_path(@order), class: 'btn', method: :post %>
+  <% end -%>
+  <%= link_to t('crud.edit'), edit_admin_order_path(@order), class: 'btn btn-primary' %>
+  <% if @order.can_cancel? %>
+    <%= link_to t('cancel_order'), cancel_admin_order_path(@order), confirm: t('cancel_order_confirmation', number: @order.number), class: 'btn btn-danger', method: :post %>
+  <% end -%>
+  <% if @order.can_refund? %>
+    <%= link_to t('refund_order'), new_refund_admin_order_path(@order), class: 'btn btn-danger' %>
+  <% end -%>
+  <%= link_to t('crud.back'), admin_orders_path, class: 'btn' %>
+</div>
+<% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= Order.human_attribute_name(:state) %></th>
+      <td><%= @order.human_state_name %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:total) %></th>
+      <td><%= @order.payable? ? @order.total : @order.payment_total %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:payment_total) %></th>
+      <td><%= @order.payment_total %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:payment_method) %></th>
+      <td><%= @order.payment_method.try(:name) %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:checked_in_at) %></th>
+      <td>
+        <% if @order.checked_in? %>
+          <%=l @order.checked_in_at, format: :short %>
+        <% else %>
+          <span class="label label-warning"><%= t("have_not_checked_in") %></span>
+        <% end -%>
+      </td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:username) %></th>
+      <td><%= @order.username %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:mobile) %></th>
+      <td><%= @order.mobile %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:verification_code) %></th>
+      <td><%= @order.verification_code %></td>
+    </tr>
+    <tr>
+      <th><%= Order.human_attribute_name(:special_instructions) %></th>
+      <td><%= @order.special_instructions %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= render '/admin/line_items/list', { order: @order, editable: false } %>

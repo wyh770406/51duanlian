@@ -1,0 +1,18 @@
+<%% content_for :title do %>
+<h1><%= class_name %></h1>
+<div class="toolbar">
+  <%%= link_to t('crud.edit'), edit_admin_<%= singular_table_name %>_path(@<%= singular_table_name %>), <%= key_value :class, "'btn btn-primary'" %> %>
+  <%%= link_to t('crud.back'), admin_<%= plural_table_name %>_path, <%= key_value :class, "'btn'" %> %>
+</div>
+<%% end %>
+
+<table class="table table-nobordered">
+  <tbody>
+<% attributes.each do |attribute| -%>
+    <tr>
+      <th><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></th>
+      <td><%%= @<%= singular_table_name %>.<%= attribute.name %> %></td>
+    </tr>
+<% end -%>
+  </tbody>
+</table>

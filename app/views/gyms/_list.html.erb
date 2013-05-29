@@ -1,0 +1,42 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="image"><%= Gym.human_attribute_name(:images) %></th>
+      <th class="gym"><%= Gym.model_name.human %></th>
+      <th class="price"><%= t("price") %> / <%= t("member_price") %></th>
+      <th class="times"><%= t("available_times") %> (<%= t("click_to_order") %>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% gyms.each do |gym_line_item| %>
+      <% gym, price, member_price, times = gym_line_item[:gym], gym_line_item[:price], gym_line_item[:member_price], gym_line_item[:times] %>
+      <tr>
+        <td class="image"><%= image_tag(gym.key_image.image_url(:small).to_s) unless gym.key_image.blank? %></td>
+        <td class="gym">
+          <span class="gym-name">
+            <%= link_to truncate(gym.name, length: 15), gym %>
+          </span><br />
+          <%= Gym.human_attribute_name(:full_address) %>: <%= gym.full_address %><br />
+          <%= Gym.human_attribute_name(:phone) %>: <%= gym.phone %>
+        </td>
+        <td class="price">
+          <% if price.present? %>
+            <%= number_to_currency price %>
+          <% end -%>
+          <% if member_price.present? %>
+            / <%= number_to_currency member_price %>
+          <% end -%>
+        </td>
+        <td class="times">
+          <% unless times.blank? %>
+            <%= link_to_venues_at_time(gym, @venue_type, times[:backwards][-2]) %>
+            <%= link_to_venues_at_time(gym, @venue_type, times[:backwards][-1]) %>
+            <%= link_to_venues_at_time(gym, @venue_type, times[:target][0], "btn btn-success") %>
+            <%= link_to_venues_at_time(gym, @venue_type, times[:forwards][0]) %>
+            <%= link_to_venues_at_time(gym, @venue_type, times[:forwards][1]) %>
+          <% end -%>
+        </td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>

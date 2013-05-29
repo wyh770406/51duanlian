@@ -1,0 +1,44 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: Card.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.new'), new_admin_card_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<%= render 'search' %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= Card.human_attribute_name(:number) %></th>
+        <th><%= Card.human_attribute_name(:username) %></th>
+        <th><%= Card.human_attribute_name(:email) %></th>
+        <th><%= Card.human_attribute_name(:mobile) %></th>
+        <th class="price"><%= Card.human_attribute_name(:balance) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @cards.each do |card| %>
+    <tr>
+      <td>
+        <%= card.number %>
+        <% if card.on_sale? %>
+          <span class="label"><%= t("on_sale") %></span>
+        <% end -%>
+      </td>
+      <td><%= card.username %></td>
+      <td><%= card.email %></td>
+      <td><%= card.mobile %></td>
+      <td class="price"><%= number_to_currency card.balance %></td>
+      <td class="control span4">
+        <%= link_to t('crud.show'), admin_card_path(card) %>
+        <%= link_to t('crud.edit'), edit_admin_card_path(card) %>
+        <%= link_to t('crud.destroy'), admin_card_path(card), confirm: t('crud.destroy_confirmation'), method: :delete %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= paginate @cards %>

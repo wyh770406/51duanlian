@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  $("#live-cart .modal-body").html("<%= escape_javascript(t('added_to_cart')) %>");
+  $('#live-cart').modal('show');
+<% else %>
+  window.location.href = "<%= new_session_path('user') %>"
+<% end %>

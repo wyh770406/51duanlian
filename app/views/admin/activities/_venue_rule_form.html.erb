@@ -1,0 +1,17 @@
+<div class="control-group">
+  <label class="control-label"><%= VenueRule.human_attribute_name(:type) %></label>
+  <div class="controls">
+    <% venue_rules_options = {} %>
+    <% VenueRule.subclasses.each { |klass| venue_rules_options[klass.model_name.human] = klass.to_s.parameterize } %>
+    <%= select_tag :activity_venue_rule_attributes_type,
+      options_for_select(venue_rules_options, @activity.venue_rule.class.to_s.parameterize),
+      id: 'venue_rule_type_of_activity'
+    %>
+  </div>
+</div>
+<div id="dynamic_venue_rules">
+  <% VenueRule.subclasses.each do |klass| %>
+    <% venue_rule = @activity.venue_rule.is_a?(klass) ? @activity.venue_rule : klass.new %>
+    <%= render resource_view_path(venue_rule, namespace: 'admin', partial: 'form'), { f: f, venue_rule: venue_rule } %>
+  <% end %>
+</div>

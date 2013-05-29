@@ -1,0 +1,21 @@
+<% unless controller_name == "registrations" %>
+  <div id="user-nav">
+    <% if user_signed_in? %>
+      <%= t("welcome", name: current_user.display_name) %>
+      [<%= link_to t(:sign_out), destroy_user_session_path, :method => :delete %>]
+    <% else %>
+      <%= form_for("user", :url => user_session_path, html: { class: 'form-inline form-horizontal' }) do |f| %>
+        <%= f.label :login %>
+        <%= f.text_field :login, class: "input-small" %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "input-small" %>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+        <%= f.submit t('sign_in'), class: 'btn btn-mini' %>
+
+        | <%= link_to t('sign_up'), new_registration_path('user') %>
+        | <%= link_to t('forgot_password'), new_password_path('user') %>
+      <% end %>
+    <% end -%>
+  </div>
+<% end -%>

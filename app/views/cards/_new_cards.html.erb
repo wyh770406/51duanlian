@@ -1,0 +1,31 @@
+<div class="gym-cards">
+  <h2><%= t('new_card') %></h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><%= CardType.human_attribute_name(:name) %></th>
+        <th><%= CardType.human_attribute_name(:description) %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% gym.card_types.each do |card_type| %>
+        <tr>
+          <td><%= card_type.name %></td>
+          <td><%= card_type.description %></td>
+          <td class="controls">
+            <% if user_signed_in? && current_user.cards.by_type(card_type).count > 0 %>
+              <% current_user.cards.by_type(card_type).each do |card| %>
+                <%= link_to "#{Card.model_name.human}: #{card.number}", card_path(card), class: "btn" %>
+              <% end -%>
+            <% elsif card_type.cards.on_sale.count > 0 %>
+              <%= link_to t("new_card"), new_card_path(gym_id: gym.id, card_type_id: card_type.id), class: "btn btn-success" %>
+            <% else %>
+              <%= t("out_of_stock") %>
+            <% end -%>
+          </td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

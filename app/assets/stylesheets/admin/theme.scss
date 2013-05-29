@@ -1,0 +1,17 @@
+body {
+  background: #3a6617 asset-url('admin/bg.jpg', image) repeat 0 0;
+}
+
+.navbar {
+  .brand {
+    width: 84px;
+    background: $red asset-url('admin/logo.png', image) no-repeat 0 0;
+    text-indent: -9999px;
+  }
+}
+
+.container {
+  .content {
+    @include single-box-shadow(rgba(0, 0, 0, .6), 0, 1px, 5px);
+  }
+}

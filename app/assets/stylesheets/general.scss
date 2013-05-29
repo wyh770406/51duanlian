@@ -1,0 +1,21 @@
+div.center {
+  margin: 0 auto;
+}
+
+div.modal {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-primary {
+  background: image-url('btn_bg_red.png') repeat-x left center;
+  color: #FFF;
+  border: 1px solid #FFF;
+
+  &:hover {
+    background: image-url('btn_bg_red.png') repeat-x left center;
+  }
+}

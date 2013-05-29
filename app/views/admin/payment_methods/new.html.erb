@@ -1,0 +1,10 @@
+<% content_for :title do %>
+<h1><%= t 'crud.creating', model: PaymentMethod.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_payment_methods_path, class: 'btn' %>
+</div>
+<% end %>
+
+<%= simple_form_for([:admin, @payment_method], as: :payment_method, html: { class: 'form-horizontal' }) do |f| %>
+  <%= render 'form', { f: f } %>
+<% end -%>

@@ -1,0 +1,12 @@
+<% content_for :title do %>
+<h1><%= t 'crud.editing', model: Product.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to admin_product_path(@product), confirm: t('crud.destroy_confirmation'), method: :delete, class: 'btn btn-danger' do %>
+    <i class="icon-trash icon-white"></i>
+    <%= t('crud.destroy') %>
+  <% end %>
+  <%= link_to t('crud.back'), admin_products_path, class: 'btn' %>
+</div>
+<% end %>
+
+<%= render 'form' %>

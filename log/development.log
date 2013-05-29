@@ -1,0 +1,56 @@
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:78)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:78)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-05-29 09:54:46 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered admin/gyms/_search.html.erb (41.6ms)
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `gyms` [0m
+  Rendered admin/gyms/index.html.erb within layouts/admin (74.6ms)
+  Rendered admin/shared/_topnav.html.erb (157.6ms)
+Completed 200 OK in 2729ms (Views: 2579.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-05-29 09:55:21 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/gyms/_search.html.erb (7.3ms)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `gyms` 
+  Rendered admin/gyms/index.html.erb within layouts/admin (33.9ms)
+  Rendered admin/shared/_topnav.html.erb (5.7ms)
+Completed 200 OK in 60ms (Views: 51.1ms | ActiveRecord: 0.6ms)

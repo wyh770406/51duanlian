@@ -1,0 +1,44 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: Order.model_name.human %></h1>
+<div class="toolbar">
+</div>
+<% end %>
+
+<%= render 'tabs' %>
+<%= render 'search' %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= Order.human_attribute_name(:number) %></th>
+        <th><%= Order.human_attribute_name(:total) %></th>
+        <th><%= Order.human_attribute_name(:state) %></th>
+        <th><%= Order.human_attribute_name(:payment_total) %></th>
+        <th><%= Order.human_attribute_name(:payment_state) %></th>
+        <th><%= Order.human_attribute_name(:username) %></th>
+        <th><%= Order.human_attribute_name(:mobile) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.number %></td>
+        <td><%= order.payable? ? order.total : order.payment_total %></td>
+        <td><%= order.human_state_name %></td>
+        <td><%= order.payment_total %></td>
+        <td><%= order.human_payment_state_name %></td>
+        <td><%= order.username %></td>
+        <td><%= order.mobile %></td>
+        <td class="control span4">
+          <% if order.can_check_in? %>
+            <%= link_to t('check_in'), check_in_admin_order_path(order), confirm: t('check_in_order_confirmation', number: order.number), method: :post %>
+          <% end -%>
+          <%= link_to t('crud.show'), admin_order_path(order) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @orders %>

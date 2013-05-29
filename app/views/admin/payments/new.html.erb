@@ -1,0 +1,8 @@
+<% content_for :title do %>
+<h1>Order</h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_order_path(@order), class: 'btn' %>
+</div>
+<% end %>
+
+<%= render resource_view_path(@payment_method, namespace: 'admin', partial: 'payment_method'), { order: @order, payment_method: @payment_method } %>

@@ -1,0 +1,16 @@
+<%= f.simple_fields_for :location do |location_form| %>
+  <div class="control-group select optional">
+    <%= location_form.label :city, class: "control-label" %>
+    <div class="controls">
+      <%= select_tag :gym_location_attributes_city, options_from_collection_for_select(City.all, :id, :name, location_form.object.city.try(:id)), id: 'city_for_dynamic_area' %>
+    </div>
+  </div>
+  <div class="control-group select required">
+    <%= location_form.label :area, class: "control-label" %>
+    <div class="controls">
+      <%= location_form.grouped_collection_select :area_id, City.all, :areas, :name, :id, :name, { include_blank: true }, { id: 'dynamic_area' } %>
+    </div>
+  </div>
+  <%= location_form.input :address, input_html: { class: 'span8' } %>
+  <%= location_form.input :zip_code, input_html: { class: 'span1' } %>
+<% end %>

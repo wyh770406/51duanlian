@@ -1,0 +1,13 @@
+<% if @order.payable? && @payment_methods.any? %>
+  <div class="btn-group">
+    <%= link_to '#', class: "btn btn-success dropdown-toggle", data: { toggle: "dropdown" } do %>
+      <%= t('pay') %>
+      <span class="caret"></span>
+    <% end %>
+    <ul class="dropdown-menu">
+      <% @payment_methods.each do |payment_method| %>
+        <li><%= link_to payment_method.name, new_admin_order_payment_path(order, payment_method_id: payment_method.id) %></li>
+      <% end -%>
+    </ul>
+  </div>
+<% end -%>

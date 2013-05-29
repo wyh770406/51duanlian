@@ -1,0 +1,27 @@
+<%= simple_form_for([:admin, @user], html: { class: 'form-horizontal' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
+  <%= f.input :email %>
+  <%= f.input :login_name %>
+
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+
+  <%= f.input :name %>
+  <%= f.input :mobile %>
+
+  <% if current_user.is?(:admin) %>
+    <%= f.input :roles, as: :check_boxes, collection: User::ROLES.map{ |r| [t("roles.#{r}"), r] } %>
+  <% end -%>
+
+  <%= f.association :gyms, collection: @gyms %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

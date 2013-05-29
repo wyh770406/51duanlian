@@ -1,0 +1,16 @@
+<%= f.simple_fields_for :date_rule do |date_rule_form| %>
+  <%= date_rule_form.hidden_field :type %>
+  <%= date_rule_form.input :start_date, input_html: { class: 'span2 date-input' } %>
+  <%= date_rule_form.input :end_date, input_html: { class: 'span2 date-input' } %>
+  <div class="control-group">
+    <label class="control-label"><%= RecurrenceRule::DateRule::WeeklyRule.human_attribute_name(:day_ids) %></label>
+    <div class="controls">
+      <% RecurrenceRule::DateRule::WeeklyRule::DAYS.each do |name, id| %>
+        <label class="checkbox inline">
+          <%= check_box_tag "activity[date_rule_attributes][day_ids][]", id, @activity.date_rule.day_ids.include?(id) %>
+          <%= t(name) %>
+        </label>
+      <% end %>
+    </div>
+  </div>
+<% end %>

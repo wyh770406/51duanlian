@@ -1,0 +1,29 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: GymGroup.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.new'), new_admin_gym_group_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= GymGroup.human_attribute_name(:name) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @gym_groups.each do |gym_group| %>
+    <tr>
+      <td><%= gym_group.name %></td>
+      <td class="control span4">
+        <%= link_to t('crud.show'), admin_gym_group_path(gym_group) %>
+        <%= link_to t('crud.edit'), edit_admin_gym_group_path(gym_group) %>
+        <%= link_to t('crud.destroy'), admin_gym_group_path(gym_group), confirm: t('crud.destroy_confirmation'), method: :delete %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= paginate @gym_groups %>

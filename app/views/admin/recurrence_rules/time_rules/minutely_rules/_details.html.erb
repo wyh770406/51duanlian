@@ -1,0 +1,12 @@
+<tr>
+  <th><%= time_rule.class.human_attribute_name(:start_time) %></th>
+  <td><%= l time_rule.start_time, format: :time %></td>
+</tr>
+<tr>
+  <th><%= time_rule.class.human_attribute_name(:end_time) %></th>
+  <td><%= l time_rule.end_time, format: :time %></td>
+</tr>
+<tr>
+  <th><%= time_rule.class.human_attribute_name(:duration) %></th>
+  <td><%= time_rule.duration %></td>
+</tr>

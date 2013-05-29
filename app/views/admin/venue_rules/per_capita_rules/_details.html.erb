@@ -1,0 +1,12 @@
+<tr>
+  <th><%= venue_rule.class.human_attribute_name(:price) %></th>
+  <td><%= number_to_currency venue_rule.price %></td>
+</tr>
+<tr>
+  <th><%= venue_rule.class.human_attribute_name(:member_price) %></th>
+  <td><%= number_to_currency venue_rule.member_price %></td>
+</tr>
+<tr>
+  <th><%= venue_rule.class.human_attribute_name(:max_people) %></th>
+  <td><%= venue_rule.max_people %></td>
+</tr>

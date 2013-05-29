@@ -1,0 +1,18 @@
+$sansFontFamily: "Helvetica Neue", Helvetica, "Heiti SC", "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+$baseFontSize: 13px;
+$baseLineHeight: 18px;
+
+@import "bootstrap";
+@import "compass";
+
+$border: 1px solid $gray;
+
+@import "general";
+@import "layout";
+@import "form";
+@import "table";
+@import "nav";
+@import "admin/datepicker";
+@import "banner";
+@import "gmaps4rails";
+@import "login";

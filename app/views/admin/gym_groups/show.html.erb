@@ -1,0 +1,37 @@
+<% content_for :title do %>
+<h1><%= @gym_group.name %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.edit'), edit_admin_gym_group_path(@gym_group), class: 'btn btn-primary' %>
+  <%= link_to t('crud.back'), admin_gym_groups_path, class: 'btn' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= Gym.human_attribute_name(:name) %></th>
+      <th><%= Gym.human_attribute_name(:open_at) %></th>
+      <th><%= Gym.human_attribute_name(:close_at) %></th>
+      <th><%= Gym.human_attribute_name(:confirmed) %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @gym_group.gyms.each do |gym| %>
+    <tr>
+      <td><%= gym.name %></td>
+      <td><%= l gym.open_at, format: :time %></td>
+      <td><%= l gym.close_at, format: :time %></td>
+      <td><%= t gym.confirmed.to_s %></td>
+      <td class="control span4">
+        <% if gym != current_gym %>
+          <%= link_to t('crud.enter'), admin_gym_session_path(gym), method: :put %>
+        <% end %>
+        <%= link_to t('crud.show'), admin_gym_path(gym) %>
+        <%= link_to t('crud.edit'), edit_admin_gym_path(gym) %>
+        <%= link_to t('crud.destroy'), admin_gym_path(gym), confirm: t('crud.destroy_confirmation'), method: :delete %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

@@ -1,0 +1,8 @@
+<%% content_for :title do %>
+<h1><%%= t 'crud.editing', <%= key_value :model, "#{class_name}.model_name.human" %> %></h1>
+<div class="toolbar">
+  <%%= link_to t('crud.back'), admin_<%= plural_table_name %>_path, <%= key_value :class, "'btn'" %> %>
+</div>
+<%% end %>
+
+<%%= render 'form' %>

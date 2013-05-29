@@ -1,0 +1,20 @@
+#banner {
+  .content {
+    height: 250px;
+    position: relative;
+
+    .btn-sign-up {
+      position: absolute;
+      top: 125px;    
+      right: 120px;
+    }
+  }
+
+  .banner-1 { background: image-url('banners/1.jpg') no-repeat center center; }
+  .banner-2 { background: image-url('banners/2.jpg') no-repeat center center; }
+  .banner-3 { background: image-url('banners/3.jpg') no-repeat center center; }
+  .banner-4 { background: image-url('banners/4.jpg') no-repeat center center; }
+  .banner-5 { background: image-url('banners/5.jpg') no-repeat center center; }
+  .banner-6 { background: image-url('banners/6.jpg') no-repeat center center; }
+
+}

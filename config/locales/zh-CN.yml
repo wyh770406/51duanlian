@@ -1,0 +1,510 @@
+# encoding: utf-8
+
+zh-CN:
+  sunday: '星期日'
+  monday: '星期一'
+  tuesday: '星期二'
+  wednesday: '星期三'
+  thursday: '星期四'
+  friday: '星期五'
+  saturday: '星期六'
+  everyday: '每天'
+
+  activerecord:
+    models:
+      user: '用户'
+      company: '企业'
+      gym: '场馆'
+      gym_image: '场馆照片'
+      gym_group: '场馆群'
+      venue: '场地'
+      venue_type: '场地类型'
+      venue_inventory: '场地标准数量'
+      city: '城市'
+      area: '区县'
+      location: '地理位置'
+      activity: '规则'
+      product: '商品'
+      order: '订单'
+      order/venue_order: '场地订单'
+      order/product_order: '商品订单'
+      order/card_order: '会员卡订单'
+      venue_rule: '场地计费规则'
+      venue_rule/per_venue_rule: '按场地计费'
+      venue_rule/per_capita_rule: '按人数计费'
+      payment_method: '支付方式'
+      payment_method/card: '会员卡支付'
+      payment_method/free: '免费'
+      payment_method/gateway: '支付网关'
+      payment_method/gateway/alipay: '支付宝'
+      payment: '支付记录'
+      card: '会员卡'
+      card_type: '会员卡类型'
+      card_line_item: '会员卡记录'
+      card_charge: '会员卡充值'
+    attributes:
+      user:
+        login: '邮箱/用户名'
+        email: '邮箱'
+        password: '密码'
+        password_confirmation: '确认密码'
+        current_password: '当前密码'
+        remember_me: '记住密码'
+        roles: '角色'
+        created_at: '注册时间'
+        mobile: '手机号'
+        name: '姓名'
+        gyms: '场馆'
+        login_name: '用户名'
+        company: 企业
+      company:
+        name: 名称
+        address: 地址
+        phone: 联系电话
+      gym:
+        name: '名称'
+        description: '描述'
+        phone: '联系电话'
+        open_at: '开门时间'
+        close_at: '关门时间'
+        confirmed: '验证通过'
+        address: '地址'
+        zip_code: '邮编'
+        full_address: '地址'
+        venue_types: '场地类型'
+        images: '照片'
+        business_hours: '营业时间'
+        company: 企业
+        company_id: 企业
+        gym_groups: '场馆群'
+        gym_group_ids: '场馆群'
+      gym_image:
+        image: '照片'
+      gym_group:
+        name: '名称'
+      venue:
+        date: '日期'
+        start_at: '开始时间'
+        stop_at: '结束时间'
+        capacity: '总数量'
+        count_on_hand: '剩余数量'
+        count_ordered: '已预定数量'
+        activity: '规则'
+        venue_type: '场地类型'
+        price: '价格'
+        member_price: '会员价'
+      real_venue:
+        id: '场地编号'
+        count_on_hand: '剩余数量'
+        max_people: '最大人数'
+      venue_type:
+        name: '名称'
+      venue_inventory:
+        capacity: '数量'
+        venue_type: '场地类型'
+      city:
+        name: '城市名'
+      area:
+        name: '区县名'
+        city: '所属城市'
+      location:
+        city: '城市'
+        area: '区县'
+        address: '地址'
+        zip_code: '邮编'
+        full_address: '地址'
+      activity:
+        name: '名称'
+        description: '描述'
+        quantity: '数量'
+        display_on: '显示在'
+        active: '生效'
+        gym: '场馆'
+        venue_type: '场地类型'
+        start_date: '开始日期'
+        end_date: '结束日期'
+        parent_id: 上级
+        ancestors: 祖先节点
+        published_to: 发布到
+      recurrence_rule/date_rule: &recurrence_rule_date_rule
+        start_date: '开始日期'
+        end_date: '结束日期'
+      recurrence_rule/date_rule/weekly_rule:
+        day_ids: '星期'
+        <<: *recurrence_rule_date_rule
+      recurrence_rule/time_rule: &recurrence_rule_time_rule
+        start_time: '开始时间'
+        end_time: '结束时间'
+        duration: '间隔'
+      recurrence_rule/date_rule/minutely_rule:
+        <<: *recurrence_rule_time_rule
+      venue_rule:
+        type: '场地计费方式'
+      venue_rule/per_venue_rule:
+        price: '价格'
+        member_price: '会员价'
+      venue_rule/per_capita_rule:
+        price: '价格'
+        member_price: '会员价'
+        max_people: '最大人数'
+      product:
+        name: '名称'
+        description: '描述'
+        count_on_hand: '库存量'
+        sku: '编号/SKU'
+        price: '价格'
+        member_price: '会员价'
+      order: &order
+        number: '订单号'
+        total: '总金额'
+        member_total: '会员价总金额'
+        state: '状态'
+        payment_total: '已支付金额'
+        payment_state: '支付状态'
+        user: '用户'
+        username: '姓名'
+        mobile: '手机号'
+        verification_code: '验证码'
+        special_instructions: '备注'
+        checked_in_at: '签到时间'
+        remained_to_pay: '待支付金额'
+        created_at: '下单时间'
+        expired_at: '过期时间'
+        gym: '场馆'
+        payment_method: '支付方式'
+        payment_method_id: '支付方式'
+      order/venue_order:
+        <<: *order
+      order/product_order:
+        <<: *order
+      order/card_order:
+        <<: *order
+      payment_method: &payment_method
+        type: '类型'
+        name: '名称'
+        display_on: '显示在'
+        active: '生效'
+      payment_method/card:
+        <<: *payment_method
+      payment_method/free:
+        <<: *payment_method
+      payment_method/gateway/alipay:
+        <<: *payment_method
+        gateway_id: '支付宝 ID'
+        gateway_key: '支付宝 KEY'
+        gateway_user: '支付宝 Email'
+      line_item:
+        description: '描述'
+        price: '价格'
+        member_price: '会员价'
+        quantity: '数量'
+        amount: '小计'
+        member_amount: '会员价小计'
+      card:
+        number: '卡号'
+        card_type: '类型'
+        username: '姓名'
+        email: '邮箱'
+        mobile: '手机号'
+        user: '用户'
+        balance: '余额'
+        start_on: '生效日期'
+        stop_on: '失效日期'
+        validity: '有效期'
+        gyms: '可用场馆'
+      card_type:
+        name: '名称'
+        description: '描述'
+        gym_groups: '可用场馆群'
+        gym_group_ids: '可用场馆群'
+      card_line_item:
+        card: '会员卡'
+        amount: '金额'
+        reason: '原因'
+        updated_at: '时间'
+        validity: '延长有效期'
+        order: '订单'
+        order_id: '订单'
+      payment:
+        amount: '金额'
+        source: '付款来源'
+        source_id: '付款来源'
+      card_charge:
+        name: '名称'
+        price: '金额'
+        member_price: '会员价'
+        gym: '所属场馆'
+    errors:
+      messages:
+        not_earlier_than_available_form: '不能早于开始日期'
+    state_machines:
+      order:
+        state:
+          states:
+            cart: '购物中'
+            completed: '新订单'
+            checked_in: '已签到'
+            canceled: '已取消'
+            refunded: '已退款'
+        payment_state:
+          states:
+            balance_due: '等待支付'
+            paid: '已支付'
+            credit_owed: '超额付款'
+
+
+  helpers:
+    submit:
+      refresh: '刷新'
+      search: '搜索'
+  simple_form:
+    hints:
+      location:
+        address: '不含城市和区县，例如：人民路1号101室。'
+      time_rule:
+        start_time: '格式：8:20'
+        end_time: '格式：18:30'
+        duration: '请输入数字，单位：分钟'
+      card:
+        number: '不能含有空格'
+        validity: '从生效日期开始，单位：天'
+      card_line_item:
+        amount: '充值：100，扣款：-20，单位：元'
+        validity: '单位：天'
+  crud:
+    listing: '%{model}列表'
+    editing: '编辑%{model}'
+    showing: '%{model}详细信息'
+    creating: '新增%{model}'
+    new: '新增'
+    show: '查看'
+    edit: '编辑'
+    destroy: '删除'
+    destroy_confirmation: '确定要删除吗？'
+    back: '返回'
+    enable: '启用'
+    disable: '禁用'
+    confirm: '批准'
+    deny: '不批准'
+    upload: '上传'
+    enter: '进入'
+  notice:
+    enable_confirmation: '确定要启用吗？'
+    disable_confirmation: '确定要禁用吗？'
+    entered_gym: '已进入 %{gym}'
+
+  nav:
+    account: '帐号'
+    dashboard: '控制台'
+    orders: '订单'
+    gym: '当前场馆'
+    gyms: '场馆'
+    venue_inventories: '场地标准数量'
+    venues: '场地'
+    activities: '规则'
+    products: '商品'
+    cards: '会员卡'
+    card_types: '会员卡类型'
+    card_charges: '会员卡充值'
+    users: '用户'
+    companies: '企业'
+    settings: '系统设置'
+    settings_nav:
+      venue_types: '场地类型'
+      cities: '城市'
+      areas: '区县'
+      payment_methods: '支付方式'
+      gym_groups: '场馆群'
+
+  recurrence_rule:
+    date_rule: '日期重复规则'
+    date:
+      daily_rule: '每日重复规则'
+      weekly_rule: '每周重复规则'
+    time_rule: '时间重复规则'
+    time:
+      minutely_rule: '每分钟重复规则'
+  
+  flash:
+    base:
+      current_gym:
+        nil: '您还未创建场馆，请填写以下信息创建场馆。'
+        wait_confirmation: '您的场馆等待验证……'
+      current_company:
+        nil: '您还未创建企业，请填写以下信息创建企业。'
+    create:
+      success: '新建成功'
+      failure: '新建失败'
+    update:
+      success: '更新成功'
+      failure: '更新失败'
+    card_line_items:
+      create:
+        failure: '新增会员卡记录失败，请检查金额和有效期'
+    payments:
+      create:
+        successful: '付款成功'
+        failed: '付款失败，请联系客服'
+        pending: '付款等待中'
+    gyms:
+      confirm:
+        success: '批准成功'
+        failure: '批准失败'
+      deny:
+        success: '不批准成功'
+        failure: '不批准失败'
+    checkouts:
+      edit:
+        empty: '您还没有加入商品，不能结算。'
+    orders:
+      check_in:
+        success: '订单 %{number} 签到成功。'
+        failure: '订单 %{number} 签到失败，请检查订单状态和支付状态。'
+      refund:
+        success: '订单 %{number} 退款成功。'
+        failure: '订单 %{number} 退款失败，请检查会员卡状态和退款金额。'
+    cards:
+      create:
+        failure: '会员卡申请失败，请完整填写联系信息'
+        batch: '%{count}张会员卡创建成功'
+    mobiles:
+      update:
+        success: '手机验证成功'
+        failure: '手机验证码错误，请确认您的手机号'
+      send_verification_code:
+        success: '手机验证码短信已发送'
+    admin:
+      venues:
+        publish:
+          success: '场地发布至 %{date}'
+
+  'true': '是'
+  'false': '否'
+  all: '全部'
+  none: '暂无'
+  none_of: '暂无%{model}'
+  enabled: '已启用'
+  disabled: '已禁用'
+  berlin: '我要锻炼'
+  sign_out: '注销'
+  administration: '管理后台'
+  powered_by: '&copy; 2012 遥点科技&nbsp;-&nbsp;沪ICP备09057643号'
+  add_to_cart: '加入购物车'
+  expired: '过期'
+  sign_in: '登录'
+  sign_in_title: '用户登录'
+  sign_up: '注册'
+  sign_up_title: '用户注册'
+  forgot_password: '忘记密码'
+  forgot_password_title: '输入注册邮箱，重置密码'
+  reset_password: '重置密码'
+  cart_is_empty: '购物车：空'
+  items_in_cart: '购物车：%{count}个'
+  select_real_venue: '选择具体场地'
+  cart: '购物车'
+  checkout: '结算'
+  continue_shopping: '继续选购'
+  empty_cart: '清空购物车'
+  empty_cart_confirmation: '确定要清空购物车吗？'
+  out_of_stock: '库存不足'
+  venue_description:
+    one: '%{type} （时间：%{date} %{start_at} - %{stop_at}）'
+    other: '%{type} （时间：%{date} %{start_at} - %{stop_at}，数量：%{count}）'
+  real_venue_description:
+    one: '%{type} （时间：%{date} %{start_at} - %{stop_at}，场地编号：%{id}）'
+    other: '%{type} （时间：%{date} %{start_at} - %{stop_at}，场地编号：%{id}，数量：%{count}）'
+  complete_order: '确认订单'
+  back_to_cart: '放回购物车'
+  cancel_order: '取消订单'
+  cancel_order_confirmation: '确定要取消订单 %{number} 吗？'
+  pay: '支付'
+  add_card_line_item: '充值'
+  invalid: '失效'
+  have_not_checked_in: '未签到'
+  check_in: '签到'
+  check_in_order_confirmation: '确定要签到订单 %{number} 吗？该操作不能撤销！'
+  close: '关闭'
+  related_order: '相关订单'
+  display_on:
+    both: '前台和后台'
+    front_end: '前台'
+    back_end: '后台'
+  roles:
+    user: '用户'
+    admin: '系统管理员'
+    manager: '场馆管理员'
+    leader: '企业管理员'
+  price: '价格'
+  member_price: '会员价'
+  available_times: '符合要求的时间'
+  gyms_search_result:
+    zero: "没有找到符合的场馆"
+    one: "有%{count}家场馆可以立即预定"
+    other: "有%{count}家场馆可以立即预定"
+  gyms_recommended: "有%{count}家场馆符合您所在的区域"
+  click_to_order: '点击时间预定'
+  type_gym_name: '输入场馆名称搜索（可选）'
+  choose_area: '选择地区'
+  choose_venue_type: '选择活动项目'
+  choose_time: '选择时间'
+  home: '首页'
+  help: '帮助中心'
+  my_account: '我的锻炼'
+  my_records: '我的记录'
+  my_orders: '我的订单'
+  my_cards: '我的会员卡'
+  my_info: '我的资料'
+  profile: '帐户信息'
+  change_password: '修改密码'
+  search_venue: '查询运动场地'
+  contact_us: '联系我们'
+  about_us: '关于我们'
+  search: '搜索'
+  previous_day: '&larr; 前一天'
+  next_day: '后一天  &rarr;'
+  click_to_add_to_cart: '点击加入购物车'
+  venue_no: '%{index}号场地'
+  legend: '图例'
+  available_venue: '该场地可预订'
+  ordered_venue: '该场地已被预定'
+  expired_venue: '该场地已过期'
+  cannot_order_venue: '不能预定，请选择其他场地'
+  welcome: '欢迎您，%{name}'
+  website_help:
+    title: '如何使用我要锻炼网？'
+    description: '<p>是一个免费的运动场地管理系统现在您只需注册登录就可以在网上预定适合您的运动场地。</p><p>预定成功即有温磬短信提示，并告知您现场验证码。</p><p>如果您熟悉的运动场馆还不在我们的管理系统内，您还可以推荐他们加入我们，具体实施办法请参看。</p>'
+  hot_gyms: '最热门的预定场地'
+  go_to_cart: '去购物车结算'
+  added_to_cart: '成功加入购物车，您可以继续购物，或马上去购物车结算。'
+  new_card: '申请会员卡'
+  on_sale: '在售'
+  update_profile: '更新资料'
+  order_will_expire_at: '请在%{expired_at}前完成支付，否则订单将被自动取消。'
+  cannot_order_time: '-'
+  redirecting_to: '正在跳转到 %{target} ⋯⋯'
+  charge_card: '给会员卡%{number}充值'
+  how_to_create_on_sale_card: '姓名，邮箱，手机号，都不填，即可创建在售会员卡'
+  sign_up_as_leader: '企业管理员注册'
+  batch_create_description: '从上述卡号递增，批量创建10张在售会员卡。勾选该选项时，卡号必须为数字，姓名，邮箱，手机号，均留空。'
+  verify_mobile: '验证手机'
+  mobile_verification_code: '验证码'
+  resend_mobile_verification_code: '重发短信'
+  charge: '充值'
+  order_by_manager: '场馆管理员下单'
+  card_charge_for: '管理员为%{user}充值，手机号：%{mobile}'
+  refund_order: '退款'
+  refund_to: '退款到'
+  amount: '金额'
+  cash: '现金'
+  refunded_from_order: '从订单%{number}退款'
+  publish_venues: 发布场地
+  this_week: 本周
+  next_week: 下周
+  private_venue: 未发布的
+  has_child_activities: 有下级规则
+  bookmark_gym: 收藏该场馆
+  bookmarked_gym: 已收藏该场馆
+  bookmarked_gyms: 收藏的场馆
+  unbookmark_gym: 取消收藏
+  default_gym_group_name: 默认
+  

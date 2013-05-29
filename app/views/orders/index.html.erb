@@ -1,0 +1,30 @@
+<%= render '/shared/user_tabs' %>
+
+<h1><%= t 'crud.listing', model: Order.model_name.human %></h1>
+
+<%= render 'search' %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= Order.human_attribute_name(:created_at) %></th>
+      <th><%= Order.human_attribute_name(:number) %></th>
+      <th><%= Order.human_attribute_name(:gym) %></th>
+      <th><%= Order.human_attribute_name(:total) %></th>
+      <th><%= Order.human_attribute_name(:state) %></th>
+      <th><%= Order.human_attribute_name(:payment_state) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= l(order.created_at, format: :long) %></td>
+        <td><%= link_to order.number, order_path(order) %></td>
+        <td><%= link_to order.gym.name, gym_path(order.gym) %></td>
+        <td><%= order.payable? ? order.total : order.payment_total %></td>
+        <td><%= order.human_state_name %></td>
+        <td><%= order.human_payment_state_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

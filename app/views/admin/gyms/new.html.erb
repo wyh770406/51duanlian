@@ -1,0 +1,10 @@
+<% content_for :title do %>
+<h1><%= t 'crud.creating', model: Gym.model_name.human %></h1>
+<div class="toolbar">
+  <% if can?(:manage, Gym) %>
+    <%= link_to t('crud.back'), admin_gyms_path, class: 'btn' %>
+  <% end -%>
+</div>
+<% end %>
+
+<%= render 'form' %>

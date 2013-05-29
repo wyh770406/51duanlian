@@ -1,0 +1,27 @@
+.hidden {
+  display: none;
+}
+
+a.disabled {
+  @include link-colors($gray);
+  cursor: text;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn.mini {
+  padding: 2px 5px 2px;
+  font-size: 10px;
+}
+
+.price, td.price, th.price {
+  text-align: right;
+}
+
+.price-important, td.price-important, th.price-important {
+  color: lighten($red, 15%);
+  font-size: $baseFontSize + 2px;
+  font-weight: bold;
+}

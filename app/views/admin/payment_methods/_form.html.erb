@@ -1,0 +1,18 @@
+<% if f.error_notification %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert">&times;</a>
+    <p><%= f.error_notification %></p>
+  </div>
+<% end %>
+
+<%= f.input :type, collection: PaymentMethod.payment_method_classes.map { |klass| [klass.model_name.human, klass.to_s] } %>
+<%= f.input :name %>
+<%= f.input :display_on, collection: PaymentMethod::DISPLAY.map { |display| [t("display_on.#{display}"), display == :both ? nil : display.to_s] }, include_blank: false %>
+<%= f.input :active %>
+<% unless @payment_method.new_record? %>
+  <%= render resource_view_path(@payment_method, namespace: 'admin', partial: 'form'), { f: f, payment_method: @payment_method } %>
+<% end -%>
+
+<div class="form-actions">
+  <%= f.button :submit, class: 'btn btn-primary' %>
+</div>

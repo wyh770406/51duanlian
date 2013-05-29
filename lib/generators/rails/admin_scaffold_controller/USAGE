@@ -1,0 +1,14 @@
+Description:
+    Stubs out a scaffolded controller and its views. Pass the model name,
+    either CamelCased or under_scored, and a list of views as arguments.
+    The controller name is retrieved as a pluralized version of the model
+    name.
+
+    This generates a controller class in app/controllers/admin and template engine.
+
+Example:
+    `rails generate admin_scaffold_controller CreditCard number:string`
+
+    Credit card controller with URLs like /credit_card/debit.
+        Controller:      app/controllers/admin/credit_cards_controller.rb
+        Views:           app/views/admin/credit_cards/index.html.erb [...]

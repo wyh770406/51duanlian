@@ -1,0 +1,16 @@
+<%= search_form_for [:admin, @q], html: { class: "well form-inline form-horizontal" } do |f| %>
+  <div class="control-group-inline">
+    <%= f.label :name %>
+    <%= f.text_field :name_cont, class: "span3" %>
+  </div>
+  <div class="control-group-inline">
+    <%= f.label :address %>
+    <%= f.text_field :location_address_cont, class: "span3" %>
+  </div>
+  <div class="control-group-inline">
+    <%= f.label :email, User.human_attribute_name("email") %>
+    <%= f.text_field :users_email_cont, class: "span2" %>
+  </div>
+
+  <%= f.submit t('helpers.submit.search'), class: 'btn btn-primary' %>
+<% end %>

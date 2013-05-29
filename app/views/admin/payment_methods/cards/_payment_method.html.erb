@@ -1,0 +1,28 @@
+<%= simple_form_for([:admin, :order, @payment], html: { class: 'form-horizontal', id: 'form-payment-method-card' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :payment_method_id, value: @payment_method.id %>
+  <%= f.input :amount %>
+  <%= f.hidden_field :source_type, value: Card.to_s %>
+  <%= f.input :source_id, input_html: { class: "span8", autocomplete: "off", data: { provide: 'typeahead', source: cards_typeahead(current_gym) } } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, value: t('pay'), class: 'btn btn-primary' %>
+  </div>
+<% end -%>
+
+<%= javascript_tag do %>
+$('#form-payment-method-card').submit(function() {
+  orig_card_id = $('#form-payment-method-card #payment_source_id').val();
+  matched_card_id = /^\S+/.exec(orig_card_id);
+  if (matched_card_id) {
+    $('#form-payment-method-card #payment_source_id').val(matched_card_id[0]);
+  }
+  return true;
+});
+<% end -%>

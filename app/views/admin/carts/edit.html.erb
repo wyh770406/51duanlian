@@ -1,0 +1,16 @@
+<% content_for :title do %>
+<h1><%= t 'cart' %></h1>
+<div class="toolbar">
+</div>
+<% end %>
+
+<%= render '/admin/line_items/list', { order: current_order, editable: true } %>
+
+<%= link_to t('continue_shopping'), @back_to_url, class: 'btn' %>
+
+<%= link_to t('empty_cart'), empty_admin_cart_path(back_to_url: @back_to_url), class: 'btn btn-danger', confirm: t('empty_cart_confirmation'), method: :put %>
+
+<%= link_to edit_admin_checkout_path, class: 'btn btn-success pull-right' do %>
+  <i class="icon-shopping-cart icon-white"></i>
+  <%= t('checkout') %>
+<% end %>

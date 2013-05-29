@@ -1,0 +1,7 @@
+<ul class="nav nav-tabs">
+  <% current_gym.venue_types.each do |venue_type| %>
+    <li class="<%= 'active' if venue_type == @venue_type %>">
+      <%= link_to venue_type.name, admin_venues_path(venue_type_id: venue_type.id, on_date: @on_date) %>
+    </li>
+  <% end %>
+</ul>

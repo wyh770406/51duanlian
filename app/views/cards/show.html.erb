@@ -1,0 +1,54 @@
+<%= render '/shared/user_tabs' %>
+
+<div class="titlebar">
+  <h1>
+    <%= t 'crud.showing', model: Card.model_name.human %>
+  </h1>
+
+  <div class="toolbar">
+    <%= link_to t('crud.back'), cards_path, class: 'btn' %>
+  </div>
+</div>
+
+<% if @card_charges.present? %>
+  <div class="well">
+    <% @card_charges.each do |card_charge| %>
+      <%= link_to card_charge.name, charge_card_path(@card, card_charge_id: card_charge.id), method: :post, class: 'btn' %>
+    <% end -%>
+  </div>
+<% end -%>
+
+<table class="table table-nobordered">
+  <tbody>
+    <tr>
+      <th><%= Card.human_attribute_name(:gyms) %></th>
+      <td><%= @card.gyms.map(&:name).join(', ') %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:number) %></th>
+      <td><%= @card.number %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:username) %></th>
+      <td><%= @card.username %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:email) %></th>
+      <td><%= @card.email %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:mobile) %></th>
+      <td><%= @card.mobile %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:balance) %></th>
+      <td><%= number_to_currency @card.balance %></td>
+    </tr>
+    <tr>
+      <th><%= Card.human_attribute_name(:validity) %></th>
+      <td><%= @card.start_on %> - <%= @card.stop_on %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= render '/card_line_items/list', { card_line_items: @card_line_items } %>

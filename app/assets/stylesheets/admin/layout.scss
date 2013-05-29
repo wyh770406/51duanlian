@@ -1,0 +1,66 @@
+body {
+  padding-top: 40px;
+}
+
+.container {
+
+  .content {
+    background: #FFF;
+    padding: 20px;
+    margin: 0 -20px;
+    @include border-radius(0 0 6px 6px);
+    @include single-box-shadow(rgba(0, 0, 0, .15), 0, 1px, 2px);
+
+    > .page-header {
+      background: #F5F5F5;
+      padding: 20px 20px 10px;
+      margin: -20px -20px 20px;
+
+      .titlebar {
+        display: block;
+
+        h1 {
+          float: left;
+        }
+
+        .toolbar {
+          float: right;
+          line-height: 36px;
+
+          > * {
+            float: left;
+            margin-left: 5px;
+          }
+        }
+
+        &::after {
+          clear: both;
+        }
+
+        &::before, &::after {
+          display: table;
+          content: "";
+        }
+      }
+
+      ul.tabs {
+        clear: both;
+        float: none;
+        margin: 5px -20px 0 -20px;
+        padding-left: 20px;
+        width: auto;
+      }
+
+    }
+
+    .with-tabs {
+      border-bottom: 0 none;
+      padding-bottom: 0;
+    }
+
+    > footer {
+      padding: 20px 0 0 0;
+    }
+  }
+
+}

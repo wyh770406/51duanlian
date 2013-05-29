@@ -1,0 +1,28 @@
+<% content_for :title do %>
+<h1><%= t 'crud.listing', model: CardType.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.new'), new_admin_card_type_path, class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th><%= CardType.human_attribute_name(:name) %></th>
+        <th><%= CardType.human_attribute_name(:gym_groups) %></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @card_types.each do |card_type| %>
+    <tr>
+      <td><%= card_type.name %></td>
+      <td><%= card_type.gym_groups.map(&:name).join(', ') %></td>
+      <td class="control span4">
+        <%= link_to t('crud.edit'), edit_admin_card_type_path(card_type) %>
+        <%= link_to t('crud.destroy'), admin_card_type_path(card_type), confirm: t('crud.destroy_confirmation'), method: :delete %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

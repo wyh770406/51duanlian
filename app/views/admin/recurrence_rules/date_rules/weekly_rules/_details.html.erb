@@ -1,0 +1,12 @@
+<tr>
+  <th><%= date_rule.class.human_attribute_name(:start_date) %></th>
+  <td><%= l date_rule.start_date, format: :long %></td>
+</tr>
+<tr>
+  <th><%= date_rule.class.human_attribute_name(:end_date) %></th>
+  <td><%= l date_rule.end_date, format: :long %></td>
+</tr>
+<tr>
+  <th><%= date_rule.class.human_attribute_name(:day_ids) %></th>
+  <td><%= date_rule.day_names.join(' ') %></td>
+</tr>

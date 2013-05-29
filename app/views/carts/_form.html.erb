@@ -1,0 +1,13 @@
+<%= simple_form_for(@order, as: :order, url: checkout_path, method: :put, html: { class: 'form-horizontal' }) do |f| %>
+
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
+  <%= render resource_view_path(@order, partial: 'form'), { f: f } %>
+
+  <%= f.submit t("complete_order"), class: 'hidden' %>
+<% end %>

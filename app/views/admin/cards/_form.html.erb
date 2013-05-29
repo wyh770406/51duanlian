@@ -1,0 +1,32 @@
+<%= simple_form_for([:admin, @card], html: { class: 'form-horizontal' }) do |f| %>
+  <% if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert">&times;</a>
+      <p><%= f.error_notification %></p>
+    </div>
+  <% end %>
+
+  <%= f.association :card_type, collection: current_gym.card_types %>
+  <%= f.input :number %>
+  
+  <% if @card.new_record? %>
+    <div class="control-group">
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" id="batch_create" name="batch_create" value="1">
+          <%= t(:batch_create_description) %>
+        </label>
+      </div>
+    </div>
+  <% end -%>
+
+  <%= f.input :username, hint: t('how_to_create_on_sale_card') %>
+  <%= f.input :email, hint: t('how_to_create_on_sale_card') %>
+  <%= f.input :mobile, hint: t('how_to_create_on_sale_card') %>
+  <%= f.input :start_on, as: :string, input_html: { class: 'span2 date-input' } %>
+  <%= f.input :validity %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

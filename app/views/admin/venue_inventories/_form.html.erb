@@ -1,0 +1,31 @@
+<%= form_tag update_individual_admin_venue_inventories_path, method: :put do %>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+          <th><%= VenueInventory.human_attribute_name(:venue_type) %></th>
+          <th><%= VenueInventory.human_attribute_name(:capacity) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @venue_inventories.each do |vi| %>
+        <%= fields_for "venue_inventories[]", vi do |f| %>
+          <tr>
+            <td><%= vi.venue_type.name %></td>
+            <td>
+              <div class="required <%= vi.errors.blank? ? '' : 'clearfix error' %>">
+                <%= f.text_field :capacity %>
+                <% vi.errors.messages[:capacity].each do |e| %>
+                  <span class="help-inline">
+                    <%= e %>
+                  </span>
+                <% end %>
+              </div>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= submit_tag t('helpers.submit.update', model: VenueInventory.model_name.human), class: 'btn btn-primary' %>
+<% end %>

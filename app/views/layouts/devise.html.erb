@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% if content_for? :html_title %>
+    <title><%= yield :html_title %></title>
+  <% else %>
+    <title><%= t(:berlin) %></title>
+  <% end -%>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="devise">
+  <div class="container">
+    <div id="header">
+      <%= render "/shared/user_nav" %>
+      <div class="content">
+        <%= link_to root_url, id: "logo" do %>
+          <%= image_tag 'logo.jpg' %>
+        <% end -%>
+        <%= image_tag('powered_by_transparent.png', class: "header-banner") %>
+      </div>
+    </div>
+
+    <div id="content">
+      <%= render "/shared/nav" %>
+
+      <% unless alert.blank? %>
+        <div class="alert alert-error fade in">
+          <a class="close" data-dismiss="alert">&times;</a>
+          <%= alert %>
+        </div>
+      <% end %>
+
+      <% unless notice.blank? %>
+        <div class="alert alert-success fade in">
+          <a class="close" data-dismiss="alert">&times;</a>
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <% if content_for? :banner %>
+        <div id="banner">
+          <%= yield :banner %>
+        </div>
+      <% end -%>
+
+      <div id="main">
+        <div id="login" class="center">
+
+          <% unless alert.blank? %>
+            <div class="alert alert-error fade in">
+              <a class="close" data-dismiss="alert">&times;</a>
+              <%= alert %>
+            </div>
+          <% end %>
+
+          <% unless notice.blank? %>
+            <div class="alert alert-success fade in">
+              <a class="close" data-dismiss="alert">&times;</a>
+              <%= notice %>
+            </div>
+          <% end %>
+
+          <div class="center login">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <%= render '/shared/footer_nav' %>
+    </div>
+  </div>
+  <%= render "/carts/live" %>
+</body>
+</html>
