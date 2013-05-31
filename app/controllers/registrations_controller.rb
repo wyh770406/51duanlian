@@ -1,16 +1,16 @@
 class RegistrationsController < Devise::RegistrationsController
   
   def new
-  	@role = params[:role]
-  	@user_agreement = UserAgreement.first
-  	super 	
+    @role = params[:role]
+    @agreement = @role ? UserAgreement.find(2) : UserAgreement.first
+  	super
   end
 
   def create
-  	@role = params[:role]
-  	@user_agreement = UserAgreement.first
-  	super 	
-  end  
+    @role = params[:role]
+    @agreement = @role ? UserAgreement.find(2) : UserAgreement.first
+  	super
+  end
 
   protected
 

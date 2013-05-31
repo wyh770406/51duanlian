@@ -9,6 +9,7 @@ class Card < ActiveRecord::Base
 
   validates :card_type, :number, :balance, :start_on, :stop_on, presence: true
   validates :username, :mobile, presence: true, unless: Proc.new { |r| r.sold_at.blank? }
+  validates :mobile, presence: true, if: :check_mobile  
   validates :number, uniqueness: { scope: :company_id }, format: { with: /^\S+$/ }
   validates :balance, numericality: { greater_than_or_equal_to: 0 }
 
@@ -116,5 +117,9 @@ class Card < ActiveRecord::Base
       u = User.mobile_verified.find_by_mobile(self.mobile)
       self.user = u unless u.blank?
     end
+  end
+
+  def check_mobile
+    self.username.present?
   end
 end

@@ -3,5 +3,6 @@ class UserAgreementsController < BaseController
   
   def index
   	@user_agreement = UserAgreement.first
+  	@venue_agreement = UserAgreement.find(2)
   end
 end

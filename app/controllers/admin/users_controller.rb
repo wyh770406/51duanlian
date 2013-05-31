@@ -7,11 +7,9 @@ module Admin
     before_filter :check_params, only: [:create, :update]
 
     def index
-      @users = if current_user.is?(:admin)
-        User.page(params[:page]).per(15)
-      else
-        current_company.users.page(params[:page]).per(15)
-      end
+      @users = current_user.is?(:admin) ? User : current_company.users
+      @q = @users.search(params[:q])
+      @users = @q.result.page(params[:page]).per(15)
     end
 
     def show

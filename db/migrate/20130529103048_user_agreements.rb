@@ -6,5 +6,6 @@ class UserAgreements < ActiveRecord::Migration
       t.text :content
     end
     UserAgreement.create!(:title=>"网络用户协议", :content=>"请更改协议内容")
+    UserAgreement.create!(:title=>"场馆用户服务协议", :content=>"请更改协议内容")
   end
 end

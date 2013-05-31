@@ -1,8 +1,15 @@
 <div id="home-content">
   <div class="row-fluid">
     <div class="help">    
-      <center><h1><%= t("user_agreement")%></h1></center>
-          <%=raw(@user_agreement.content)%>
+      <center><h1><%= t("nav.user_agreements")%></h1></center>
+          <ol>
+          	<li><a href="#user_agreement"><%= t("user_agreement")%></a></li>
+            <li><a href="#venue_agreement"><%= t("venue_agreement")%></a></li>
+          </ol>
+          <h2><a name="user_agreement"></a><%= t("user_agreement")%></h2>
+          <div><%=raw(@user_agreement.content)%></div>
+          <h2><a name="venue_agreement"></a><%= t("venue_agreement")%></h2>
+          <div><%=raw(@venue_agreement.content)%></div>
     </div>
   </div>
 </div>

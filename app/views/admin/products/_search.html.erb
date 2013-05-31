@@ -1,0 +1,11 @@
+<%= search_form_for [:admin, @q], html: { class: "well form-inline form-horizontal" } do |f| %>
+  <div class="control-group-inline">
+    <%= f.label :name %>
+    <%= f.text_field :name_cont, class: "span2" %>
+  </div>
+  <div class="control-group-inline">
+    <%= f.label :sku %>
+    <%= f.text_field :sku_cont, class: "span2" %>
+  </div>
+  <%= f.submit t('helpers.submit.search'), class: 'btn btn-primary' %>
+<% end %>

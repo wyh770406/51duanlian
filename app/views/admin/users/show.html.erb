@@ -1,5 +1,5 @@
 <% content_for :title do %>
-<h1>User</h1>
+<h1><%= t 'crud.showing', model: User.model_name.human %></h1>
 <div class="toolbar">
   <%= link_to t('crud.edit'), edit_admin_user_path(@user), class: 'btn btn-primary' %>
   <%= link_to t('crud.back'), admin_users_path, class: 'btn' %>
@@ -35,7 +35,7 @@
     <tr>
       <th><%= User.human_attribute_name(:roles) %></th>
       <td>
-        <%= @user.roles.map { |role| t(role, scope: "roles") }.join(', ') %>
+        <%= @user.roles.empty? ? t(:user, scope: "roles") : @user.roles.map { |role| t(role, scope: "roles") }.join(', ') %>
       </td>
     </tr>
     <tr>
