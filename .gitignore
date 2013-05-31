@@ -1,0 +1,7 @@
+.svn/
+.DS_Store
+.idea/
+*.swp
+*.log
+*.log.age
+tmp/

@@ -6588,3 +6588,946 @@ Processing by UserAgreementsController#index as HTML
   Rendered shared/_footer_nav.html.erb (0.5ms)
   Rendered carts/_live.html.erb (0.3ms)
 Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:10:43 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.4ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.4ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.2ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (177.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (115.3ms)
+  Rendered home/index.html.erb within layouts/application (309.5ms)
+  Rendered shared/_user_nav.html.erb (3.4ms)
+  Rendered shared/_nav.html.erb (2.1ms)
+  Rendered shared/_footer_nav.html.erb (1.7ms)
+  Rendered carts/_live.html.erb (1.6ms)
+Completed 200 OK in 619ms (Views: 561.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:12:57 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.3ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.2ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.2ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (10.3ms)
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:12:59 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.3ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (7.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (9.8ms)
+  Rendered home/index.html.erb within layouts/application (20.9ms)
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.5ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:14:19 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.6ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (48.7ms)
+  Rendered home/index.html.erb within layouts/application (56.9ms)
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:14:22 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (4.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (9.4ms)
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:14:36 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (6.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (14.9ms)
+  Rendered home/index.html.erb within layouts/application (26.3ms)
+  Rendered shared/_user_nav.html.erb (1.6ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-30 18:21:53 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.2ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.2ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (9.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (10.0ms)
+  Rendered home/index.html.erb within layouts/application (24.7ms)
+  Rendered shared/_user_nav.html.erb (1.4ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 1.8ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/current/config/initializers/simple_form.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 08:57:32 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.3ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.2ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.2ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (182.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (78.5ms)
+  Rendered home/index.html.erb within layouts/application (318.5ms)
+  Rendered shared/_user_nav.html.erb (3.2ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_footer_nav.html.erb (1.5ms)
+  Rendered carts/_live.html.erb (2.3ms)
+Completed 200 OK in 1409ms (Views: 1363.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-05-31 08:57:53 +0800
+Processing by RegistrationsController#new as HTML
+  [1m[35mUserAgreement Load (0.5ms)[0m  SELECT `user_agreements`.* FROM `user_agreements` LIMIT 1
+  Rendered devise/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (47.3ms)
+  Rendered shared/_user_nav.html.erb (0.0ms)
+  Rendered shared/_nav.html.erb (28.4ms)
+  Rendered shared/_footer_nav.html.erb (0.5ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 202ms (Views: 130.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-31 08:58:23 +0800
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3XyXNsSLJyyys3R3g1mZzC0YyG17y3wb0LiyyhvG55g=", "user"=>{"role"=>"", "email"=>"wyh770507@gmail.com", "login_name"=>"wyh770507", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "mobile"=>"15066666668", "name"=>"David wu"}, "agreement_check"=>"1", "commit"=>"注册"}
+  [1m[36mUserAgreement Load (0.1ms)[0m  [1mSELECT `user_agreements`.* FROM `user_agreements` LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'wyh770507@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`login_name` = 'wyh770507' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`mobile` = BINARY '15066666668' LIMIT 1[0m
+  Rendered sms/verify_mobile.text.erb (0.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`company_id`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `login_name`, `mobile`, `mobile_verification_code`, `mobile_verified_at`, `name`, `password_salt`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `roles_mask`, `sign_in_count`, `updated_at`) VALUES (NULL, '2013-05-31 00:58:23', NULL, NULL, 'wyh770507@gmail.com', '13689696094815ccc8dab91df4ff95708ee3bc3e84eada06fab13df4622e12b385d486a55a811773af13fb31893477a368d36040c7d2c3aa813880f519b86d71', NULL, NULL, 'wyh770507', '15066666668', '058015', NULL, 'David wu', 'gYqmH2ru24zortGsZa7j', NULL, NULL, NULL, 0, 0, '2013-05-31 00:58:23')[0m
+  [1m[35m (110.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-05-31 00:58:23', `current_sign_in_at` = '2013-05-31 00:58:23', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2013-05-31 00:58:23' WHERE `users`.`id` = 23
+  [1m[36m (56.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/mobile/edit
+Completed 302 Found in 450ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mobile/edit" for 127.0.0.1 at 2013-05-31 08:58:24 +0800
+Processing by MobilesController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered shared/_user_tabs.html.erb (2.4ms)
+  Rendered mobiles/edit.html.erb within layouts/application (13.7ms)
+  Rendered shared/_user_nav.html.erb (0.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2013-05-31 08:58:47 +0800
+Processing by RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (3.3ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (30.4ms)
+  Rendered shared/_user_nav.html.erb (0.1ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 96ms (Views: 93.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2013-05-31 08:59:19 +0800
+Processing by RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3XyXNsSLJyyys3R3g1mZzC0YyG17y3wb0LiyyhvG55g=", "user"=>{"email"=>"wyh770507@gmail.com", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"修改密码"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE (`users`.`login_name` = 'wyh770507' AND `users`.`id` != 23) LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE (`users`.`mobile` = BINARY '15066666668' AND `users`.`id` != 23) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE `users` SET `password_salt` = 'RTvirSLrCumBFmF1Xnif', `encrypted_password` = '1357708f398bb45abf62d264ad307662ebd96aa0b90146c71848d34d417907221e760dfd0605dd7a610b2c6ea98b9d8152e38f7550e810ceed1def2a2d2b23e9', `updated_at` = '2013-05-31 00:59:19' WHERE `users`.`id` = 23[0m
+  [1m[35m (64.0ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/users/edit.23
+Completed 302 Found in 108ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/edit.23" for 127.0.0.1 at 2013-05-31 08:59:19 +0800
+Processing by RegistrationsController#edit as 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered shared/_user_tabs.html.erb (1.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.0ms)
+  Rendered shared/_user_nav.html.erb (0.1ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 08:59:27 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.2ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (8.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (14.7ms)
+  Rendered home/index.html.erb within layouts/application (27.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_footer_nav.html.erb (30.9ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 80.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-05-31 08:59:36 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3XyXNsSLJyyys3R3g1mZzC0YyG17y3wb0LiyyhvG55g="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 08:59:37 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (4.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (11.3ms)
+  Rendered home/index.html.erb within layouts/application (19.0ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-05-31 08:59:53 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xUSiIUCxnIhgzBXXdJZ6oX5y1m6e072tZFG8OpCLeh8=", "user"=>{"login"=>"wyh770507", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770507' OR lower(email) = 'wyh770507') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2013-05-31 00:59:53', `sign_in_count` = 2, `updated_at` = '2013-05-31 00:59:53' WHERE `users`.`id` = 23
+  [1m[36m (69.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/mobile/edit
+Completed 302 Found in 110ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mobile/edit" for 127.0.0.1 at 2013-05-31 08:59:53 +0800
+Processing by MobilesController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered shared/_user_tabs.html.erb (1.3ms)
+  Rendered mobiles/edit.html.erb within layouts/application (2.3ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-05-31 08:59:55 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xUSiIUCxnIhgzBXXdJZ6oX5y1m6e072tZFG8OpCLeh8="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 08:59:55 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.4ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (12.3ms)
+  Rendered home/index.html.erb within layouts/application (20.4ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (30.0ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-05-31 09:00:04 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Ir8EeXADCILXchbC8B3O8gB4ED/eXIXMSk+rSicvJI=", "user"=>{"login"=>"wyh770507", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770507' OR lower(email) = 'wyh770507') LIMIT 1[0m
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Ir8EeXADCILXchbC8B3O8gB4ED/eXIXMSk+rSicvJI=", "user"=>{"login"=>"wyh770507", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  Rendered devise/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (7.3ms)
+  Rendered shared/_user_nav.html.erb (2.1ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 91ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-05-31 09:00:18 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Ir8EeXADCILXchbC8B3O8gB4ED/eXIXMSk+rSicvJI=", "user"=>{"login"=>"wyh770507", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770507' OR lower(email) = 'wyh770507') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-05-31 00:59:53', `current_sign_in_at` = '2013-05-31 01:00:18', `sign_in_count` = 3, `updated_at` = '2013-05-31 01:00:18' WHERE `users`.`id` = 23
+  [1m[36m (66.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/mobile/edit
+Completed 302 Found in 79ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mobile/edit" for 127.0.0.1 at 2013-05-31 09:00:18 +0800
+Processing by MobilesController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered shared/_user_tabs.html.erb (1.6ms)
+  Rendered mobiles/edit.html.erb within layouts/application (2.7ms)
+  Rendered shared/_user_nav.html.erb (0.6ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 09:05:49 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.6ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.2ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.2ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (35.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (10.2ms)
+  Rendered home/index.html.erb within layouts/application (48.5ms)
+  Rendered shared/_user_nav.html.erb (2.0ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-05-31 09:06:01 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03tSLg820ykUD49wOTQLzGH2cUjBcB7X1OHLSIMeM1s=", "user"=>{"login"=>"wyh770406@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770406@gmail.com' OR lower(email) = 'wyh770406@gmail.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-05-29 10:29:26', `current_sign_in_at` = '2013-05-31 01:06:01', `sign_in_count` = 12, `updated_at` = '2013-05-31 01:06:01' WHERE `users`.`id` = 22
+  [1m[36m (153.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 163ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-05-31 09:06:01 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-05-31 09:06:01 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered admin/gyms/_search.html.erb (15.8ms)
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `gyms` [0m
+  Rendered admin/gyms/index.html.erb within layouts/admin (67.3ms)
+  Rendered admin/shared/_topnav.html.erb (242.3ms)
+Completed 200 OK in 1821ms (Views: 1783.6ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/admin/gym_session/4" for 127.0.0.1 at 2013-05-31 09:07:52 +0800
+Processing by Admin::GymSessionController#update as HTML
+  Parameters: {"authenticity_token"=>"03tSLg820ykUD49wOTQLzGH2cUjBcB7X1OHLSIMeM1s=", "id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.4ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 LIMIT 1[0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 51ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-05-31 09:07:52 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-05-31 09:07:52 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/orders/_tabs.html.erb (6.2ms)
+  [1m[35mPaymentMethod Load (0.4ms)[0m  SELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1
+  Rendered admin/orders/_search.html.erb (92.7ms)
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 4 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 4 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))
+  Rendered admin/orders/index.html.erb within layouts/admin (108.7ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (88.6ms)
+Completed 200 OK in 350ms (Views: 317.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2013-05-31 09:07:58 +0800
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`gym_id` = 4[0m
+  Rendered admin/products/index.html.erb within layouts/admin (9.2ms)
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (41.4ms)
+Completed 200 OK in 181ms (Views: 170.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/products/new" for 127.0.0.1 at 2013-05-31 09:08:08 +0800
+Processing by Admin::ProductsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/products/_form.html.erb (8.8ms)
+  Rendered admin/products/new.html.erb within layouts/admin (18.4ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (9.4ms)
+Completed 200 OK in 438ms (Views: 422.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/products" for 127.0.0.1 at 2013-05-31 09:08:48 +0800
+Processing by Admin::ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03tSLg820ykUD49wOTQLzGH2cUjBcB7X1OHLSIMeM1s=", "product"=>{"name"=>"我的商品测试", "sku"=>"w33eee", "price"=>"12", "count_on_hand"=>"1234", "description"=>"fffffr"}, "commit"=>"新增商品"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`count_on_hand`, `created_at`, `deleted_at`, `description`, `gym_id`, `name`, `price`, `sku`, `updated_at`) VALUES (1234, '2013-05-31 01:08:48', NULL, 'fffffr', 4, '我的商品测试', 12.0, 'w33eee', '2013-05-31 01:08:48')[0m
+  [1m[35m (121.9ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/admin/products
+Completed 302 Found in 136ms (ActiveRecord: 122.4ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2013-05-31 09:08:48 +0800
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`gym_id` = 4[0m
+  Rendered admin/products/index.html.erb within layouts/admin (3.9ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (9.2ms)
+Completed 200 OK in 144ms (Views: 137.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/cart/populate?back_to_url=http%3A%2F%2F127.0.0.1%3A3000%2Fadmin%2Fproducts&items_attributes%5B%5D%5Bid%5D=5&items_attributes%5B%5D%5Bquantity%5D=1&type=Order%3A%3AProductOrder" for 127.0.0.1 at 2013-05-31 09:09:30 +0800
+Processing by Admin::CartsController#populate as HTML
+  Parameters: {"authenticity_token"=>"03tSLg820ykUD49wOTQLzGH2cUjBcB7X1OHLSIMeM1s=", "back_to_url"=>"http://127.0.0.1:3000/admin/products", "items_attributes"=>[{"id"=>"5", "quantity"=>"1"}], "type"=>"Order::ProductOrder"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mOrder::ProductOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`type` IN ('Order::ProductOrder') AND `orders`.`number` = 'P435828038' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `orders` (`card_id`, `checked_in_at`, `created_at`, `expired_at`, `gym_id`, `member_total`, `mobile`, `number`, `payment_method_id`, `payment_state`, `payment_total`, `special_instructions`, `state`, `total`, `type`, `updated_at`, `user_id`, `username`, `verification_code`) VALUES (NULL, NULL, '2013-05-31 01:09:30', NULL, 4, NULL, NULL, 'P435828038', NULL, 'balance_due', NULL, NULL, 'cart', NULL, 'Order::ProductOrder', '2013-05-31 01:09:30', NULL, NULL, NULL)
+  [1m[36m (79.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`gym_id` = 4 AND `products`.`id` = 5 LIMIT 1
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT `line_items`.* FROM `line_items` WHERE ((`line_items`.`order_id` = 64 AND `line_items`.`purchasable_type` = 'Product' AND `line_items`.`purchasable_id` = 5)) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `line_items` (`created_at`, `member_price`, `order_id`, `price`, `purchasable_id`, `purchasable_type`, `quantity`, `updated_at`) VALUES ('2013-05-31 01:09:30', 12.0, 64, 12.0, 5, 'Product', 1, '2013-05-31 01:09:30')[0m
+  [1m[35m (58.8ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/admin/cart/edit?back_to_url=http%3A%2F%2F127.0.0.1%3A3000%2Fadmin%2Fproducts
+Completed 302 Found in 280ms (ActiveRecord: 142.5ms)
+
+
+Started GET "/admin/cart/edit?back_to_url=http%3A%2F%2F127.0.0.1%3A3000%2Fadmin%2Fproducts" for 127.0.0.1 at 2013-05-31 09:09:30 +0800
+Processing by Admin::CartsController#edit as HTML
+  Parameters: {"back_to_url"=>"http://127.0.0.1:3000/admin/products"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE ((`orders`.`id` = 64 AND `orders`.`gym_id` = 4)) LIMIT 1[0m
+  [1m[35mLineItem Load (0.5ms)[0m  SELECT `line_items`.* FROM `line_items` WHERE `line_items`.`order_id` = 64
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`id` = 5 LIMIT 1[0m
+  Rendered admin/line_items/_form.html.erb (1.8ms)
+  Rendered admin/line_items/_list.html.erb (33.3ms)
+  Rendered admin/carts/edit.html.erb within layouts/admin (43.1ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (8.6ms)
+Completed 200 OK in 211ms (Views: 200.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/checkout/edit" for 127.0.0.1 at 2013-05-31 09:09:44 +0800
+Processing by Admin::CheckoutsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT `orders`.* FROM `orders` WHERE ((`orders`.`id` = 64 AND `orders`.`gym_id` = 4)) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`order_id` = 64[0m
+  Rendered admin/orders/product_orders/_form.html.erb (0.3ms)
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT `line_items`.* FROM `line_items` WHERE `line_items`.`order_id` = 64
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`id` = 5 LIMIT 1[0m
+  Rendered admin/line_items/_list.html.erb (8.7ms)
+  Rendered admin/checkouts/_form.html.erb (13.4ms)
+  Rendered admin/checkouts/edit.html.erb within layouts/admin (15.4ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`order_id` = 64[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`order_id` = 64
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (10.9ms)
+Completed 200 OK in 199ms (Views: 189.8ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/admin/checkout" for 127.0.0.1 at 2013-05-31 09:09:52 +0800
+Processing by Admin::CheckoutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03tSLg820ykUD49wOTQLzGH2cUjBcB7X1OHLSIMeM1s=", "commit"=>"确认订单"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE ((`orders`.`id` = 64 AND `orders`.`gym_id` = 4)) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `orders` SET `user_id` = 22, `updated_at` = '2013-05-31 01:09:52' WHERE `orders`.`type` IN ('Order::ProductOrder') AND `orders`.`id` = 64
+  [1m[36m (85.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT `line_items`.* FROM `line_items` WHERE `line_items`.`order_id` = 64
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `orders` SET `total` = 12.0, `member_total` = 12.0, `payment_total` = 0.0, `updated_at` = '2013-05-31 01:09:52' WHERE `orders`.`type` IN ('Order::ProductOrder') AND `orders`.`id` = 64[0m
+  [1m[35m (0.3ms)[0m  UPDATE `orders` SET `state` = 'completed', `updated_at` = '2013-05-31 01:09:52' WHERE `orders`.`type` IN ('Order::ProductOrder') AND `orders`.`id` = 64
+  [1m[36m (0.3ms)[0m  [1mUPDATE `products` SET `count_on_hand` = 1233, `updated_at` = '2013-05-31 01:09:52' WHERE `products`.`id` = 5[0m
+  [1m[35m (59.7ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/admin/orders/64
+Completed 302 Found in 183ms (ActiveRecord: 148.0ms)
+
+
+Started GET "/admin/orders/64" for 127.0.0.1 at 2013-05-31 09:09:52 +0800
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 4 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 4 AND `orders`.`id` = 64 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND ((`payment_methods`.`active` = 1 AND (`payment_methods`.`display_on` = 'back_end' OR `payment_methods`.`display_on` = ''))) AND (1=1)
+  [1m[36mPaymentMethod Load (0.3ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND ((`payment_methods`.`active` = 1 AND (`payment_methods`.`display_on` = 'back_end' OR `payment_methods`.`display_on` = ''))) AND (1=1)[0m
+  Rendered admin/orders/_payment_methods.html.erb (6.7ms)
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT `line_items`.* FROM `line_items` WHERE `line_items`.`order_id` = 64
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`deleted_at` IS NULL AND `products`.`id` = 5 LIMIT 1[0m
+  Rendered admin/line_items/_list.html.erb (3.8ms)
+  Rendered admin/orders/show.html.erb within layouts/admin (15.1ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (9.1ms)
+Completed 200 OK in 156ms (Views: 144.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 10:31:31 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (4.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (10.4ms)
+  Rendered home/index.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-05-31 10:31:38 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_role rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 10:31:38 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.2ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (14.8ms)
+  Rendered home/index.html.erb within layouts/application (23.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (34.2ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-05-31 10:31:49 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_role rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 10:31:50 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.0ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (9.1ms)
+  Rendered home/index.html.erb within layouts/application (17.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-05-31 10:35:18 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Ir8EeXADCILXchbC8B3O8gB4ED/eXIXMSk+rSicvJI="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 41ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 10:35:18 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (44.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (83.1ms)
+  Rendered home/index.html.erb within layouts/application (135.7ms)
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 219ms (Views: 212.6ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-05-31 10:35:24 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q02GfXEdJsyXtHBvarspjtKEhyfdhmqy0cB0phAFWWQ=", "user"=>{"login"=>"wyh770406@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770406@gmail.com' OR lower(email) = 'wyh770406@gmail.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-05-31 01:06:01', `current_sign_in_at` = '2013-05-31 02:35:24', `sign_in_count` = 13, `updated_at` = '2013-05-31 02:35:24' WHERE `users`.`id` = 22
+  [1m[36m (65.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-05-31 10:35:24 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-05-31 10:35:24 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered admin/gyms/_search.html.erb (14.3ms)
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `gyms` [0m
+  Rendered admin/gyms/index.html.erb within layouts/admin (33.8ms)
+  Rendered admin/shared/_topnav.html.erb (91.7ms)
+Completed 200 OK in 268ms (Views: 246.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-05-31 10:35:30 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 1
+  [1m[36mGym Load (0.4ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 3[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 6
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 7[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 8
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 9[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 10
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 11[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 12
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 13[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 14
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 15[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 16
+  [1m[36mGym Load (0.4ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 17[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 18
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered admin/users/index.html.erb within layouts/admin (60.2ms)
+  Rendered admin/shared/_topnav.html.erb (5.8ms)
+Completed 200 OK in 204ms (Views: 189.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/admin/users?page=2" for 127.0.0.1 at 2013-05-31 10:35:35 +0800
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 15 OFFSET 15[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 19
+  [1m[36mGym Load (0.6ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 20[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 21
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 23
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered admin/users/index.html.erb within layouts/admin (15.3ms)
+  Rendered admin/shared/_topnav.html.erb (6.0ms)
+Completed 200 OK in 167ms (Views: 155.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 10:36:03 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5
+  Rendered home/_gyms.html.erb (15.1ms)
+  Rendered home/index.html.erb within layouts/application (24.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-05-31 10:36:09 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"q02GfXEdJsyXtHBvarspjtKEhyfdhmqy0cB0phAFWWQ="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-31 10:36:09 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (5.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5[0m
+  Rendered home/_gyms.html.erb (10.3ms)
+  Rendered home/index.html.erb within layouts/application (19.0ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_footer_nav.html.erb (0.5ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up?role=leader" for 127.0.0.1 at 2013-05-31 10:36:12 +0800
+Processing by RegistrationsController#new as HTML
+  Parameters: {"role"=>"leader"}
+  [1m[35mUserAgreement Load (0.1ms)[0m  SELECT `user_agreements`.* FROM `user_agreements` LIMIT 1
+  Rendered devise/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (8.8ms)
+  Rendered shared/_user_nav.html.erb (0.1ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.5ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 64.0ms | ActiveRecord: 1.1ms)
