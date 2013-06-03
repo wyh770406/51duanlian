@@ -58,7 +58,7 @@ SimpleNavigation::Configuration.run do |navigation|
     end
     primary.item :users, t('nav.users'), admin_users_url if can? :manage, User
 
-    if can?(:manage, Company) || can?(:manage, GymGroup) || can?(:manage, VenueType) || can?(:manage, City) || can?(:manage, Area) || can?(:manage, PaymentMethod) || can?(:manage, UserAgreement)
+    if can?(:manage, Company) || can?(:manage, GymGroup) || can?(:manage, VenueType) || can?(:manage, City) || can?(:manage, Area) || can?(:manage, PaymentMethod)
       primary.item :settings, t('nav.settings'), '#' do |sub_nav|
         sub_nav.item :companies, t('nav.companies'), admin_companies_url if can?(:manage, Company)
 
@@ -89,7 +89,6 @@ SimpleNavigation::Configuration.run do |navigation|
         if can?(:manage, PaymentMethod)
           sub_nav.item :payment_methods, t('nav.settings_nav.payment_methods'), admin_payment_methods_url
         end
-        sub_nav.item :user_agreements, t('nav.user_agreements'), admin_user_agreements_url if can?(:manage, UserAgreement)        
       end
     end
     # You can also specify a condition-proc that needs to be fullfilled to display an item.

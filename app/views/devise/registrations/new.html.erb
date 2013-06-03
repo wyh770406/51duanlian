@@ -15,16 +15,8 @@
     <%= f.input :name %>
   </div>
 
-  <center><h1><%= @role ? t("venue_agreement") : t("user_agreement")%></h1></center>
-  <div class="inputs" style="width:520px;height:120px; overflow-y:scroll; ">
-    <%=raw(@agreement.content)%>
-  </div>
-  <div align="center">
-   <%= check_box_tag :agreement_check %>&nbsp;&nbsp; <%= t("agreement_confirm")%>
-  </div>
-
   <div class="form-actions">
-    <%= f.button :submit, t('sign_up'), class: 'btn btn-large btn-primary', onclick: "javascript:return validate_user_agreement();" %>
+    <%= f.button :submit, t('sign_up'), class: 'btn btn-large btn-primary' %>
   </div>
 <% end %>
 

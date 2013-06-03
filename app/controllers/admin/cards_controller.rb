@@ -57,7 +57,7 @@ module Admin
     def charge
       @card_charge = CardCharge.find(params[:card_charge_id])
       @card = current_gym.cards.find(params[:id])
-      @card_order = @card_charge.create_order(current_user, @card, t('card_charge_for', user: @card.username, mobile: @card.mobile))
+      @card_order = @card_charge.create_order(current_user, @card, t('card_charge_for', user: @card.username, mobile: @card.mobile), current_gym)
 
       redirect_to admin_order_path(@card_order)
     end

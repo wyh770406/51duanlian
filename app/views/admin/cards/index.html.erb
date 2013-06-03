@@ -1,6 +1,9 @@
 <% content_for :title do %>
 <h1><%= t 'crud.listing', model: Card.model_name.human %></h1>
 <div class="toolbar">
+  <% if can?(:manage, CardLineItem) %>
+    <%= link_to t('crud.listing', model: t('card_line_items_without_order')), admin_card_line_items_path, class: 'btn' %>
+  <% end -%>
   <%= link_to t('crud.new'), new_admin_card_path, class: 'btn btn-primary' %>
 </div>
 <% end %>

@@ -1,7 +1,7 @@
 <% content_for :sidebar do %>
   <div class="well">
     <ul class="nav nav-list">
-      <% unless current_user.is?('admin') || current_user.is?('manager') %>
+      <% unless current_user.is?('admin') || current_user.is?('manager') || current_user.is?('leader') %>
         <li class="nav-header">
           <%= t("my_records") %>
         </li>
