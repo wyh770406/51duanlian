@@ -10,7 +10,7 @@
       <% VenueType.all.each_with_index do |venue_type, index| %>
         <div class="tab-pane <%= 'active' if index == 0 %>" id="<%= dom_id(venue_type) %>">
           <ol>
-            <% venue_type.gyms.each do |gym| %>
+            <% venue_type.gyms.confirmed.each do |gym| %>
               <li>
                 <%= link_to gym.name, gym_path(gym) %>
               </li>

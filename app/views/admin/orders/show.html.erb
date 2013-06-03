@@ -33,6 +33,12 @@
       <th><%= Order.human_attribute_name(:payment_total) %></th>
       <td><%= @order.payment_total %></td>
     </tr>
+    <% if @order.refund_total %>
+      <tr>
+        <th><%= Order.human_attribute_name(:refund_total) %></th>
+        <td><span class="label label-important"><%= @order.refund_total %></span></td>
+      </tr>
+    <% end -%>
     <tr>
       <th><%= Order.human_attribute_name(:payment_method) %></th>
       <td><%= @order.payment_method.try(:name) %></td>

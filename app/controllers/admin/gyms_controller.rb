@@ -6,7 +6,7 @@ module Admin
     def index
       @gyms = current_user.is?('admin') ? Gym.scoped : current_user.gyms
       @q = @gyms.search(params[:q])
-      @gyms = @q.result.page(params[:page]).per(15)
+      @gyms = @q.result.uniq.page(params[:page]).per(15)
     end
 
     def show

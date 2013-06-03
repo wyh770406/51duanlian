@@ -19,7 +19,6 @@ zh-CN:
       gym_group: '场馆群'
       venue: '场地'
       venue_type: '场地类型'
-      user_agreement: '用户协议'
       venue_inventory: '场地标准数量'
       city: '城市'
       area: '区县'
@@ -105,8 +104,6 @@ zh-CN:
         venue_type: '场地类型'
       city:
         name: '城市名'
-      user_agreement:
-        content: '协议内容'        
       area:
         name: '区县名'
         city: '所属城市'
@@ -163,6 +160,7 @@ zh-CN:
         member_total: '会员价总金额'
         state: '状态'
         payment_total: '已支付金额'
+        refund_total: '退款金额'
         payment_state: '支付状态'
         user: '用户'
         username: '姓名'
@@ -311,7 +309,6 @@ zh-CN:
     card_charges: '会员卡充值'
     users: '用户'
     companies: '企业'
-    user_agreements: '用户协议'    
     settings: '系统设置'
     settings_nav:
       venue_types: '场地类型'
@@ -422,7 +419,7 @@ zh-CN:
   cancel_order: '取消订单'
   cancel_order_confirmation: '确定要取消订单 %{number} 吗？'
   pay: '支付'
-  add_card_line_item: '充值'
+  add_card_line_item: '自定义收支记录'
   invalid: '失效'
   have_not_checked_in: '未签到'
   check_in: '签到'
@@ -463,10 +460,6 @@ zh-CN:
   search_venue: '查询运动场地'
   contact_us: '联系我们'
   about_us: '关于我们'
-  user_agreement: '网络用户协议'  
-  venue_agreement: '场馆用户服务协议'   
-  agreement_confirm: '同意协议条款'
-  cancan_access_denied: '你没有权限访问该页内容！'  
   search: '搜索'
   previous_day: '&larr; 前一天'
   next_day: '后一天  &rarr;'
@@ -515,4 +508,4 @@ zh-CN:
   bookmarked_gyms: 收藏的场馆
   unbookmark_gym: 取消收藏
   default_gym_group_name: 默认
-  
+  card_line_items_without_order: 自定义充值

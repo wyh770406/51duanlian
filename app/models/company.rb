@@ -6,6 +6,8 @@ class Company < ActiveRecord::Base
   has_many :users, dependent: :destroy
   has_many :card_types, dependent: :destroy
   has_many :card_charges, dependent: :destroy
+  has_many :cards
+  has_many :card_line_items, through: :cards
 
   after_create :create_default_gym_group
 

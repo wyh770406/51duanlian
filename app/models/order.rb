@@ -121,14 +121,22 @@ class Order < ActiveRecord::Base
   def refund_to_card(card, amount)
     if card.process(self, amount, 0, I18n.t(:refunded_from_order, number: self.number))
       fire_state_event(:refund)
+      update_refund_total(amount)
     end
   end
 
-  def refund_via_cash
+  def refund_via_cash(amount)
     fire_state_event(:refund)
+    update_refund_total(amount)
   end
 
   protected
+
+  def update_refund_total(amount)
+    self.refund_total ||= 0
+    self.refund_total += amount
+    self.save
+  end
 
   def self.initial
     'R'

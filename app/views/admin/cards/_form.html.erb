@@ -1,4 +1,10 @@
 <%= simple_form_for([:admin, @card], html: { class: 'form-horizontal' }) do |f| %>
+  <% if @card.new_record? %>
+    <div class="alert alert-warning">
+      建立已售出的会员卡，必须同时填写姓名和手机号
+    </div>
+  <% end -%>
+
   <% if f.error_notification %>
     <div class="alert alert-error fade in">
       <a class="close" data-dismiss="alert">&times;</a>

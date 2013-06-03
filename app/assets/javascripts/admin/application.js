@@ -7,8 +7,6 @@
 
 //= require_tree .
 //= require_self
-//= require ckeditor/init
-//= require_tree ../ckeditor
 
 $(function() {
   $('.date-input').datepicker({

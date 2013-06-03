@@ -38,8 +38,8 @@ class CardCharge < ActiveRecord::Base
   def restock!(quantity)
   end
 
-  def create_order(user, card, special_instructions = nil)
-    order = Order::CardOrder.create(gym: self.company.gyms.first, user: user, card: card, special_instructions: special_instructions)
+  def create_order(user, card, special_instructions = nil, order_gym = nil)
+    order = Order::CardOrder.create(gym: order_gym || self.company.gyms.first, user: user, card: card, special_instructions: special_instructions)
     order.populate([{ id: self.id, quantity: 1 }])
     order.fire_state_event(:complete)
     order

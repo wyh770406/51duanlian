@@ -1,7 +1,5 @@
 Berlin::Application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor'
-
   resource :mobile, only: [:edit, :update] do
     member do
       post 'send_verification_code'
@@ -38,8 +36,6 @@ Berlin::Application.routes.draw do
     end
     resources :line_items, only: [:update, :destroy]
   end
-
-  resources :user_agreements, only: [:index]
 
   resources :gyms, only: [:show] do
     member do
@@ -126,10 +122,14 @@ Berlin::Application.routes.draw do
 
     resources :products, except: [:show]
 
+    resources :card_line_items, only: [:index]
+
     resources :cards do
       member do
         post 'charge'
       end
+
+      resources :card_line_items, only: [:new, :create]
     end
 
     resources :card_types, except: [:show]
@@ -147,14 +147,12 @@ Berlin::Application.routes.draw do
     resources :venue_types, except: [:show]
 
     resources :payment_methods
-
-    resources :user_agreements    
     
   end
 
   match '/admin', to: 'admin/dashboard#index', as: :admin
 
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -40,11 +40,3 @@ $(function() {
 
   $('[rel="tooltip"]').tooltip();
 });
-
-function validate_user_agreement() {
-  if ($("#agreement_check").attr("checked") != "checked"){
-    alert("注册前必须同意协议条款！");
-    return false;
-  }
-  return true;
-}

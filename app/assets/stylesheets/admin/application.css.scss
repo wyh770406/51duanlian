@@ -1,7 +1,3 @@
-/*
- *= require chosen
- */
-
 @import "var";
 @import "bootstrap";
 @import "compass";
@@ -10,6 +6,7 @@ $border: 1px solid $gray;
 
 @import "theme";
 @import "general";
+@import "chosen";
 @import "datepicker";
 @import "layout";
 @import "table";

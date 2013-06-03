@@ -8,7 +8,7 @@
     <label class="control-label" for="code"><%= @mobile %></label>
     <div class="controls">
       <div class="input-prepend input-append">
-        <span class="add-on"><%= t('mobile_verification_code') %></span><input class="span2" name="code" id="code" size="6" type="text"><%= link_to t('resend_mobile_verification_code'), send_verification_code_mobile_path, method: :post, class: 'btn' %>
+        <span class="add-on"><%= t('mobile_verification_code') %></span><input name="code" id="code" size="6" type="text"><%= link_to t('resend_mobile_verification_code'), send_verification_code_mobile_path, method: :post, class: 'btn' %>
       </div>
     </div>
   </div>
