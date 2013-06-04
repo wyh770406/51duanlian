@@ -26,6 +26,7 @@ module Admin
 
       unless @batch_create
         @card = Card.new(params[:card])
+        @card.current_gym = current_gym
         if @card.save
           redirect_to admin_card_path(@card)
         else

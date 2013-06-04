@@ -15,6 +15,8 @@ class Card < ActiveRecord::Base
 
   attr_accessible :company, :number, :username, :email, :mobile, :card_type_id, :card_type, :start_on, :stop_on, :validity, :user_id, :user
 
+  attr_accessor :current_gym
+
   default_value_for :balance, 0
   default_value_for :start_on, Date.today
 
@@ -108,7 +110,7 @@ class Card < ActiveRecord::Base
 
   def send_sms
     if mobile_changed? && mobile.present?
-      SMSGateway.render_then_send(mobile, 'card', { card: self })
+      SMSGateway.render_then_send(mobile, 'card', { card: self , gym: current_gym })
     end
   end
 
