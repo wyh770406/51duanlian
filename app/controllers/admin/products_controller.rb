@@ -5,6 +5,8 @@ module Admin
 
     def index
       @products = current_gym.products
+      @q = @products.search(params[:q])
+      @products = @q.result.page(params[:page]).per(15)
     end
 
     def new

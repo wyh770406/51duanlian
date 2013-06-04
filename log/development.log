@@ -17289,3 +17289,1259 @@ Processing by Admin::CardsController#update as HTML
   [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
   Rendered admin/shared/_topnav.html.erb (6.9ms)
 Completed 200 OK in 138ms (Views: 124.2ms | ActiveRecord: 1.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+  [1m[36m (3.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120112153752)
+Migrating to CreateGyms (20120113144421)
+Migrating to CreateVenueTypes (20120114174229)
+Migrating to CreateCities (20120115164836)
+Migrating to CreateAreas (20120115170421)
+Migrating to CreateLocations (20120115175236)
+Migrating to CreateVenueInventories (20120117162526)
+Migrating to CreatePreferences (20120118170100)
+Migrating to CreateActivities (20120118203723)
+Migrating to CreateVenues (20120120215043)
+Migrating to CreateRecurrenceRules (20120121163726)
+Migrating to RemoveAvailableDatesFromActivities (20120122155132)
+Migrating to RemoveTimesFromActivities (20120123020205)
+Migrating to AddSettingsToRecurrenceRules (20120130043002)
+Migrating to DropPreferences (20120130074418)
+Migrating to CreateProducts (20120131035535)
+Migrating to AddGymToProducts (20120131083614)
+Migrating to CreateOrders (20120201034849)
+Migrating to AddCapacityToVenues (20120209092344)
+Migrating to CreateVenueRules (20120211164502)
+Migrating to CreateRealVenues (20120213084446)
+Migrating to CreateLineItems (20120213102729)
+Migrating to AddGymToOrders (20120213152020)
+Migrating to CreatePaymentMethods (20120218180209)
+Migrating to CreateCards (20120219190340)
+Migrating to CreateCardLineItems (20120220162140)
+Migrating to CreatePayments (20120221165252)
+Migrating to CreateCardTypes (20120229075900)
+Migrating to AssociateCardWithCardType (20120229075938)
+Migrating to AddValidityToCardLineItems (20120229204010)
+Migrating to AddPhoneToGyms (20120229212504)
+Migrating to AddCheckedInAtToOrders (20120229213800)
+Migrating to CreateGymImages (20120302012905)
+Migrating to AddRolesMaskToUsers (20120305035913)
+Migrating to CreateGymsUsers (20120305080753)
+Migrating to AddMobileToUsers (20120305095011)
+Migrating to AddUsernameToOrders (20120323085439)
+Migrating to CreateCardCharges (20120426010440)
+Migrating to AddSoldAtToCards (20120428033717)
+Migrating to AddCardIdToOrders (20120428075214)
+Migrating to AddExpiredAtToOrders (20120511075355)
+Migrating to AddNameToUsers (20120515064614)
+Migrating to CreateGatewayBills (20120517162023)
+Migrating to ChangeCardChargesPrice (20120529122133)
+Migrating to AddPriceAndMemberPrice (20120529124208)
+Migrating to AddPaymentMethodToOrders (20120711173130)
+Migrating to AddMapsToLocations (20120726110106)
+Migrating to AddMobileVerificationToUsers (20120817075826)
+Migrating to AddOrderIdToCardLineItems (20120905093313)
+Migrating to AddActiveToVenues (20121209110754)
+Migrating to AddLoginNameToUsers (20121209195426)
+Migrating to AddAncestryToUsers (20121210103003)
+Migrating to AddAncestryToActivities (20121217200200)
+Migrating to CreateGymBookmarks (20130104152544)
+Migrating to CreateCardsGyms (20130114115713)
+Migrating to CreateGymGroups (20130114183016)
+Migrating to AddGymGroupIdToGyms (20130114184058)
+Migrating to AddGymGroupIdToCardTypes (20130114194220)
+Migrating to AddGymGroupIdToCardCharges (20130114201156)
+Migrating to AddGymGroupIdToCards (20130114213509)
+Migrating to CreateCompanies (20130123235532)
+Migrating to AddCompanyIdToUsers (20130124022533)
+Migrating to AddCompanyIdToGyms (20130124030955)
+Migrating to RemoveCompanyIdFromGyms (20130124050333)
+Migrating to AddCompanyIdToGymGroups (20130124050510)
+Migrating to DropCardsGyms (20130130010631)
+Migrating to CreateGymGroupsGyms (20130326143838)
+Migrating to AddCompanyIdAgainToGyms (20130326151946)
+Migrating to RemoveGymGroupIdFromGyms (20130327093817)
+Migrating to AddCompanyIdToCardTypes (20130327100225)
+Migrating to RemoveGymGroupIdFromCardTypes (20130327102559)
+Migrating to CreateCardTypesGymGroups (20130327103654)
+Migrating to AddCompanyIdToCardCharges (20130327112440)
+Migrating to RemoveGymGroupIdFromCardCharges (20130327114022)
+Migrating to RemoveAncestryFromUsers (20130327114447)
+Migrating to AddCompanyIdToCards (20130328153812)
+Migrating to RemoveGymGroupIdFromCards (20130328160756)
+Migrating to AddRefundTotalToOrders (20130516125240)
+  [1m[35m (595.1ms)[0m  ALTER TABLE `orders` ADD `refund_total` decimal(8,2)
+  [1m[36m (76.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130516125240')[0m
+Migrating to CreateCkeditorAssets (20130529103047)
+Migrating to UserAgreements (20130529103048)
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Compiled jquery.js  (1ms)  (pid 7283)
+Compiled jquery_ujs.js  (0ms)  (pid 7283)
+Compiled bootstrap-datepicker/bootstrap-datepicker.js  (0ms)  (pid 7283)
+Compiled bootstrap-transition.js  (0ms)  (pid 7283)
+Compiled bootstrap-affix.js  (0ms)  (pid 7283)
+Compiled bootstrap-alert.js  (0ms)  (pid 7283)
+Compiled bootstrap-button.js  (0ms)  (pid 7283)
+Compiled bootstrap-carousel.js  (0ms)  (pid 7283)
+Compiled bootstrap-collapse.js  (0ms)  (pid 7283)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 7283)
+Compiled bootstrap-modal.js  (0ms)  (pid 7283)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 7283)
+Compiled bootstrap-tab.js  (0ms)  (pid 7283)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 7283)
+Compiled bootstrap-popover.js  (0ms)  (pid 7283)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 7283)
+Compiled bootstrap.js  (124ms)  (pid 7283)
+Compiled chosen.jquery.js  (0ms)  (pid 7283)
+Compiled admin/activities.js  (71ms)  (pid 7283)
+Compiled admin/areas.js  (3ms)  (pid 7283)
+Compiled admin/cart.js  (1ms)  (pid 7283)
+Compiled admin/chosen.js  (1ms)  (pid 7283)
+Compiled admin/gyms.js  (1ms)  (pid 7283)
+Compiled ckeditor/init.js  (4ms)  (pid 7283)
+Compiled ckeditor/application-5c32c3c1300971b728d9285698a25a98.js  (1ms)  (pid 7283)
+Compiled ckeditor/application.js  (1ms)  (pid 7283)
+Compiled ckeditor/build-config.js  (0ms)  (pid 7283)
+Compiled ckeditor/ckeditor.js  (29ms)  (pid 7283)
+Compiled ckeditor/config-7171da15c2fced586e56a7eb7350dab4.js  (0ms)  (pid 7283)
+Compiled ckeditor/config.js  (0ms)  (pid 7283)
+Compiled ckeditor/filebrowser/javascripts/application-454b0154f892491b479b717e73f1cfd4.js  (0ms)  (pid 7283)
+Compiled ckeditor/filebrowser/javascripts/application.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/af.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ar.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/bg.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/bn.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/bs.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ca.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/cs.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/cy.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/da.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/de.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/el.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/en-au.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/en-ca.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/en-gb.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/en.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/eo.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/es.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/et.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/eu.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/fa.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/fi.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/fo.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/fr-ca.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/gl.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/gu.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/he.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/hi.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/hr.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/hu.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/is.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/it.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ja.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ka.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/km.js  (1ms)  (pid 7283)
+Compiled ckeditor/lang/ko.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ku.js  (1ms)  (pid 7283)
+Compiled ckeditor/lang/lt.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/lv.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/mk.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/mn.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ms.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/nb.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/nl.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/no.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/pl.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/pt-br.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/pt.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ro.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ru.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/sk.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/sl.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/sr-latn.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/sr.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/sv.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/th.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/tr.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/ug.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/uk.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/vi.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/zh-cn.js  (0ms)  (pid 7283)
+Compiled ckeditor/lang/zh.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ar.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/bg.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ca.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cs.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cy.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/da.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/de.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/el.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/en.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/eo.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/es.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/et.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fa.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fi.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fr.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/gu.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/he.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hi.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hr.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hu.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/it.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ja.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/km.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ku.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lt.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lv.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mk.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mn.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nb.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nl.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/no.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pl.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ro.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ru.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sk.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sl.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sv.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/th.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/tr.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ug.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/uk.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/vi.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/about/dialogs/about.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/clipboard/dialogs/paste.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/colordialog/dialogs/colordialog.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/dialog/dialogDefinition.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/div/dialogs/div.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/find/dialogs/find.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/flash/dialogs/flash.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/button.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/checkbox.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/form.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/hiddenfield.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/radio.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/select.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/textarea.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/forms/dialogs/textfield.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/iframe/dialogs/iframe.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/image/dialogs/image.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/link/dialogs/anchor.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/link/dialogs/link.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/liststyle/dialogs/liststyle.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/pastefromword/filter/default.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/scayt/dialogs/options.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/smiley/dialogs/smiley.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ca.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cs.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cy.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/de.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/el.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/en.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/eo.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/et.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fa.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fi.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fr.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/he.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/hr.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/it.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ku.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/lv.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nb.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nl.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/no.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pl.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pt-br.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sk.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sv.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/th.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/tr.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ug.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/specialchar/dialogs/specialchar.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/table/dialogs/table.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/tabletools/dialogs/tableCell.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/templates/dialogs/templates.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/templates/templates/default.js  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.js  (1ms)  (pid 7283)
+Compiled ckeditor/styles.js  (0ms)  (pid 7283)
+Compiled admin/application.js  (1245ms)  (pid 7283)
+Compiled gmaps4rails/gmaps4rails.base.js  (185ms)  (pid 7283)
+Compiled gmaps4rails/gmaps4rails.googlemaps.js  (41ms)  (pid 7283)
+Compiled cart.js  (2ms)  (pid 7283)
+Compiled application.js  (254ms)  (pid 7283)
+Compiled ckeditor/application.css  (0ms)  (pid 7283)
+Compiled ckeditor/contents.css  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/scayt/dialogs/toolbar.css  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/templates/dialogs/templates.css  (0ms)  (pid 7283)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/dialog_ie.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/dialog_ie7.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/dialog_ie8.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/dialog_iequirks.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/dialog_opera.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/editor_gecko.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/editor_ie.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/editor_ie7.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/editor_ie8.css  (0ms)  (pid 7283)
+Compiled ckeditor/skins/moono/editor_iequirks.css  (0ms)  (pid 7283)
+Compiled admin/application.css  (3343ms)  (pid 7283)
+Compiled gmaps4rails.css  (0ms)  (pid 7283)
+Compiled application.css  (1662ms)  (pid 7283)
+Compiled jquery.js  (1ms)  (pid 7380)
+Compiled jquery_ujs.js  (0ms)  (pid 7380)
+Compiled bootstrap-datepicker/bootstrap-datepicker.js  (0ms)  (pid 7380)
+Compiled bootstrap-transition.js  (0ms)  (pid 7380)
+Compiled bootstrap-affix.js  (0ms)  (pid 7380)
+Compiled bootstrap-alert.js  (0ms)  (pid 7380)
+Compiled bootstrap-button.js  (0ms)  (pid 7380)
+Compiled bootstrap-carousel.js  (0ms)  (pid 7380)
+Compiled bootstrap-collapse.js  (0ms)  (pid 7380)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 7380)
+Compiled bootstrap-modal.js  (0ms)  (pid 7380)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 7380)
+Compiled bootstrap-tab.js  (0ms)  (pid 7380)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 7380)
+Compiled bootstrap-popover.js  (0ms)  (pid 7380)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 7380)
+Compiled bootstrap.js  (80ms)  (pid 7380)
+Compiled chosen.jquery.js  (0ms)  (pid 7380)
+Compiled admin/activities.js  (71ms)  (pid 7380)
+Compiled admin/areas.js  (3ms)  (pid 7380)
+Compiled admin/cart.js  (1ms)  (pid 7380)
+Compiled admin/chosen.js  (1ms)  (pid 7380)
+Compiled admin/gyms.js  (2ms)  (pid 7380)
+Compiled ckeditor/init.js  (38ms)  (pid 7380)
+Compiled ckeditor/application-5c32c3c1300971b728d9285698a25a98.js  (1ms)  (pid 7380)
+Compiled ckeditor/application.js  (1ms)  (pid 7380)
+Compiled ckeditor/build-config.js  (0ms)  (pid 7380)
+Compiled ckeditor/ckeditor.js  (5ms)  (pid 7380)
+Compiled ckeditor/config-7171da15c2fced586e56a7eb7350dab4.js  (0ms)  (pid 7380)
+Compiled ckeditor/config.js  (0ms)  (pid 7380)
+Compiled ckeditor/filebrowser/javascripts/application-454b0154f892491b479b717e73f1cfd4.js  (0ms)  (pid 7380)
+Compiled ckeditor/filebrowser/javascripts/application.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/af.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ar.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/bg.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/bn.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/bs.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ca.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/cs.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/cy.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/da.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/de.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/el.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/en-au.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/en-ca.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/en-gb.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/en.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/eo.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/es.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/et.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/eu.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/fa.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/fi.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/fo.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/fr-ca.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/gl.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/gu.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/he.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/hi.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/hr.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/hu.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/is.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/it.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ja.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ka.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/km.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ko.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ku.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/lt.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/lv.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/mk.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/mn.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ms.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/nb.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/nl.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/no.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/pl.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/pt-br.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/pt.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ro.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ru.js  (1ms)  (pid 7380)
+Compiled ckeditor/lang/sk.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/sl.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/sr-latn.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/sr.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/sv.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/th.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/tr.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/ug.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/uk.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/vi.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/zh-cn.js  (0ms)  (pid 7380)
+Compiled ckeditor/lang/zh.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ar.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/bg.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ca.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cs.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cy.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/da.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/de.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/el.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/en.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/eo.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/es.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/et.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fa.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fi.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fr.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/gu.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/he.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hi.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hr.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hu.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/it.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ja.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/km.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ku.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lt.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lv.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mk.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mn.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nb.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nl.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/no.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pl.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ro.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ru.js  (1ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sk.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sl.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sv.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/th.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/tr.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ug.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/uk.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/vi.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/about/dialogs/about.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/clipboard/dialogs/paste.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/colordialog/dialogs/colordialog.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/dialog/dialogDefinition.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/div/dialogs/div.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/find/dialogs/find.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/flash/dialogs/flash.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/button.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/checkbox.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/form.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/hiddenfield.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/radio.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/select.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/textarea.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/forms/dialogs/textfield.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/iframe/dialogs/iframe.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/image/dialogs/image.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/link/dialogs/anchor.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/link/dialogs/link.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/liststyle/dialogs/liststyle.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/pastefromword/filter/default.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/scayt/dialogs/options.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/smiley/dialogs/smiley.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ca.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cs.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cy.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/de.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/el.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/en.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/eo.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/et.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fa.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fi.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fr.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/he.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/hr.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/it.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ku.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/lv.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nb.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nl.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/no.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pl.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pt-br.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sk.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sv.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/th.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/tr.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ug.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/specialchar/dialogs/specialchar.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/table/dialogs/table.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/tabletools/dialogs/tableCell.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/templates/dialogs/templates.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/templates/templates/default.js  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.js  (0ms)  (pid 7380)
+Compiled ckeditor/styles.js  (0ms)  (pid 7380)
+Compiled admin/application.js  (1231ms)  (pid 7380)
+Compiled gmaps4rails/gmaps4rails.base.js  (91ms)  (pid 7380)
+Compiled gmaps4rails/gmaps4rails.googlemaps.js  (44ms)  (pid 7380)
+Compiled cart.js  (2ms)  (pid 7380)
+Compiled application.js  (165ms)  (pid 7380)
+Compiled ckeditor/application.css  (0ms)  (pid 7380)
+Compiled ckeditor/contents.css  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/scayt/dialogs/toolbar.css  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/templates/dialogs/templates.css  (0ms)  (pid 7380)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/dialog_ie.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/dialog_ie7.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/dialog_ie8.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/dialog_iequirks.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/dialog_opera.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/editor_gecko.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/editor_ie.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/editor_ie7.css  (0ms)  (pid 7380)
+Compiled ckeditor/skins/moono/editor_ie8.css  (29ms)  (pid 7380)
+Compiled ckeditor/skins/moono/editor_iequirks.css  (0ms)  (pid 7380)
+Compiled admin/application.css  (3059ms)  (pid 7380)
+Compiled gmaps4rails.css  (0ms)  (pid 7380)
+Compiled application.css  (1562ms)  (pid 7380)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-03 18:22:24 +0800
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 31ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-03 18:22:25 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (45.7ms)
+  Rendered shared/_user_nav.html.erb (39.3ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_footer_nav.html.erb (1.1ms)
+  Rendered carts/_live.html.erb (1.1ms)
+Completed 200 OK in 219ms (Views: 198.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-03 18:22:31 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fC0OowQlWTgNliEOgn3w2cy+lLxcaauKZJmADjkCLfA=", "user"=>{"login"=>"wyh770406@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[36mUser Load (18.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770406@gmail.com' OR lower(email) = 'wyh770406@gmail.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.6ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-05-31 04:27:09', `current_sign_in_at` = '2013-06-03 10:22:31', `sign_in_count` = 18, `updated_at` = '2013-06-03 10:22:31' WHERE `users`.`id` = 22[0m
+  [1m[35m (97.7ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 320ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-03 18:22:32 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 52ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-03 18:22:32 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/gyms/_search.html.erb (47.5ms)
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` 
+  Rendered admin/gyms/index.html.erb within layouts/admin (77.3ms)
+  Rendered admin/shared/_topnav.html.erb (171.2ms)
+Completed 200 OK in 615ms (Views: 586.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-03 18:22:45 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered admin/gyms/_search.html.erb (34.8ms)
+  [1m[35mGym Load (0.1ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT DISTINCT `gyms`.* FROM `gyms` [0m
+  Rendered admin/gyms/index.html.erb within layouts/admin (104.6ms)
+  Rendered admin/shared/_topnav.html.erb (6.1ms)
+Completed 200 OK in 208ms (Views: 200.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-06-03 18:22:59 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/users/_search.html.erb (7.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 1
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 3[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 6
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 7[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 8
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 9[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 10
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 11[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 12
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 13[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 14
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 15[0m
+  [1m[35mGym Load (0.5ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 16
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 17[0m
+  [1m[35mGym Load (0.6ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 18
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered admin/users/index.html.erb within layouts/admin (186.8ms)
+  Rendered admin/shared/_topnav.html.erb (5.8ms)
+Completed 200 OK in 287ms (Views: 271.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-06-03 18:23:11 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/users/_search.html.erb (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 3[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 6
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 7[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 8
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 9[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 10
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 11[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 12
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 13[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 14
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 15[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 16
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 17[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 18
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered admin/users/index.html.erb within layouts/admin (44.4ms)
+  Rendered admin/shared/_topnav.html.erb (6.5ms)
+Completed 200 OK in 180ms (Views: 170.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-03 18:23:14 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/gyms/_search.html.erb (50.1ms)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` 
+  Rendered admin/gyms/index.html.erb within layouts/admin (70.8ms)
+  Rendered admin/shared/_topnav.html.erb (6.2ms)
+Completed 200 OK in 177ms (Views: 168.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/admin/gym_session/1" for 127.0.0.1 at 2013-06-03 18:23:38 +0800
+Processing by Admin::GymSessionController#update as HTML
+  Parameters: {"authenticity_token"=>"fC0OowQlWTgNliEOgn3w2cy+lLxcaauKZJmADjkCLfA=", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 LIMIT 1
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 33ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-03 18:23:38 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-03 18:23:38 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (3.1ms)
+  [1m[36mPaymentMethod Load (0.3ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (93.0ms)
+  [1m[35mOrder Load (0.5ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (141.2ms)
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.6ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (26.1ms)
+Completed 200 OK in 347ms (Views: 289.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-03 18:24:06 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/orders/_tabs.html.erb (1.1ms)
+  [1m[35mPaymentMethod Load (0.1ms)[0m  SELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1
+  Rendered admin/orders/_search.html.erb (23.7ms)
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0[0m
+  [1m[35mOrder Load (0.2ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))
+  Rendered admin/orders/index.html.erb within layouts/admin (33.7ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (10.2ms)
+Completed 200 OK in 192ms (Views: 137.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/admin/user_agreements" for 127.0.0.1 at 2013-06-03 18:24:31 +0800
+Processing by Admin::UserAgreementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mUserAgreement Load (39.1ms)[0m  SELECT `user_agreements`.* FROM `user_agreements` 
+  Rendered admin/user_agreements/index.html.erb within layouts/admin (2.6ms)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (11.0ms)
+Completed 200 OK in 190ms (Views: 138.4ms | ActiveRecord: 39.7ms)
+
+
+Started GET "/admin/user_agreements/1/edit" for 127.0.0.1 at 2013-06-03 18:24:35 +0800
+Processing by Admin::UserAgreementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mUserAgreement Load (0.3ms)[0m  [1mSELECT `user_agreements`.* FROM `user_agreements` WHERE `user_agreements`.`id` = 1 LIMIT 1[0m
+  Rendered admin/user_agreements/_form.html.erb (59.2ms)
+  Rendered admin/user_agreements/edit.html.erb within layouts/admin (60.8ms)
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (10.4ms)
+Completed 200 OK in 168ms (Views: 159.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-03 18:26:58 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (121.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)[0m
+  Rendered home/_gyms.html.erb (30.0ms)
+  Rendered home/index.html.erb within layouts/application (159.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.5ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 213ms (Views: 206.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/user_agreements" for 127.0.0.1 at 2013-06-03 18:34:03 +0800
+Processing by UserAgreementsController#index as HTML
+  [1m[36mUserAgreement Load (0.4ms)[0m  [1mSELECT `user_agreements`.* FROM `user_agreements` LIMIT 1[0m
+  [1m[35mUserAgreement Load (0.3ms)[0m  SELECT `user_agreements`.* FROM `user_agreements` WHERE `user_agreements`.`id` = 2 LIMIT 1
+  Rendered user_agreements/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-03 18:44:40 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered admin/gyms/_search.html.erb (18.0ms)
+  [1m[35mGym Load (0.1ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` 
+  Rendered admin/gyms/index.html.erb within layouts/admin (141.8ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.0ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (313.3ms)
+Completed 200 OK in 938ms (Views: 820.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/admin/venues" for 127.0.0.1 at 2013-06-03 18:44:50 +0800
+Processing by Admin::VenuesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mVenueType Load (0.5ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 1 LIMIT 1[0m
+  Rendered admin/venues/_form.html.erb (2.1ms)
+  [1m[35mVenueType Load (0.6ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 1
+  Rendered admin/venues/_tabs.html.erb (5.0ms)
+  [1m[36mVenue Load (303.1ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 1 AND ((`activities`.`venue_type_id` = 1 AND `venues`.`start_at` BETWEEN '2013-06-02 16:00:00' AND '2013-06-03 15:59:59' AND `venues`.`stop_at` BETWEEN '2013-06-02 16:00:00' AND '2013-06-03 15:59:59')) ORDER BY `venues`.`start_at`, `venues`.`stop_at`[0m
+  [1m[35mActivity Load (0.3ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`id` IN (1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1099[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1099 AND `line_items`.`purchasable_type` = 'Venue'
+  Rendered admin/venues/_orders.html.erb (16.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1100[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1100 AND `line_items`.`purchasable_type` = 'Venue'
+  Rendered admin/venues/_orders.html.erb (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1100[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1101
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1101 AND `line_items`.`purchasable_type` = 'Venue'[0m
+  Rendered admin/venues/_orders.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1101
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1102[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1102 AND `line_items`.`purchasable_type` = 'Venue'
+  Rendered admin/venues/_orders.html.erb (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1102[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1103
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1103 AND `line_items`.`purchasable_type` = 'Venue'[0m
+  Rendered admin/venues/_orders.html.erb (32.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1103
+  Rendered admin/venues/index.html.erb within layouts/admin (466.7ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (9.1ms)
+Completed 200 OK in 694ms (Views: 260.8ms | ActiveRecord: 315.6ms)
+
+
+Started GET "/admin/activities" for 127.0.0.1 at 2013-06-03 18:44:56 +0800
+Processing by Admin::ActivitiesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mActivity Load (0.4ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 1 AND `activities`.`ancestry` IS NULL LIMIT 15 OFFSET 0[0m
+  [1m[35mVenueType Load (0.3ms)[0m  SELECT `venue_types`.* FROM `venue_types` WHERE `venue_types`.`id` IN (1)
+  [1m[36mRecurrenceRule::DateRule Load (0.4ms)[0m  [1mSELECT `recurrence_rules`.* FROM `recurrence_rules` WHERE `recurrence_rules`.`type` IN ('RecurrenceRule::DateRule', 'RecurrenceRule::DateRule::WeeklyRule') AND `recurrence_rules`.`type` IN ('RecurrenceRule::DateRule', 'RecurrenceRule::DateRule::WeeklyRule') AND `recurrence_rules`.`date_recurrent_type` = 'Activity' AND `recurrence_rules`.`date_recurrent_id` IN (1, 2, 14)[0m
+  [1m[35mRecurrenceRule::TimeRule Load (0.5ms)[0m  SELECT `recurrence_rules`.* FROM `recurrence_rules` WHERE `recurrence_rules`.`type` IN ('RecurrenceRule::TimeRule', 'RecurrenceRule::TimeRule::MinutelyRule') AND `recurrence_rules`.`type` IN ('RecurrenceRule::TimeRule', 'RecurrenceRule::TimeRule::MinutelyRule') AND `recurrence_rules`.`time_recurrent_type` = 'Activity' AND `recurrence_rules`.`time_recurrent_id` IN (1, 2, 14)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`ancestry` = '1'[0m
+  [1m[35mVenue Load (22.1ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 1 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 1 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `activities` WHERE `activities`.`ancestry` = '2'
+  [1m[36mVenue Load (0.6ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 2 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 2 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`ancestry` = '14'[0m
+  [1m[35mVenue Load (0.4ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 14 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 1 AND `activities`.`ancestry` IS NULL[0m
+  Rendered admin/activities/index.html.erb within layouts/admin (178.1ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (11.1ms)
+Completed 200 OK in 328ms (Views: 290.2ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-06-03 18:45:03 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/users/_search.html.erb (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 1
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 3[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 6
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 7[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 8
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 9[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 10
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 11[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 12
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 13[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 14
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 15[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 16
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 17[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 18
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered admin/users/index.html.erb within layouts/admin (54.6ms)
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (11.3ms)
+Completed 200 OK in 199ms (Views: 186.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/venues" for 127.0.0.1 at 2013-06-03 18:45:10 +0800
+Processing by Admin::VenuesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  [1m[36mVenueType Load (0.2ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 1 LIMIT 1[0m
+  Rendered admin/venues/_form.html.erb (0.7ms)
+  [1m[35mVenueType Load (0.2ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 1
+  Rendered admin/venues/_tabs.html.erb (1.8ms)
+  [1m[36mVenue Load (0.2ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 1 AND ((`activities`.`venue_type_id` = 1 AND `venues`.`start_at` BETWEEN '2013-06-02 16:00:00' AND '2013-06-03 15:59:59' AND `venues`.`stop_at` BETWEEN '2013-06-02 16:00:00' AND '2013-06-03 15:59:59')) ORDER BY `venues`.`start_at`, `venues`.`stop_at`[0m
+  [1m[35mActivity Load (0.1ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`id` IN (1)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1099[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1099 AND `line_items`.`purchasable_type` = 'Venue'
+  Rendered admin/venues/_orders.html.erb (1.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1100[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1100 AND `line_items`.`purchasable_type` = 'Venue'
+  Rendered admin/venues/_orders.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1100[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1101
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1101 AND `line_items`.`purchasable_type` = 'Venue'[0m
+  Rendered admin/venues/_orders.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1101
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1102[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1102 AND `line_items`.`purchasable_type` = 'Venue'
+  Rendered admin/venues/_orders.html.erb (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1102[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1103
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`purchasable_id` = 1103 AND `line_items`.`purchasable_type` = 'Venue'[0m
+  Rendered admin/venues/_orders.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `real_venues` WHERE `real_venues`.`venue_id` = 1103
+  Rendered admin/venues/index.html.erb within layouts/admin (25.8ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (12.0ms)
+Completed 200 OK in 187ms (Views: 171.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-03 18:45:16 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (3.7ms)
+  [1m[36mPaymentMethod Load (0.1ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (111.8ms)
+  [1m[35mOrder Load (0.1ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (162.2ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (9.7ms)
+Completed 200 OK in 332ms (Views: 305.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-03 19:04:55 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/orders/_tabs.html.erb (1.4ms)
+  [1m[35mPaymentMethod Load (0.1ms)[0m  SELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1
+  Rendered admin/orders/_search.html.erb (30.9ms)
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))
+  Rendered admin/orders/index.html.erb within layouts/admin (41.9ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (9.3ms)
+Completed 200 OK in 194ms (Views: 175.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-03 19:51:06 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (1.3ms)
+  [1m[36mPaymentMethod Load (0.2ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (48.6ms)
+  [1m[35mOrder Load (0.1ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (2.2ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (109.1ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (10.6ms)
+Completed 200 OK in 311ms (Views: 265.3ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/admin/orders?order_klass=Order%3A%3ACardOrder" for 127.0.0.1 at 2013-06-03 19:51:32 +0800
+Processing by Admin::OrdersController#index as HTML
+  Parameters: {"order_klass"=>"Order::CardOrder"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/orders/_tabs.html.erb (2.0ms)
+  [1m[35mPaymentMethod Load (0.1ms)[0m  SELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1
+  Rendered admin/orders/_search.html.erb (96.3ms)
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::CardOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::CardOrder'))
+  Rendered admin/orders/index.html.erb within layouts/admin (128.4ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (11.6ms)
+Completed 200 OK in 335ms (Views: 270.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/orders?order_klass=Order%3A%3AProductOrder" for 127.0.0.1 at 2013-06-03 19:51:45 +0800
+Processing by Admin::OrdersController#index as HTML
+  Parameters: {"order_klass"=>"Order::ProductOrder"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (1.1ms)
+  [1m[36mPaymentMethod Load (0.1ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (22.1ms)
+  [1m[35mOrder Load (32.8ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::ProductOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::ProductOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (62.1ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (10.4ms)
+Completed 200 OK in 216ms (Views: 167.7ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/admin/orders?order_klass=Order%3A%3AProductOrder" for 127.0.0.1 at 2013-06-03 19:52:34 +0800
+Processing by Admin::OrdersController#index as HTML
+  Parameters: {"order_klass"=>"Order::ProductOrder"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/orders/_tabs.html.erb (1.1ms)
+  [1m[35mPaymentMethod Load (0.1ms)[0m  SELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1
+  Rendered admin/orders/_search.html.erb (21.6ms)
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::ProductOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::ProductOrder'))
+  Rendered admin/orders/index.html.erb within layouts/admin (27.5ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (11.2ms)
+Completed 200 OK in 193ms (Views: 176.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/orders?order_klass=Order%3A%3AProductOrder" for 127.0.0.1 at 2013-06-03 19:52:48 +0800
+Processing by Admin::OrdersController#index as HTML
+  Parameters: {"order_klass"=>"Order::ProductOrder"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (1.0ms)
+  [1m[36mPaymentMethod Load (0.1ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (26.5ms)
+  [1m[35mOrder Load (0.3ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::ProductOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::ProductOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (31.7ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (9.4ms)
+Completed 200 OK in 176ms (Views: 159.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-04 07:36:28 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (139.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (17.3ms)
+  Rendered home/index.html.erb within layouts/application (184.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (2.9ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_footer_nav.html.erb (1.2ms)
+  Rendered carts/_live.html.erb (0.9ms)
+Completed 200 OK in 446ms (Views: 339.1ms | ActiveRecord: 106.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-04 07:36:38 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (13.4ms)
+  Rendered home/index.html.erb within layouts/application (23.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (39.8ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-04 07:56:30 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (14.6ms)
+  Rendered home/index.html.erb within layouts/application (24.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.9ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-04 08:00:26 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 285ms (ActiveRecord: 21.3ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-04 08:00:27 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (3.0ms)
+  [1m[36mPaymentMethod Load (0.1ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (153.0ms)
+  [1m[35mOrder Load (0.2ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (205.6ms)
+  [1m[35mCompany Load (0.1ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (144.2ms)
+Completed 200 OK in 1040ms (Views: 967.8ms | ActiveRecord: 6.4ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-04 08:13:04 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 173ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-04 08:13:04 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Load (0.6ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1
+  Rendered admin/orders/_tabs.html.erb (2.8ms)
+  [1m[36mPaymentMethod Load (0.1ms)[0m  [1mSELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1[0m
+  Rendered admin/orders/_search.html.erb (128.4ms)
+  [1m[35mOrder Load (0.1ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))[0m
+  Rendered admin/orders/index.html.erb within layouts/admin (177.9ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22[0m
+  Rendered admin/shared/_topnav.html.erb (107.5ms)
+Completed 200 OK in 761ms (Views: 665.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-04 08:14:06 +0800
+Processing by Admin::OrdersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 1 AND (confirmed_at IS NOT NULL) LIMIT 1[0m
+  Rendered admin/orders/_tabs.html.erb (1.0ms)
+  [1m[35mPaymentMethod Load (0.2ms)[0m  SELECT `payment_methods`.* FROM `payment_methods` WHERE `payment_methods`.`deleted_at` IS NULL AND `payment_methods`.`active` = 1
+  Rendered admin/orders/_search.html.erb (22.0ms)
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder')) ORDER BY updated_at DESC LIMIT 15 OFFSET 0[0m
+  [1m[35mOrder Load (0.2ms)[0m  SELECT DISTINCT `orders`.* FROM `orders` WHERE `orders`.`gym_id` = 1 AND (`orders`.`state` NOT IN ('cart')) AND ((`orders`.`state` = 'completed' AND `orders`.`type` = 'Order::VenueOrder'))
+  Rendered admin/orders/index.html.erb within layouts/admin (32.1ms)
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
+  Rendered admin/shared/_topnav.html.erb (10.6ms)
+Completed 200 OK in 184ms (Views: 165.0ms | ActiveRecord: 3.7ms)

@@ -4,7 +4,6 @@ module Admin
     
     def index
       @user_agreements = UserAgreement.all
-      puts "dddddd"
     end
 
     def edit
