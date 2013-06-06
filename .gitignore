@@ -3,5 +3,6 @@
 .idea/
 *.swp
 *.log
+*.yml
 *.log.age
 tmp/
