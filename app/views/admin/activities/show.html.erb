@@ -40,7 +40,8 @@
     </table>
   </div>
 </div>
-
+<% activity_root_venues = @activity.root.venues%>
+共<%= activity_root_venues.count%>条场地记录
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -52,7 +53,7 @@
     </tr>
   </thead>
   <tbody>
-    <% VenueDecorator.decorate(@activity.root.venues).each do |venue| %>
+    <% VenueDecorator.decorate(activity_root_venues).each do |venue| %>
       <tr>
         <td>
           <%= venue.on_date %>

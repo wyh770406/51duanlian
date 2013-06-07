@@ -62,7 +62,7 @@ class Card < ActiveRecord::Base
     card_line_item.save
   end
 
-  def update!
+  def update_balance!
     self.balance = self.card_line_items.map(&:amount).sum
     self.save!
   end

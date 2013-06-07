@@ -19,6 +19,7 @@
     role = resource.role || params[:role] || ''
     agreement = role.blank? ? UserAgreement.first : UserAgreement.find(2)
   %>
+
   <center><h1><%= role.blank? ? t("user_agreement") : t("venue_agreement")%></h1></center>
   <div class="inputs" style="width:520px;height:120px; overflow-y:scroll; ">
     <%=raw(agreement.content)%>

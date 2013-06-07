@@ -14,7 +14,7 @@ class CardLineItem < ActiveRecord::Base
   protected
 
   def update_card!
-    card.update!
+    card.update_balance!
     card.increase_validity!(self.validity)
   end
 end
