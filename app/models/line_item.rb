@@ -3,7 +3,7 @@ class LineItem < ActiveRecord::Base
   belongs_to :purchasable, :polymorphic => true
 
   def description
-    self.purchasable.to_s(self.quantity)
+    self.purchasable.to_s(self.quantity) if self.purchasable
   end
 
   def amount

@@ -27,8 +27,8 @@
           <%= link_to(gym.name, admin_gym_session_path(gym), method: :put, title: t('crud.enter') ) %>
         <% end -%>
       </td>
-      <td><%= user.roles.empty? ? t(:user, scope: "roles") : user.roles.map { |role| t(role, scope: "roles") }.join(', ') %></td>
-      <td class="control span4">
+      <td class="control span2"><%= user.roles.empty? ? t(:user, scope: "roles") : user.roles.map { |role| t(role, scope: "roles") }.join(', ') %></td>
+      <td class="control span3">
         <%= link_to t('crud.show'), admin_user_path(user) %>
         <%= link_to t('crud.edit'), edit_admin_user_path(user) %>
         <% if can?(:destroy, user) %>

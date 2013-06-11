@@ -11,7 +11,7 @@ module Admin
       rescue
         current_gym.venue_types.first
       end
-      @venues = current_gym.venues.includes(:activity).where('venues.active' => 1, 'activities.venue_type_id' => @venue_type.id, start_at: @on_date.to_time.all_day, stop_at: @on_date.to_time.all_day).order(:start_at, :stop_at)
+      @venues = current_gym.venues.includes(:activity).where('activities.venue_type_id' => @venue_type.id, start_at: @on_date.to_time.all_day, stop_at: @on_date.to_time.all_day).order(:start_at, :stop_at)
       # TODO: group venues by start_at and stop_at
     end
 
