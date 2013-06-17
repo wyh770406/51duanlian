@@ -25171,3 +25171,538 @@ Processing by ContactsController#show as HTML
   Rendered shared/_footer_nav.html.erb (0.6ms)
   Rendered carts/_live.html.erb (0.3ms)
 Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 15:44:06 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (137.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)[0m
+  Rendered home/_gyms.html.erb (84.4ms)
+  Rendered home/index.html.erb within layouts/application (259.9ms)
+  Rendered shared/_user_nav.html.erb (2.8ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+  Rendered shared/_footer_nav.html.erb (1.4ms)
+  Rendered carts/_live.html.erb (0.9ms)
+Completed 200 OK in 2681ms (Views: 2644.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 15:44:29 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGym Load (13.9ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1
+  [1m[36m (83.2ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2[0m
+  [1m[35mActivity Load (1.4ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1
+  [1m[36mCity Load (0.3ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.2ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.2ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (10.5ms)
+  [1m[36mVenue Load (666.3ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mEXPLAIN (0.3ms)[0m  EXPLAIN SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+EXPLAIN for: SELECT  `venues`.* FROM `venues`  WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
++----+-------------+--------+------+----------------------------------------------------+-----------------------------+---------+-------+------+-----------------------------+
+| id | select_type | table  | type | possible_keys                                      | key                         | key_len | ref   | rows | Extra                       |
++----+-------------+--------+------+----------------------------------------------------+-----------------------------+---------+-------+------+-----------------------------+
+|  1 | SIMPLE      | venues | ref  | index_venues_on_activity_id,index_venues_on_active | index_venues_on_activity_id | 5       | const |  863 | Using where; Using filesort |
++----+-------------+--------+------+----------------------------------------------------+-----------------------------+---------+-------+------+-----------------------------+
+1 row in set (0.00 sec)
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mLocation Load (32.5ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1
+  [1m[36mArea Load (0.3ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1[0m
+  [1m[35mCity Load (26.7ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mGymImage Load (47.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCardType Load (68.9ms)[0m  [1mSELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2[0m
+  [1m[35m (83.2ms)[0m  SELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)
+  Rendered cards/_new_cards.html.erb (229.4ms)
+  [1m[36mVenueType Load (0.3ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2[0m
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.2ms)
+  Rendered shared/_map.html.erb (106.3ms)
+  Rendered gyms/show.html.erb within layouts/application (1779.4ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 1951ms (Views: 863.0ms | ActiveRecord: 1040.7ms)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 15:45:42 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2[0m
+  [1m[35mActivity Load (0.1ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (9.2ms)
+  [1m[36mVenue Load (0.1ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.1ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCardType Load (0.1ms)[0m  SELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)[0m
+  Rendered cards/_new_cards.html.erb (3.8ms)
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered shared/_map.html.erb (2.3ms)
+  Rendered gyms/show.html.erb within layouts/application (32.0ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 15:57:43 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (7.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)[0m
+  Rendered home/_gyms.html.erb (17.5ms)
+  Rendered home/index.html.erb within layouts/application (28.7ms)
+  Rendered shared/_user_nav.html.erb (3.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (1.1ms)
+  Rendered carts/_live.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 15:57:46 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2[0m
+  [1m[35mActivity Load (0.1ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (6.6ms)
+  [1m[36mVenue Load (0.1ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.1ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCardType Load (0.1ms)[0m  SELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)[0m
+  Rendered cards/_new_cards.html.erb (4.0ms)
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (1.8ms)
+  Rendered gyms/show.html.erb within layouts/application (26.8ms)
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 83.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:39:37 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (87.4ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (93.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)[0m
+  Rendered home/_gyms.html.erb (15.5ms)
+  Rendered home/index.html.erb within layouts/application (178.1ms)
+  Rendered shared/_user_nav.html.erb (2.1ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.5ms)
+Completed 200 OK in 461ms (Views: 372.4ms | ActiveRecord: 88.3ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2013-06-17 16:39:45 +0800
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-17 16:39:46 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/_links.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (39.7ms)
+  Rendered shared/_user_nav.html.erb (2.3ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (1.1ms)
+  Rendered carts/_live.html.erb (0.5ms)
+Completed 200 OK in 601ms (Views: 120.8ms | ActiveRecord: 419.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-17 16:39:51 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QDsHJG9RN6aGvQZ4XKTQ6CPasyFjttg6K3RFTbrGvNE=", "user"=>{"login"=>"wyh770406@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[35mUser Load (43.8ms)[0m  SELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770406@gmail.com' OR lower(email) = 'wyh770406@gmail.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (45.6ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-06-17 03:55:03', `current_sign_in_at` = '2013-06-17 08:39:51', `sign_in_count` = 29, `updated_at` = '2013-06-17 08:39:51' WHERE `users`.`id` = 22
+  [1m[36m (213.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 665ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 16:39:51 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 16:39:51 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered admin/gyms/_search.html.erb (8.7ms)
+  [1m[35mGym Load (0.1ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT DISTINCT `gyms`.* FROM `gyms` [0m
+  Rendered admin/gyms/index.html.erb within layouts/admin (58.7ms)
+  Rendered admin/shared/_topnav.html.erb (304.8ms)
+Completed 200 OK in 4088ms (Views: 3945.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 16:41:35 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.3ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (4.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (14.8ms)
+  Rendered home/index.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/gyms/search?utf8=%E2%9C%93&city_id=1&area_id=&venue_type_id=1&gym_name=&date=2013-06-17&time=17%3A00&commit=%E6%90%9C%E7%B4%A2" for 127.0.0.1 at 2013-06-17 16:41:39 +0800
+Processing by GymsController#search as HTML
+  Parameters: {"utf8"=>"✓", "city_id"=>"1", "area_id"=>"", "venue_type_id"=>"1", "gym_name"=>"", "date"=>"2013-06-17", "time"=>"17:00", "commit"=>"搜索"}
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mVenueType Load (22.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` WHERE `venue_types`.`id` = 1 LIMIT 1[0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mSQL (23.7ms)[0m  [1mSELECT `gyms`.`id` AS t0_r0, `gyms`.`name` AS t0_r1, `gyms`.`description` AS t0_r2, `gyms`.`open_at` AS t0_r3, `gyms`.`close_at` AS t0_r4, `gyms`.`confirmed_at` AS t0_r5, `gyms`.`created_at` AS t0_r6, `gyms`.`updated_at` AS t0_r7, `gyms`.`phone` AS t0_r8, `gyms`.`company_id` AS t0_r9, `locations`.`id` AS t1_r0, `locations`.`address` AS t1_r1, `locations`.`zip_code` AS t1_r2, `locations`.`locatable_id` AS t1_r3, `locations`.`locatable_type` AS t1_r4, `locations`.`area_id` AS t1_r5, `locations`.`created_at` AS t1_r6, `locations`.`updated_at` AS t1_r7, `locations`.`latitude` AS t1_r8, `locations`.`longitude` AS t1_r9, `locations`.`gmaps` AS t1_r10 FROM `gyms` LEFT OUTER JOIN `locations` ON `locations`.`locatable_id` = `gyms`.`id` AND `locations`.`locatable_type` = 'Gym' INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND `locations`.`area_id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9) AND (name like '%%')[0m
+  [1m[35mVenue Load (87.5ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 1 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)
+  [1m[36m (92.3ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 1 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (1.0ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 1 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (32.9ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 2 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)[0m
+  [1m[35mActivity Load (0.7ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`id` IN (3)
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 2 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (1.8ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 2 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`id` IN (3)[0m
+  [1m[35mVenue Load (3.0ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 2 AND `venues`.`active` = 1 AND `venues`.`start_at` IN ('2013-06-17 07:00:00', '2013-06-17 08:00:00', '2013-06-17 09:00:00', '2013-06-17 10:00:00', '2013-06-17 11:00:00') AND (activities.venue_type_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`id` IN (3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 2 AND `venues`.`active` = 1 AND `venues`.`start_at` IN ('2013-06-17 07:00:00', '2013-06-17 08:00:00', '2013-06-17 09:00:00', '2013-06-17 10:00:00', '2013-06-17 11:00:00') AND (activities.venue_type_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`id` IN (3)[0m
+  [1m[35mVenue Load (26.9ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 3 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 3 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (29.3ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 3 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (18.9ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 4 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)[0m
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 4 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (2.4ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 4 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (0.4ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 5 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 5 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (0.3ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 5 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (0.8ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 6 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 6 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 6 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (1.8ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 7 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 7 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (10.6ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 7 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 8 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 8 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (1.0ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 8 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (0.5ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 9 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 9 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (2.2ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 9 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (2.0ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 10 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 10 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mVenue Load (2.1ms)[0m  [1mSELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 10 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (32.7ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 11 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 07:00:00' AND '2013-06-17 08:59:59' AND (activities.venue_type_id = 1)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 11 AND `venues`.`active` = 1 AND `venues`.`start_at` = '2013-06-17 09:00:00' AND (activities.venue_type_id = 1)[0m
+  [1m[35mVenue Load (2.6ms)[0m  SELECT `venues`.* FROM `venues` INNER JOIN `activities` ON `venues`.`activity_id` = `activities`.`id` WHERE `activities`.`gym_id` = 11 AND `venues`.`active` = 1 AND `venues`.`start_at` BETWEEN '2013-06-17 09:00:01' AND '2013-06-17 11:00:00' AND (activities.venue_type_id = 1)
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (6.9ms)
+  [1m[36mGymImage Load (0.2ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mArea Load (0.3ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  Rendered gyms/_list.html.erb (9.9ms)
+  [1m[36m (24.6ms)[0m  [1mSELECT COUNT(*) FROM `gyms` [0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` 
+  [1m[36mGymImage Load (1.2ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 1 ORDER BY position LIMIT 1[0m
+  [1m[35mLocation Load (0.5ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 1 AND `locations`.`locatable_type` = 'Gym' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.5ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 3 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 3 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.5ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 4 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 4 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mArea Load (0.6ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.5ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 5 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 5 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mArea Load (0.6ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.3ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 6 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 6 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (1.7ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 7 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 7 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.4ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 8 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 8 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (12.2ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 9 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 9 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mGymImage Load (0.4ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 10 ORDER BY position LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 10 ORDER BY position LIMIT 1[0m
+  [1m[35mLocation Load (1.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 10 AND `locations`.`locatable_type` = 'Gym' LIMIT 1
+  [1m[36mArea Load (0.3ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mGymImage Load (0.4ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 11 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 11 ORDER BY position LIMIT 1
+  [1m[36mLocation Load (2.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 11 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  Rendered gyms/_list.html.erb (93.5ms)
+  Rendered gyms/search.html.erb within layouts/application (159.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 862ms (Views: 159.8ms | ActiveRecord: 462.1ms)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:42:20 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.7ms)
+  [1m[35mVenue Load (0.1ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Exists (27.4ms)[0m  SELECT 1 AS one FROM `gyms` INNER JOIN `gym_bookmarks` ON `gyms`.`id` = `gym_bookmarks`.`gym_id` WHERE `gym_bookmarks`.`user_id` = 22 AND `gyms`.`id` = 2 LIMIT 1
+  [1m[36mGymImage Load (0.1ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCardType Load (0.1ms)[0m  [1mSELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2[0m
+  [1m[35m (34.8ms)[0m  SELECT COUNT(*) FROM `cards` WHERE `cards`.`user_id` = 22 AND `cards`.`card_type_id` = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)[0m
+  Rendered cards/_new_cards.html.erb (41.4ms)
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered shared/_map.html.erb (32.7ms)
+  Rendered gyms/show.html.erb within layouts/application (190.2ms)
+  Rendered shared/_user_nav.html.erb (0.4ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (1.0ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 285ms (Views: 217.8ms | ActiveRecord: 64.7ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:45:22 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.0ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (88.7ms)
+  [1m[35mVenue Load (0.2ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Exists (0.0ms)[0m  SELECT 1 AS one FROM `gyms` INNER JOIN `gym_bookmarks` ON `gyms`.`id` = `gym_bookmarks`.`gym_id` WHERE `gym_bookmarks`.`user_id` = 22 AND `gyms`.`id` = 2 LIMIT 1
+  [1m[36mGymImage Load (0.1ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCardType Load (0.2ms)[0m  [1mSELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `cards` WHERE `cards`.`user_id` = 22 AND `cards`.`card_type_id` = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)[0m
+  Rendered cards/_new_cards.html.erb (141.8ms)
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (2.6ms)
+  Rendered shared/_map.html.erb (78.4ms)
+  Rendered gyms/show.html.erb within layouts/application (831.5ms)
+  Rendered shared/_user_nav.html.erb (1.4ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_footer_nav.html.erb (1.3ms)
+  Rendered carts/_live.html.erb (0.9ms)
+Completed 200 OK in 1537ms (Views: 1280.4ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:48:57 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2
+  [1m[36mActivity Load (0.1ms)[0m  [1mSELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (5.7ms)
+  [1m[35mVenue Load (0.1ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mGym Exists (0.1ms)[0m  SELECT 1 AS one FROM `gyms` INNER JOIN `gym_bookmarks` ON `gyms`.`id` = `gym_bookmarks`.`gym_id` WHERE `gym_bookmarks`.`user_id` = 22 AND `gyms`.`id` = 2 LIMIT 1
+  [1m[36mGymImage Load (0.1ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCardType Load (0.1ms)[0m  SELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `cards` WHERE `cards`.`user_id` = 22 AND `cards`.`card_type_id` = 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)
+  Rendered cards/_new_cards.html.erb (4.3ms)
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2[0m
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.5ms)
+  Rendered shared/_map.html.erb (1.7ms)
+  Rendered gyms/show.html.erb within layouts/application (30.8ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 84.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:50:20 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` WHERE `gyms`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `activities` WHERE `activities`.`gym_id` = 2[0m
+  [1m[35mActivity Load (0.1ms)[0m  SELECT `activities`.* FROM `activities` WHERE `activities`.`gym_id` = 2 LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (5.7ms)
+  [1m[36mVenue Load (0.1ms)[0m  [1mSELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venues`.* FROM `venues` WHERE `venues`.`activity_id` = 3 AND `venues`.`active` = 1 ORDER BY `venues`.`stop_at` DESC LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`locatable_id` = 2 AND `locations`.`locatable_type` = 'Gym' LIMIT 1[0m
+  [1m[35mArea Load (0.1ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`id` = 6 LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE `cities`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mGym Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `gyms` INNER JOIN `gym_bookmarks` ON `gyms`.`id` = `gym_bookmarks`.`gym_id` WHERE `gym_bookmarks`.`user_id` = 22 AND `gyms`.`id` = 2 LIMIT 1[0m
+  [1m[35mGymImage Load (0.1ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `gym_images`.* FROM `gym_images` WHERE `gym_images`.`gym_id` = 2 ORDER BY position LIMIT 1
+  [1m[36mCardType Load (0.1ms)[0m  [1mSELECT `card_types`.* FROM `card_types` INNER JOIN `card_types_gym_groups` ON `card_types`.`id` = `card_types_gym_groups`.`card_type_id` INNER JOIN `gym_groups` ON `card_types_gym_groups`.`gym_group_id` = `gym_groups`.`id` INNER JOIN `gym_groups_gyms` ON `gym_groups`.`id` = `gym_groups_gyms`.`gym_group_id` WHERE `gym_groups_gyms`.`gym_id` = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `cards` WHERE `cards`.`user_id` = 22 AND `cards`.`card_type_id` = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `cards` WHERE `cards`.`card_type_id` = 1 AND (sold_at is null)[0m
+  Rendered cards/_new_cards.html.erb (5.2ms)
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` INNER JOIN `venue_inventories` ON `venue_types`.`id` = `venue_inventories`.`venue_type_id` WHERE `venue_inventories`.`gym_id` = 2
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (2.1ms)
+  Rendered gyms/show.html.erb within layouts/application (31.3ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.9ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 1.7ms)

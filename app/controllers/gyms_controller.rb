@@ -20,6 +20,7 @@ class GymsController < BaseController
 
   def show
     @gym = Gym.find(params[:id])
+    @activity = @gym.activities.first unless @gym.activities.empty?
   end
 
   def bookmark

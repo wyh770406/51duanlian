@@ -6,6 +6,13 @@
       <div class="venue-list">
         <div class="title">
           <h1><%= link_to @gym.name, @gym %> - <%= @venue_type.name %></h1>
+          <span align=center><font color="red">
+            <% if @activity && @activity.published_to%>
+              该场馆预定场地发布至<%=l(@activity.published_to.to_date, format: :long)%>
+            <%else%>
+              该场馆目前尚未发布可预订的场次
+            <%end%>
+          </font></span>
           <div class="date">
             <%= form_tag search_gym_venues_path(@gym, date: Date.today, venue_type_id: @venue_type.id), method: :get, id: "form-search-gym-navigator" do %>
               <%= hidden_field_tag "venue_type_id", @venue_type.id %>

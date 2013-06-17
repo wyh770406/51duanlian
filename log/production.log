@@ -54552,3 +54552,956 @@ Processing by Admin::CardsController#show as HTML
   Rendered admin/cards/show.html.erb within layouts/admin (18.3ms)
   Rendered admin/shared/_topnav.html.erb (16.7ms)
 Completed 200 OK in 62ms (Views: 36.2ms | ActiveRecord: 5.3ms)
+Compiled ckeditor/init.js  (4ms)  (pid 25021)
+Compiled jquery.js  (1ms)  (pid 25021)
+Compiled jquery_ujs.js  (0ms)  (pid 25021)
+Compiled bootstrap-datepicker/bootstrap-datepicker.js  (0ms)  (pid 25021)
+Compiled bootstrap-transition.js  (0ms)  (pid 25021)
+Compiled bootstrap-affix.js  (0ms)  (pid 25021)
+Compiled bootstrap-alert.js  (0ms)  (pid 25021)
+Compiled bootstrap-button.js  (0ms)  (pid 25021)
+Compiled bootstrap-carousel.js  (0ms)  (pid 25021)
+Compiled bootstrap-collapse.js  (0ms)  (pid 25021)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 25021)
+Compiled bootstrap-modal.js  (0ms)  (pid 25021)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 25021)
+Compiled bootstrap-tab.js  (0ms)  (pid 25021)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 25021)
+Compiled bootstrap-popover.js  (0ms)  (pid 25021)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 25021)
+Compiled bootstrap.js  (68ms)  (pid 25021)
+Compiled chosen.jquery.js  (0ms)  (pid 25021)
+Compiled admin/activities.js  (222ms)  (pid 25021)
+Compiled admin/areas.js  (2ms)  (pid 25021)
+Compiled admin/cart.js  (1ms)  (pid 25021)
+Compiled admin/chosen.js  (0ms)  (pid 25021)
+Compiled admin/gyms.js  (0ms)  (pid 25021)
+Compiled admin/application.js  (363ms)  (pid 25021)
+Compiled jquery.browser.js  (0ms)  (pid 25021)
+Compiled jquery.fancybox.js  (0ms)  (pid 25021)
+Compiled fancybox.js  (8ms)  (pid 25021)
+Compiled gmaps4rails/gmaps4rails.base.js  (40ms)  (pid 25021)
+Compiled gmaps4rails/gmaps4rails.googlemaps.js  (19ms)  (pid 25021)
+Compiled cart.js  (1ms)  (pid 25021)
+Compiled application.js  (108ms)  (pid 25021)
+Compiled ckeditor/application.css  (0ms)  (pid 25021)
+Compiled ckeditor/application.js  (1ms)  (pid 25021)
+Compiled ckeditor/build-config.js  (0ms)  (pid 25021)
+Compiled ckeditor/ckeditor.js  (4ms)  (pid 25021)
+Compiled ckeditor/config.js  (0ms)  (pid 25021)
+Compiled ckeditor/contents.css  (0ms)  (pid 25021)
+Compiled ckeditor/filebrowser/javascripts/application.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/af.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ar.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/bg.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/bn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/bs.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/cs.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/cy.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/da.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/de.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/el.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en-au.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en-ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en-gb.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/eo.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/es.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/et.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/eu.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fa.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fi.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fo.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fr-ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/gl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/gu.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/he.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/hi.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/hr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/hu.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/is.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/it.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ja.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ka.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/km.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ko.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ku.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/lt.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/lv.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/mk.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/mn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ms.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/nb.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/nl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/no.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/pl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/pt-br.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/pt.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ro.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ru.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sk.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sr-latn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sv.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/th.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/tr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ug.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/uk.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/vi.js  (1ms)  (pid 25021)
+Compiled ckeditor/lang/zh-cn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/zh.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ar.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/bg.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cs.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cy.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/da.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/de.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/el.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/en.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/eo.js  (1ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/es.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/et.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fa.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/gu.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/he.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hu.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/it.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ja.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/km.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ku.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lt.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mn.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nb.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/no.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ro.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ru.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/th.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/tr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ug.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/uk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/vi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/about/dialogs/about.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/clipboard/dialogs/paste.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/colordialog/dialogs/colordialog.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/dialog/dialogDefinition.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/div/dialogs/div.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/find/dialogs/find.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/flash/dialogs/flash.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/button.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/checkbox.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/form.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/hiddenfield.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/radio.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/select.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/textarea.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/textfield.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/iframe/dialogs/iframe.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/image/dialogs/image.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/link/dialogs/anchor.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/link/dialogs/link.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/liststyle/dialogs/liststyle.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/pastefromword/filter/default.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/scayt/dialogs/options.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/scayt/dialogs/toolbar.css  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/smiley/dialogs/smiley.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cs.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cy.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/de.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/el.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/en.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/eo.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/et.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fa.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/he.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/hr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/it.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ku.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/lv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nb.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/no.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pt-br.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/th.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/tr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ug.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/specialchar.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/table/dialogs/table.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/tabletools/dialogs/tableCell.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/templates/dialogs/templates.css  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/templates/dialogs/templates.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/templates/templates/default.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.css  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.js  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_ie.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_ie7.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_ie8.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_iequirks.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_opera.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_gecko.css  (1ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_ie.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_ie7.css  (19ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_ie8.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_iequirks.css  (0ms)  (pid 25021)
+Compiled ckeditor/styles.js  (0ms)  (pid 25021)
+Compiled admin/application.css  (3377ms)  (pid 25021)
+Compiled gmaps4rails.css  (0ms)  (pid 25021)
+Compiled jquery.fancybox.css  (52ms)  (pid 25021)
+Compiled fancybox.css  (56ms)  (pid 25021)
+Compiled application.css  (1432ms)  (pid 25021)
+Compiled ckeditor/init.js  (4ms)  (pid 25021)
+Compiled jquery.js  (1ms)  (pid 25021)
+Compiled jquery_ujs.js  (0ms)  (pid 25021)
+Compiled bootstrap-datepicker/bootstrap-datepicker.js  (0ms)  (pid 25021)
+Compiled bootstrap-transition.js  (0ms)  (pid 25021)
+Compiled bootstrap-affix.js  (0ms)  (pid 25021)
+Compiled bootstrap-alert.js  (0ms)  (pid 25021)
+Compiled bootstrap-button.js  (0ms)  (pid 25021)
+Compiled bootstrap-carousel.js  (0ms)  (pid 25021)
+Compiled bootstrap-collapse.js  (0ms)  (pid 25021)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 25021)
+Compiled bootstrap-modal.js  (0ms)  (pid 25021)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 25021)
+Compiled bootstrap-tab.js  (0ms)  (pid 25021)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 25021)
+Compiled bootstrap-popover.js  (0ms)  (pid 25021)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 25021)
+Compiled bootstrap.js  (67ms)  (pid 25021)
+Compiled chosen.jquery.js  (0ms)  (pid 25021)
+Compiled admin/activities.js  (68ms)  (pid 25021)
+Compiled admin/areas.js  (2ms)  (pid 25021)
+Compiled admin/cart.js  (1ms)  (pid 25021)
+Compiled admin/chosen.js  (0ms)  (pid 25021)
+Compiled admin/gyms.js  (0ms)  (pid 25021)
+Compiled admin/application.js  (206ms)  (pid 25021)
+Compiled jquery.browser.js  (0ms)  (pid 25021)
+Compiled jquery.fancybox.js  (0ms)  (pid 25021)
+Compiled fancybox.js  (8ms)  (pid 25021)
+Compiled gmaps4rails/gmaps4rails.base.js  (39ms)  (pid 25021)
+Compiled gmaps4rails/gmaps4rails.googlemaps.js  (19ms)  (pid 25021)
+Compiled cart.js  (0ms)  (pid 25021)
+Compiled application.js  (83ms)  (pid 25021)
+Compiled ckeditor/application.css  (0ms)  (pid 25021)
+Compiled ckeditor/application.js  (1ms)  (pid 25021)
+Compiled ckeditor/build-config.js  (0ms)  (pid 25021)
+Compiled ckeditor/ckeditor.js  (4ms)  (pid 25021)
+Compiled ckeditor/config.js  (0ms)  (pid 25021)
+Compiled ckeditor/contents.css  (0ms)  (pid 25021)
+Compiled ckeditor/filebrowser/javascripts/application.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/af.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ar.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/bg.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/bn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/bs.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/cs.js  (24ms)  (pid 25021)
+Compiled ckeditor/lang/cy.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/da.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/de.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/el.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en-au.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en-ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/en-gb.js  (25ms)  (pid 25021)
+Compiled ckeditor/lang/en.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/eo.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/es.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/et.js  (24ms)  (pid 25021)
+Compiled ckeditor/lang/eu.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fa.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fi.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fo.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fr-ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/fr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/gl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/gu.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/he.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/hi.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/hr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/hu.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/is.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/it.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ja.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ka.js  (25ms)  (pid 25021)
+Compiled ckeditor/lang/km.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ko.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ku.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/lt.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/lv.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/mk.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/mn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ms.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/nb.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/nl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/no.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/pl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/pt-br.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/pt.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ro.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ru.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sk.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sl.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sr-latn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/sv.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/th.js  (1ms)  (pid 25021)
+Compiled ckeditor/lang/tr.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/ug.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/uk.js  (26ms)  (pid 25021)
+Compiled ckeditor/lang/vi.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/zh-cn.js  (0ms)  (pid 25021)
+Compiled ckeditor/lang/zh.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ar.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/bg.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cs.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cy.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/da.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/de.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/el.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/en.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/eo.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/es.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/et.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fa.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/gu.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/he.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hu.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/it.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ja.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/km.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ku.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lt.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mn.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nb.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/no.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ro.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ru.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/th.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/tr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ug.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/uk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/vi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/about/dialogs/about.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/clipboard/dialogs/paste.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/colordialog/dialogs/colordialog.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/dialog/dialogDefinition.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/div/dialogs/div.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/find/dialogs/find.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/flash/dialogs/flash.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/button.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/checkbox.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/form.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/hiddenfield.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/radio.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/select.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/textarea.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/forms/dialogs/textfield.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/iframe/dialogs/iframe.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/image/dialogs/image.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/link/dialogs/anchor.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/link/dialogs/link.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/liststyle/dialogs/liststyle.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/pastefromword/filter/default.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/scayt/dialogs/options.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/scayt/dialogs/toolbar.css  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/smiley/dialogs/smiley.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ca.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cs.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cy.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/de.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/el.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/en.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/eo.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/et.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fa.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fi.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/he.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/hr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/it.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ku.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/lv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nb.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/no.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pl.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pt-br.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sk.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sv.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/th.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/tr.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ug.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/specialchar/dialogs/specialchar.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/table/dialogs/table.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/tabletools/dialogs/tableCell.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/templates/dialogs/templates.css  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/templates/dialogs/templates.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/templates/templates/default.js  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.css  (0ms)  (pid 25021)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.js  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_ie.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_ie7.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_ie8.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_iequirks.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/dialog_opera.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_gecko.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_ie.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_ie7.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_ie8.css  (0ms)  (pid 25021)
+Compiled ckeditor/skins/moono/editor_iequirks.css  (0ms)  (pid 25021)
+Compiled ckeditor/styles.js  (0ms)  (pid 25021)
+Compiled admin/application.css  (2987ms)  (pid 25021)
+Compiled gmaps4rails.css  (0ms)  (pid 25021)
+Compiled jquery.fancybox.css  (5ms)  (pid 25021)
+Compiled fancybox.css  (9ms)  (pid 25021)
+Compiled application.css  (1297ms)  (pid 25021)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:53:26 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (23.2ms)
+  Rendered cards/_new_cards.html.erb (67.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.1ms)
+  Rendered shared/_map.html.erb (8.5ms)
+  Rendered gyms/show.html.erb within layouts/application (304.9ms)
+  Rendered shared/_user_nav.html.erb (1.6ms)
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_footer_nav.html.erb (1.4ms)
+  Rendered carts/_live.html.erb (1.0ms)
+Completed 200 OK in 498ms (Views: 337.4ms | ActiveRecord: 16.5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-c4cf96235db2fd2eebff1ad5599c32d5.css"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-ceaec772e91ac5813113d0ccf9837739.js"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo-f14e8284ece6d9084d2c7745d765be89.jpg"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/powered_by_transparent-2932710f76186a46f2b3d2e64866e90d.png"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+Started GET "/uploads/gym_image/image/3/thumb_20111109112243126.jpg" for 127.0.0.1 at 2013-06-17 16:53:27 +0800
+
+ActionController::RoutingError (No route matches [GET] "/uploads/gym_image/image/3/thumb_20111109112243126.jpg"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:54:12 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (4.6ms)
+  Rendered cards/_new_cards.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (1.3ms)
+  Rendered gyms/show.html.erb within layouts/application (25.7ms)
+  Rendered shared/_user_nav.html.erb (0.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 1.6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-c4cf96235db2fd2eebff1ad5599c32d5.css"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-ceaec772e91ac5813113d0ccf9837739.js"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo-f14e8284ece6d9084d2c7745d765be89.jpg"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/powered_by_transparent-2932710f76186a46f2b3d2e64866e90d.png"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+Started GET "/uploads/gym_image/image/3/thumb_20111109112243126.jpg" for 127.0.0.1 at 2013-06-17 16:54:13 +0800
+
+ActionController::RoutingError (No route matches [GET] "/uploads/gym_image/image/3/thumb_20111109112243126.jpg"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+Started GET "/uploads/gym_image/image/3/thumb_20111109112243126.jpg" for 127.0.0.1 at 2013-06-17 16:54:13 +0800
+
+ActionController::RoutingError (No route matches [GET] "/uploads/gym_image/image/3/thumb_20111109112243126.jpg"):
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+Connecting to database specified by database.yml
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 16:54:50 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (21.2ms)
+  Rendered cards/_new_cards.html.erb (24.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.2ms)
+  Rendered shared/_map.html.erb (42.0ms)
+  Rendered gyms/show.html.erb within layouts/application (308.5ms)
+  Rendered shared/_user_nav.html.erb (1.3ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_footer_nav.html.erb (1.2ms)
+  Rendered carts/_live.html.erb (1.5ms)
+Completed 200 OK in 469ms (Views: 313.5ms | ActiveRecord: 13.2ms)
+Started GET "/admin/" for 127.0.0.1 at 2013-06-17 16:55:38 +0800
+Processing by Admin::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 16:55:38 +0800
+Processing by Admin::GymsController#index as HTML
+  Rendered admin/gyms/_search.html.erb (8.6ms)
+  Rendered admin/gyms/index.html.erb within layouts/admin (62.6ms)
+  Rendered admin/shared/_topnav.html.erb (7.2ms)
+Completed 200 OK in 80ms (Views: 73.4ms | ActiveRecord: 0.5ms)
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 16:55:47 +0800
+Processing by Admin::GymsController#index as HTML
+  Rendered admin/gyms/_search.html.erb (8.9ms)
+  Rendered admin/gyms/index.html.erb within layouts/admin (28.2ms)
+  Rendered admin/shared/_topnav.html.erb (45.2ms)
+Completed 200 OK in 82ms (Views: 76.6ms | ActiveRecord: 0.6ms)
+Started GET "/admin/users" for 127.0.0.1 at 2013-06-17 16:55:48 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendered admin/users/_search.html.erb (8.4ms)
+  Rendered admin/users/index.html.erb within layouts/admin (183.8ms)
+  Rendered admin/shared/_topnav.html.erb (8.3ms)
+Completed 200 OK in 240ms (Views: 180.4ms | ActiveRecord: 53.6ms)
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 16:55:53 +0800
+Processing by Admin::GymsController#index as HTML
+  Rendered admin/gyms/_search.html.erb (13.5ms)
+  Rendered admin/gyms/index.html.erb within layouts/admin (34.7ms)
+  Rendered admin/shared/_topnav.html.erb (8.4ms)
+Completed 200 OK in 53ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+Started GET "/admin/contacts" for 127.0.0.1 at 2013-06-17 16:56:00 +0800
+Processing by Admin::ContactsController#index as HTML
+  Rendered admin/contacts/index.html.erb within layouts/admin (2.0ms)
+  Rendered admin/shared/_topnav.html.erb (6.1ms)
+Completed 200 OK in 45ms (Views: 33.4ms | ActiveRecord: 0.8ms)
+Started GET "/admin/contacts/1/edit" for 127.0.0.1 at 2013-06-17 16:56:02 +0800
+Processing by Admin::ContactsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered admin/contacts/_form.html.erb (20.2ms)
+  Rendered admin/contacts/edit.html.erb within layouts/admin (55.9ms)
+  Rendered admin/shared/_topnav.html.erb (6.5ms)
+Completed 200 OK in 135ms (Views: 129.5ms | ActiveRecord: 0.2ms)
+Started GET "/gyms/11" for 127.0.0.1 at 2013-06-17 16:57:36 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendered app/cells/venues/search.html.erb (5.5ms)
+  Rendered cards/_new_cards.html.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.5ms)
+  Rendered shared/_map.html.erb (1.2ms)
+  Rendered gyms/show.html.erb within layouts/application (30.7ms)
+  Rendered shared/_user_nav.html.erb (0.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 31.0ms | ActiveRecord: 4.4ms)
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:15:44 +0800
+Processing by HomeController#index as HTML
+  Rendered app/cells/venues/search.html.erb (4.9ms)
+  Rendered home/_gyms.html.erb (16.8ms)
+  Rendered home/index.html.erb within layouts/application (26.7ms)
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.9ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:15:52 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (4.3ms)
+  Rendered cards/_new_cards.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered shared/_map.html.erb (1.8ms)
+  Rendered gyms/show.html.erb within layouts/application (25.7ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 1.7ms)
+Started GET "/admin/" for 127.0.0.1 at 2013-06-17 17:15:58 +0800
+Processing by Admin::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 17:15:58 +0800
+Processing by Admin::GymsController#index as HTML
+  Rendered admin/gyms/_search.html.erb (7.2ms)
+  Rendered admin/gyms/index.html.erb within layouts/admin (24.8ms)
+  Rendered admin/shared/_topnav.html.erb (5.6ms)
+Completed 200 OK in 42ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+Started PUT "/admin/gym_session/2" for 127.0.0.1 at 2013-06-17 17:16:00 +0800
+Processing by Admin::GymSessionController#update as HTML
+  Parameters: {"authenticity_token"=>"QDsHJG9RN6aGvQZ4XKTQ6CPasyFjttg6K3RFTbrGvNE=", "id"=>"2"}
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 53ms (ActiveRecord: 38.3ms)
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 17:16:00 +0800
+Processing by Admin::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-17 17:16:00 +0800
+Processing by Admin::OrdersController#index as HTML
+  Rendered admin/orders/_tabs.html.erb (3.6ms)
+  Rendered admin/orders/_search.html.erb (101.2ms)
+  Rendered admin/orders/index.html.erb within layouts/admin (209.2ms)
+  Rendered admin/shared/_topnav.html.erb (10.5ms)
+Completed 200 OK in 339ms (Views: 308.0ms | ActiveRecord: 17.9ms)
+Started GET "/admin/users" for 127.0.0.1 at 2013-06-17 17:16:08 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendered admin/users/_search.html.erb (45.4ms)
+  Rendered admin/users/index.html.erb within layouts/admin (87.3ms)
+  Rendered admin/shared/_topnav.html.erb (10.8ms)
+Completed 200 OK in 106ms (Views: 97.3ms | ActiveRecord: 3.5ms)
+Started PUT "/admin/gym_session/1" for 127.0.0.1 at 2013-06-17 17:16:11 +0800
+Processing by Admin::GymSessionController#update as HTML
+  Parameters: {"authenticity_token"=>"QDsHJG9RN6aGvQZ4XKTQ6CPasyFjttg6K3RFTbrGvNE=", "id"=>"1"}
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 17:16:11 +0800
+Processing by Admin::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-17 17:16:11 +0800
+Processing by Admin::OrdersController#index as HTML
+  Rendered admin/orders/_tabs.html.erb (1.0ms)
+  Rendered admin/orders/_search.html.erb (23.1ms)
+  Rendered admin/orders/index.html.erb within layouts/admin (32.2ms)
+  Rendered admin/shared/_topnav.html.erb (11.3ms)
+Completed 200 OK in 57ms (Views: 44.7ms | ActiveRecord: 3.0ms)
+Started PUT "/admin/gym_session/2" for 127.0.0.1 at 2013-06-17 17:16:14 +0800
+Processing by Admin::GymSessionController#update as HTML
+  Parameters: {"authenticity_token"=>"QDsHJG9RN6aGvQZ4XKTQ6CPasyFjttg6K3RFTbrGvNE=", "id"=>"2"}
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 17:16:14 +0800
+Processing by Admin::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 12ms (ActiveRecord: 0.5ms)
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-17 17:16:14 +0800
+Processing by Admin::OrdersController#index as HTML
+  Rendered admin/orders/_tabs.html.erb (1.0ms)
+  Rendered admin/orders/_search.html.erb (21.5ms)
+  Rendered admin/orders/index.html.erb within layouts/admin (31.7ms)
+  Rendered admin/shared/_topnav.html.erb (12.7ms)
+Completed 200 OK in 105ms (Views: 45.8ms | ActiveRecord: 6.9ms)
+Started GET "/admin/companies" for 127.0.0.1 at 2013-06-17 17:16:48 +0800
+Processing by Admin::CompaniesController#index as HTML
+  Rendered admin/companies/index.html.erb within layouts/admin (10.8ms)
+  Rendered admin/shared/_topnav.html.erb (11.3ms)
+Completed 200 OK in 51ms (Views: 43.4ms | ActiveRecord: 1.3ms)
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-17 17:16:52 +0800
+Processing by Admin::OrdersController#index as HTML
+  Rendered admin/orders/_tabs.html.erb (2.1ms)
+  Rendered admin/orders/_search.html.erb (70.1ms)
+  Rendered admin/orders/index.html.erb within layouts/admin (82.6ms)
+  Rendered admin/shared/_topnav.html.erb (10.5ms)
+Completed 200 OK in 113ms (Views: 94.4ms | ActiveRecord: 4.3ms)
+Started GET "/admin/venues" for 127.0.0.1 at 2013-06-17 17:16:57 +0800
+Processing by Admin::VenuesController#index as HTML
+  Rendered admin/venues/_form.html.erb (1.1ms)
+  Rendered admin/venues/_tabs.html.erb (2.3ms)
+  Rendered admin/venues/_orders.html.erb (98.6ms)
+  Rendered admin/venues/_orders.html.erb (2.3ms)
+  Rendered admin/venues/_orders.html.erb (2.0ms)
+  Rendered admin/venues/_orders.html.erb (1.7ms)
+  Rendered admin/venues/_orders.html.erb (1.6ms)
+  Rendered admin/venues/_orders.html.erb (1.4ms)
+  Rendered admin/venues/_orders.html.erb (1.5ms)
+  Rendered admin/venues/_orders.html.erb (1.5ms)
+  Rendered admin/venues/_orders.html.erb (1.5ms)
+  Rendered admin/venues/_orders.html.erb (1.8ms)
+  Rendered admin/venues/_orders.html.erb (1.6ms)
+  Rendered admin/venues/_orders.html.erb (1.6ms)
+  Rendered admin/venues/_orders.html.erb (1.4ms)
+  Rendered admin/venues/index.html.erb within layouts/admin (239.8ms)
+  Rendered admin/shared/_topnav.html.erb (9.7ms)
+Completed 200 OK in 309ms (Views: 182.8ms | ActiveRecord: 101.6ms)
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-17 17:17:00 +0800
+Processing by Admin::OrdersController#index as HTML
+  Rendered admin/orders/_tabs.html.erb (0.9ms)
+  Rendered admin/orders/_search.html.erb (19.0ms)
+  Rendered admin/orders/index.html.erb within layouts/admin (27.8ms)
+  Rendered admin/shared/_topnav.html.erb (8.9ms)
+Completed 200 OK in 54ms (Views: 37.2ms | ActiveRecord: 4.5ms)
+Started GET "/admin/activities" for 127.0.0.1 at 2013-06-17 17:17:02 +0800
+Processing by Admin::ActivitiesController#index as HTML
+  Rendered admin/activities/index.html.erb within layouts/admin (282.2ms)
+  Rendered admin/shared/_topnav.html.erb (10.5ms)
+Completed 200 OK in 327ms (Views: 284.2ms | ActiveRecord: 36.1ms)
+Started GET "/admin/activities/3" for 127.0.0.1 at 2013-06-17 17:17:08 +0800
+Processing by Admin::ActivitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered admin/activities/_children.html.erb (2.7ms)
+  Rendered admin/activities/_children.html.erb (5.1ms)
+  Rendered admin/recurrence_rules/date_rules/weekly_rules/_details.html.erb (3.6ms)
+  Rendered admin/recurrence_rules/time_rules/minutely_rules/_details.html.erb (4.2ms)
+  Rendered admin/venue_rules/per_venue_rules/_details.html.erb (1.9ms)
+  Rendered admin/activities/show.html.erb within layouts/admin (630.5ms)
+  Rendered admin/shared/_topnav.html.erb (9.2ms)
+Completed 200 OK in 676ms (Views: 620.8ms | ActiveRecord: 42.2ms)
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 17:17:41 +0800
+Processing by Admin::GymsController#index as HTML
+  Rendered admin/gyms/_search.html.erb (10.4ms)
+  Rendered admin/gyms/index.html.erb within layouts/admin (29.4ms)
+  Rendered admin/shared/_topnav.html.erb (10.4ms)
+Completed 200 OK in 50ms (Views: 41.3ms | ActiveRecord: 1.0ms)
+Started GET "/admin/gyms/2" for 127.0.0.1 at 2013-06-17 17:17:49 +0800
+Processing by Admin::GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered admin/gym_images/_list.html.erb (2.2ms)
+  Rendered admin/gyms/show.html.erb within layouts/admin (19.6ms)
+  Rendered admin/shared/_topnav.html.erb (11.5ms)
+Completed 200 OK in 177ms (Views: 53.2ms | ActiveRecord: 2.3ms)
+Started GET "/admin/gyms/2/gym_images/new" for 127.0.0.1 at 2013-06-17 17:17:52 +0800
+Processing by Admin::GymImagesController#new as HTML
+  Parameters: {"gym_id"=>"2"}
+  Rendered admin/gym_images/_form.html.erb (3.2ms)
+  Rendered admin/gym_images/new.html.erb within layouts/admin (5.3ms)
+  Rendered admin/shared/_topnav.html.erb (11.5ms)
+Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+Started POST "/admin/gyms/2/gym_images" for 127.0.0.1 at 2013-06-17 17:18:03 +0800
+Processing by Admin::GymImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QDsHJG9RN6aGvQZ4XKTQ6CPasyFjttg6K3RFTbrGvNE=", "gym_image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f202c861a48 @original_filename="test.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gym_image[image]\"; filename=\"test.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20130617-26459-evgmdl>>}, "commit"=>"新增场馆照片", "gym_id"=>"2"}
+Redirected to http://127.0.0.1:3000/admin/gyms/2
+Completed 302 Found in 1579ms (ActiveRecord: 263.7ms)
+Started GET "/admin/gyms/2" for 127.0.0.1 at 2013-06-17 17:18:04 +0800
+Processing by Admin::GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered admin/gym_images/_list.html.erb (2.1ms)
+  Rendered admin/gyms/show.html.erb within layouts/admin (6.9ms)
+  Rendered admin/shared/_topnav.html.erb (10.3ms)
+Completed 200 OK in 32ms (Views: 18.8ms | ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:18:12 +0800
+Processing by HomeController#index as HTML
+  Rendered app/cells/venues/search.html.erb (4.8ms)
+  Rendered home/_gyms.html.erb (12.4ms)
+  Rendered home/index.html.erb within layouts/application (19.2ms)
+  Rendered shared/_user_nav.html.erb (1.3ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 1.1ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:18:21 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (4.5ms)
+  Rendered cards/_new_cards.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered shared/_map.html.erb (1.5ms)
+  Rendered gyms/show.html.erb within layouts/application (25.1ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (1.0ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 3.4ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:18:33 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (6.0ms)
+  Rendered cards/_new_cards.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered shared/_map.html.erb (1.8ms)
+  Rendered gyms/show.html.erb within layouts/application (31.5ms)
+  Rendered shared/_user_nav.html.erb (0.7ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 2.0ms)
+Started GET "/" for 127.0.0.1 at 2013-06-17 17:18:55 +0800
+Processing by HomeController#index as HTML
+  Rendered app/cells/venues/search.html.erb (5.8ms)
+  Rendered home/_gyms.html.erb (17.9ms)
+  Rendered home/index.html.erb within layouts/application (26.1ms)
+  Rendered shared/_user_nav.html.erb (1.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 1.2ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:18:58 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (5.3ms)
+  Rendered cards/_new_cards.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (1.3ms)
+  Rendered gyms/show.html.erb within layouts/application (26.2ms)
+  Rendered shared/_user_nav.html.erb (0.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 2.1ms)
+Started GET "/admin/" for 127.0.0.1 at 2013-06-17 17:19:05 +0800
+Processing by Admin::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/orders
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+Started GET "/admin/orders" for 127.0.0.1 at 2013-06-17 17:19:05 +0800
+Processing by Admin::OrdersController#index as HTML
+  Rendered admin/orders/_tabs.html.erb (3.2ms)
+  Rendered admin/orders/_search.html.erb (28.9ms)
+  Rendered admin/orders/index.html.erb within layouts/admin (41.2ms)
+  Rendered admin/shared/_topnav.html.erb (58.0ms)
+Completed 200 OK in 122ms (Views: 100.5ms | ActiveRecord: 3.6ms)
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 17:19:08 +0800
+Processing by Admin::GymsController#index as HTML
+  Rendered admin/gyms/_search.html.erb (8.5ms)
+  Rendered admin/gyms/index.html.erb within layouts/admin (25.6ms)
+  Rendered admin/shared/_topnav.html.erb (9.6ms)
+Completed 200 OK in 46ms (Views: 36.9ms | ActiveRecord: 0.7ms)
+Started GET "/admin/gyms/2" for 127.0.0.1 at 2013-06-17 17:19:10 +0800
+Processing by Admin::GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered admin/gym_images/_list.html.erb (2.2ms)
+  Rendered admin/gyms/show.html.erb within layouts/admin (7.0ms)
+  Rendered admin/shared/_topnav.html.erb (12.0ms)
+Completed 200 OK in 33ms (Views: 20.1ms | ActiveRecord: 1.3ms)
+Connecting to database specified by database.yml
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:19:48 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (21.6ms)
+  Rendered cards/_new_cards.html.erb (25.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.2ms)
+  Rendered shared/_map.html.erb (42.5ms)
+  Rendered gyms/show.html.erb within layouts/application (308.9ms)
+  Rendered shared/_user_nav.html.erb (1.2ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_footer_nav.html.erb (1.2ms)
+  Rendered carts/_live.html.erb (0.8ms)
+Completed 200 OK in 470ms (Views: 311.5ms | ActiveRecord: 14.1ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:21:03 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (6.7ms)
+  Rendered cards/_new_cards.html.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (1.5ms)
+  Rendered gyms/show.html.erb within layouts/application (35.4ms)
+  Rendered shared/_user_nav.html.erb (0.7ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (1.2ms)
+  Rendered carts/_live.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 2.6ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:22:14 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (5.1ms)
+  Rendered cards/_new_cards.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (1.5ms)
+  Rendered gyms/show.html.erb within layouts/application (27.0ms)
+  Rendered shared/_user_nav.html.erb (0.4ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 2.1ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:22:37 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (5.6ms)
+  Rendered cards/_new_cards.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered shared/_map.html.erb (1.3ms)
+  Rendered gyms/show.html.erb within layouts/application (29.1ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 67.9ms | ActiveRecord: 2.3ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:22:53 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (11.0ms)
+  Rendered cards/_new_cards.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered shared/_map.html.erb (1.6ms)
+  Rendered gyms/show.html.erb within layouts/application (39.1ms)
+  Rendered shared/_user_nav.html.erb (0.5ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_footer_nav.html.erb (0.9ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 42.3ms | ActiveRecord: 2.8ms)
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:23:53 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (4.7ms)
+  Rendered cards/_new_cards.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered shared/_map.html.erb (2.0ms)
+  Rendered gyms/show.html.erb within layouts/application (31.8ms)
+  Rendered shared/_user_nav.html.erb (0.6ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 2.2ms)
+Connecting to database specified by database.yml
+Started GET "/gyms/2" for 127.0.0.1 at 2013-06-17 17:26:25 +0800
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered app/cells/venues/search.html.erb (21.3ms)
+  Rendered cards/_new_cards.html.erb (25.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.3ms)
+  Rendered shared/_map.html.erb (43.3ms)
+  Rendered gyms/show.html.erb within layouts/application (309.6ms)
+  Rendered shared/_user_nav.html.erb (1.2ms)
+  Rendered shared/_nav.html.erb (1.6ms)
+  Rendered shared/_footer_nav.html.erb (1.5ms)
+  Rendered carts/_live.html.erb (1.0ms)
+Completed 200 OK in 480ms (Views: 315.9ms | ActiveRecord: 14.1ms)

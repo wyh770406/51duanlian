@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require fancybox
 //= require bootstrap-datepicker/bootstrap-datepicker
 
 //= require gmaps4rails/gmaps4rails.base
