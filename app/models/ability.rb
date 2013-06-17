@@ -30,6 +30,7 @@ class Ability
       cannot :manage, Area
       cannot :manage, PaymentMethod
       cannot :manage, UserAgreement 
+      cannot :manage, Contact      
     elsif user.is? :manager
       can :manage, :all
 
@@ -49,6 +50,7 @@ class Ability
       cannot :manage, Area
       cannot :manage, PaymentMethod
       cannot :manage, UserAgreement
+      cannot :manage, Contact            
     else
       can [:read, :create, :update], Gym
       can :manage, GymImage

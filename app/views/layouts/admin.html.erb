@@ -51,8 +51,8 @@
             <% end -%>
           </div>
           <p class="links">
-            <a href="#">关于我们</a> |
-            <a href="#">联系我们</a> |
+            <%= link_to t("about_us"), contact_path(2) %> |
+            <%= link_to t("contact_us"), contact_path(1) %> |
             <a href="#">意见反馈</a> |
             <a href="#">使用帮助</a>
           </p>

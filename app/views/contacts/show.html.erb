@@ -1,0 +1,13 @@
+<div id="home-content">
+  <div class="row-fluid">
+    <div class="help">   
+      <center><h1><%= (@id.to_i==1) ? t("contact_us") : t("about_us")%></h1></center>
+
+          <div><%=raw(@contact.content)%></div>
+
+    </div>
+  </div>
+</div>
+
+
+

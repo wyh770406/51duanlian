@@ -24219,3 +24219,955 @@ Processing by Admin::CardsController#show as HTML
   [1m[35mGym Load (0.1ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `gyms_users` ON `gyms`.`id` = `gyms_users`.`gym_id` WHERE `gyms_users`.`user_id` = 22
   Rendered admin/shared/_topnav.html.erb (11.9ms)
 Completed 200 OK in 87ms (Views: 72.7ms | ActiveRecord: 1.8ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 11:54:45 +0800
+Processing by HomeController#index as HTML
+  [1m[36mCity Load (106.3ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mEXPLAIN (0.4ms)[0m  EXPLAIN SELECT `cities`.* FROM `cities` 
+EXPLAIN for: SELECT `cities`.* FROM `cities` 
++----+-------------+--------+------+---------------+------+---------+------+------+-------+
+| id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows | Extra |
++----+-------------+--------+------+---------------+------+---------+------+------+-------+
+|  1 | SIMPLE      | cities | ALL  | NULL          | NULL | NULL    | NULL |    1 |       |
++----+-------------+--------+------+---------------+------+---------+------+------+-------+
+1 row in set (0.00 sec)
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (72.4ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (13.9ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (1270.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (26.0ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (12.8ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.5ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.4ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (452.9ms)
+  Rendered home/index.html.erb within layouts/application (1850.7ms)
+  Rendered shared/_user_nav.html.erb (2.7ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.9ms)
+Completed 200 OK in 2292ms (Views: 848.1ms | ActiveRecord: 1334.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 11:54:53 +0800
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-17 11:54:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/_links.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (30.0ms)
+  Rendered shared/_user_nav.html.erb (2.1ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_footer_nav.html.erb (0.4ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 159ms (Views: 85.4ms | ActiveRecord: 49.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-17 11:55:02 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gfTRRncSqm8BfxJCUXlCpG4gYgoOprGgEt2o1LORzLs=", "user"=>{"login"=>"wyh770406@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"登录"}
+  [1m[36mUser Load (97.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (lower(login_name) = 'wyh770406@gmail.com' OR lower(email) = 'wyh770406@gmail.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (108.6ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-06-06 06:14:12', `current_sign_in_at` = '2013-06-17 03:55:03', `sign_in_count` = 28, `updated_at` = '2013-06-17 03:55:03' WHERE `users`.`id` = 22[0m
+  [1m[35m (70.8ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/admin
+Completed 302 Found in 435ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 11:55:03 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 11:55:03 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/gyms/_search.html.erb (61.1ms)
+  [1m[36mGym Load (1.5ms)[0m  [1mSELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (0.6ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` 
+  Rendered admin/gyms/index.html.erb within layouts/admin (94.9ms)
+  Rendered admin/shared/_topnav.html.erb (148.0ms)
+Completed 200 OK in 372ms (Views: 300.3ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/admin/user_agreements" for 127.0.0.1 at 2013-06-17 11:55:23 +0800
+Processing by Admin::UserAgreementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mUserAgreement Load (112.2ms)[0m  SELECT `user_agreements`.* FROM `user_agreements` 
+  Rendered admin/user_agreements/index.html.erb within layouts/admin (4.1ms)
+  Rendered admin/shared/_topnav.html.erb (5.3ms)
+Completed 200 OK in 185ms (Views: 57.3ms | ActiveRecord: 112.4ms)
+
+
+Started GET "/admin/contacts" for 127.0.0.1 at 2013-06-17 11:55:29 +0800
+Processing by Admin::ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+Mysql2::Error: Table 'berlin_development.contacts' doesn't exist: SHOW FULL FIELDS FROM `contacts`
+Completed 500 Internal Server Error in 99ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'berlin_development.contacts' doesn't exist: SHOW FULL FIELDS FROM `contacts`):
+  app/controllers/admin/contacts_controller.rb:6:in `index'
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (148.9ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+  [1m[36m (23.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120112153752)
+Migrating to CreateGyms (20120113144421)
+Migrating to CreateVenueTypes (20120114174229)
+Migrating to CreateCities (20120115164836)
+Migrating to CreateAreas (20120115170421)
+Migrating to CreateLocations (20120115175236)
+Migrating to CreateVenueInventories (20120117162526)
+Migrating to CreatePreferences (20120118170100)
+Migrating to CreateActivities (20120118203723)
+Migrating to CreateVenues (20120120215043)
+Migrating to CreateRecurrenceRules (20120121163726)
+Migrating to RemoveAvailableDatesFromActivities (20120122155132)
+Migrating to RemoveTimesFromActivities (20120123020205)
+Migrating to AddSettingsToRecurrenceRules (20120130043002)
+Migrating to DropPreferences (20120130074418)
+Migrating to CreateProducts (20120131035535)
+Migrating to AddGymToProducts (20120131083614)
+Migrating to CreateOrders (20120201034849)
+Migrating to AddCapacityToVenues (20120209092344)
+Migrating to CreateVenueRules (20120211164502)
+Migrating to CreateRealVenues (20120213084446)
+Migrating to CreateLineItems (20120213102729)
+Migrating to AddGymToOrders (20120213152020)
+Migrating to CreatePaymentMethods (20120218180209)
+Migrating to CreateCards (20120219190340)
+Migrating to CreateCardLineItems (20120220162140)
+Migrating to CreatePayments (20120221165252)
+Migrating to CreateCardTypes (20120229075900)
+Migrating to AssociateCardWithCardType (20120229075938)
+Migrating to AddValidityToCardLineItems (20120229204010)
+Migrating to AddPhoneToGyms (20120229212504)
+Migrating to AddCheckedInAtToOrders (20120229213800)
+Migrating to CreateGymImages (20120302012905)
+Migrating to AddRolesMaskToUsers (20120305035913)
+Migrating to CreateGymsUsers (20120305080753)
+Migrating to AddMobileToUsers (20120305095011)
+Migrating to AddUsernameToOrders (20120323085439)
+Migrating to CreateCardCharges (20120426010440)
+Migrating to AddSoldAtToCards (20120428033717)
+Migrating to AddCardIdToOrders (20120428075214)
+Migrating to AddExpiredAtToOrders (20120511075355)
+Migrating to AddNameToUsers (20120515064614)
+Migrating to CreateGatewayBills (20120517162023)
+Migrating to ChangeCardChargesPrice (20120529122133)
+Migrating to AddPriceAndMemberPrice (20120529124208)
+Migrating to AddPaymentMethodToOrders (20120711173130)
+Migrating to AddMapsToLocations (20120726110106)
+Migrating to AddMobileVerificationToUsers (20120817075826)
+Migrating to AddOrderIdToCardLineItems (20120905093313)
+Migrating to AddActiveToVenues (20121209110754)
+Migrating to AddLoginNameToUsers (20121209195426)
+Migrating to AddAncestryToUsers (20121210103003)
+Migrating to AddAncestryToActivities (20121217200200)
+Migrating to CreateGymBookmarks (20130104152544)
+Migrating to CreateCardsGyms (20130114115713)
+Migrating to CreateGymGroups (20130114183016)
+Migrating to AddGymGroupIdToGyms (20130114184058)
+Migrating to AddGymGroupIdToCardTypes (20130114194220)
+Migrating to AddGymGroupIdToCardCharges (20130114201156)
+Migrating to AddGymGroupIdToCards (20130114213509)
+Migrating to CreateCompanies (20130123235532)
+Migrating to AddCompanyIdToUsers (20130124022533)
+Migrating to AddCompanyIdToGyms (20130124030955)
+Migrating to RemoveCompanyIdFromGyms (20130124050333)
+Migrating to AddCompanyIdToGymGroups (20130124050510)
+Migrating to DropCardsGyms (20130130010631)
+Migrating to CreateGymGroupsGyms (20130326143838)
+Migrating to AddCompanyIdAgainToGyms (20130326151946)
+Migrating to RemoveGymGroupIdFromGyms (20130327093817)
+Migrating to AddCompanyIdToCardTypes (20130327100225)
+Migrating to RemoveGymGroupIdFromCardTypes (20130327102559)
+Migrating to CreateCardTypesGymGroups (20130327103654)
+Migrating to AddCompanyIdToCardCharges (20130327112440)
+Migrating to RemoveGymGroupIdFromCardCharges (20130327114022)
+Migrating to RemoveAncestryFromUsers (20130327114447)
+Migrating to AddCompanyIdToCards (20130328153812)
+Migrating to RemoveGymGroupIdFromCards (20130328160756)
+Migrating to AddRefundTotalToOrders (20130516125240)
+Migrating to CreateCkeditorAssets (20130529103047)
+Migrating to UserAgreements (20130529103048)
+Migrating to CreateContacts (20130617030938)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+  [1m[36m (1.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120112153752)
+Migrating to CreateGyms (20120113144421)
+Migrating to CreateVenueTypes (20120114174229)
+Migrating to CreateCities (20120115164836)
+Migrating to CreateAreas (20120115170421)
+Migrating to CreateLocations (20120115175236)
+Migrating to CreateVenueInventories (20120117162526)
+Migrating to CreatePreferences (20120118170100)
+Migrating to CreateActivities (20120118203723)
+Migrating to CreateVenues (20120120215043)
+Migrating to CreateRecurrenceRules (20120121163726)
+Migrating to RemoveAvailableDatesFromActivities (20120122155132)
+Migrating to RemoveTimesFromActivities (20120123020205)
+Migrating to AddSettingsToRecurrenceRules (20120130043002)
+Migrating to DropPreferences (20120130074418)
+Migrating to CreateProducts (20120131035535)
+Migrating to AddGymToProducts (20120131083614)
+Migrating to CreateOrders (20120201034849)
+Migrating to AddCapacityToVenues (20120209092344)
+Migrating to CreateVenueRules (20120211164502)
+Migrating to CreateRealVenues (20120213084446)
+Migrating to CreateLineItems (20120213102729)
+Migrating to AddGymToOrders (20120213152020)
+Migrating to CreatePaymentMethods (20120218180209)
+Migrating to CreateCards (20120219190340)
+Migrating to CreateCardLineItems (20120220162140)
+Migrating to CreatePayments (20120221165252)
+Migrating to CreateCardTypes (20120229075900)
+Migrating to AssociateCardWithCardType (20120229075938)
+Migrating to AddValidityToCardLineItems (20120229204010)
+Migrating to AddPhoneToGyms (20120229212504)
+Migrating to AddCheckedInAtToOrders (20120229213800)
+Migrating to CreateGymImages (20120302012905)
+Migrating to AddRolesMaskToUsers (20120305035913)
+Migrating to CreateGymsUsers (20120305080753)
+Migrating to AddMobileToUsers (20120305095011)
+Migrating to AddUsernameToOrders (20120323085439)
+Migrating to CreateCardCharges (20120426010440)
+Migrating to AddSoldAtToCards (20120428033717)
+Migrating to AddCardIdToOrders (20120428075214)
+Migrating to AddExpiredAtToOrders (20120511075355)
+Migrating to AddNameToUsers (20120515064614)
+Migrating to CreateGatewayBills (20120517162023)
+Migrating to ChangeCardChargesPrice (20120529122133)
+Migrating to AddPriceAndMemberPrice (20120529124208)
+Migrating to AddPaymentMethodToOrders (20120711173130)
+Migrating to AddMapsToLocations (20120726110106)
+Migrating to AddMobileVerificationToUsers (20120817075826)
+Migrating to AddOrderIdToCardLineItems (20120905093313)
+Migrating to AddActiveToVenues (20121209110754)
+Migrating to AddLoginNameToUsers (20121209195426)
+Migrating to AddAncestryToUsers (20121210103003)
+Migrating to AddAncestryToActivities (20121217200200)
+Migrating to CreateGymBookmarks (20130104152544)
+Migrating to CreateCardsGyms (20130114115713)
+Migrating to CreateGymGroups (20130114183016)
+Migrating to AddGymGroupIdToGyms (20130114184058)
+Migrating to AddGymGroupIdToCardTypes (20130114194220)
+Migrating to AddGymGroupIdToCardCharges (20130114201156)
+Migrating to AddGymGroupIdToCards (20130114213509)
+Migrating to CreateCompanies (20130123235532)
+Migrating to AddCompanyIdToUsers (20130124022533)
+Migrating to AddCompanyIdToGyms (20130124030955)
+Migrating to RemoveCompanyIdFromGyms (20130124050333)
+Migrating to AddCompanyIdToGymGroups (20130124050510)
+Migrating to DropCardsGyms (20130130010631)
+Migrating to CreateGymGroupsGyms (20130326143838)
+Migrating to AddCompanyIdAgainToGyms (20130326151946)
+Migrating to RemoveGymGroupIdFromGyms (20130327093817)
+Migrating to AddCompanyIdToCardTypes (20130327100225)
+Migrating to RemoveGymGroupIdFromCardTypes (20130327102559)
+Migrating to CreateCardTypesGymGroups (20130327103654)
+Migrating to AddCompanyIdToCardCharges (20130327112440)
+Migrating to RemoveGymGroupIdFromCardCharges (20130327114022)
+Migrating to RemoveAncestryFromUsers (20130327114447)
+Migrating to AddCompanyIdToCards (20130328153812)
+Migrating to RemoveGymGroupIdFromCards (20130328160756)
+Migrating to AddRefundTotalToOrders (20130516125240)
+Migrating to CreateCkeditorAssets (20130529103047)
+Migrating to UserAgreements (20130529103048)
+Migrating to CreateContacts (20130617030938)
+  [1m[35m (399.5ms)[0m  CREATE TABLE `contacts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `content` text) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO `contacts` (`content`, `title`) VALUES ('请更改内容', '联系我们')
+  [1m[36m (68.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `contacts` (`content`, `title`) VALUES ('请更改内容', '关于我们')[0m
+  [1m[35m (50.9ms)[0m  COMMIT
+  [1m[36m (54.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130617030938')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/admin/contacts" for 127.0.0.1 at 2013-06-17 11:59:59 +0800
+Processing by Admin::ContactsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.3ms)[0m  SELECT `contacts`.* FROM `contacts` 
+  Rendered admin/contacts/index.html.erb within layouts/admin (5.8ms)
+  Rendered admin/shared/_topnav.html.erb (133.4ms)
+Completed 200 OK in 398ms (Views: 269.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/contacts/1/edit" for 127.0.0.1 at 2013-06-17 12:00:01 +0800
+Processing by Admin::ContactsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.4ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  Rendered admin/contacts/_form.html.erb (37.1ms)
+  Rendered admin/contacts/edit.html.erb within layouts/admin (38.5ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= simple_form_for([:admin, @user_agreement], html: { class: 'form-horizontal' }) do |f| %>
+    2:   <% if f.error_notification %>
+    3:     <div class="alert alert-error fade in">
+    4:       <a class="close" data-dismiss="alert">&times;</a>
+  app/views/admin/contacts/_form.html.erb:1:in `_app_views_admin_contacts__form_html_erb___2639269614116360959_70221104987060'
+  app/views/admin/contacts/edit.html.erb:8:in `_app_views_admin_contacts_edit_html_erb__1422387088512576404_70221104979660'
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/admin/contacts/1/edit" for 127.0.0.1 at 2013-06-17 12:01:51 +0800
+Processing by Admin::ContactsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.2ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  Rendered admin/contacts/_form.html.erb (30.6ms)
+  Rendered admin/contacts/edit.html.erb within layouts/admin (31.7ms)
+  Rendered admin/shared/_topnav.html.erb (6.5ms)
+Completed 200 OK in 92ms (Views: 84.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/admin/contacts/1" for 127.0.0.1 at 2013-06-17 12:02:58 +0800
+Processing by Admin::ContactsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gfTRRncSqm8BfxJCUXlCpG4gYgoOprGgEt2o1LORzLs=", "contact"=>{"content"=>"<p>我要锻炼网（<a href=\"http://www.51duanlian.com\" target=\"_blank\">www.51duanlian.com</a>）的使命是&ldquo;生命在于运动，让您通过遥远的点击来组织好您的运动&rdquo;。我要锻炼网，致力于打造全中国首选的在线运动管理及服务平台。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>作为中国领先的在线运动场馆管理服务公司，我要锻炼网整合并提升了运动场馆的现场管理能力，并帮助锻炼人群有效快捷地搜寻到要锻炼场地实时信息。通过互联网与传统运动场馆的无缝结合，场馆管理者与锻炼者在全方位加强了彼此间的互动及了解。我要锻炼网为其所有会员打造更安全高效的网络管理、信息及交易平台的同时，也全心营造和倡导全民健身、健康生活的氛围。每位通过我要锻炼网进行管理、预定及交易的人，不但更迅速高效的解决运动场地供给与锻炼需求的矛盾，而且能够轻松地享受运动所带来的快乐生活！</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>电话： 400-801-5658</p>\r\n\r\n<p>电邮： <a href=\"mailto:info@remoteclick.com\" target=\"_blank\">info@remoteclick.com</a></p>\r\n"}, "commit"=>"更新联系我们", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (23.5ms)[0m  UPDATE `contacts` SET `content` = '<p>我要锻炼网（<a href=\"http://www.51duanlian.com\" target=\"_blank\">www.51duanlian.com</a>）的使命是&ldquo;生命在于运动，让您通过遥远的点击来组织好您的运动&rdquo;。我要锻炼网，致力于打造全中国首选的在线运动管理及服务平台。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>作为中国领先的在线运动场馆管理服务公司，我要锻炼网整合并提升了运动场馆的现场管理能力，并帮助锻炼人群有效快捷地搜寻到要锻炼场地实时信息。通过互联网与传统运动场馆的无缝结合，场馆管理者与锻炼者在全方位加强了彼此间的互动及了解。我要锻炼网为其所有会员打造更安全高效的网络管理、信息及交易平台的同时，也全心营造和倡导全民健身、健康生活的氛围。每位通过我要锻炼网进行管理、预定及交易的人，不但更迅速高效的解决运动场地供给与锻炼需求的矛盾，而且能够轻松地享受运动所带来的快乐生活！</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>电话： 400-801-5658</p>\r\n\r\n<p>电邮： <a href=\"mailto:info@remoteclick.com\" target=\"_blank\">info@remoteclick.com</a></p>\r\n' WHERE `contacts`.`id` = 1
+  [1m[36m (72.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/admin/contacts
+Completed 302 Found in 106ms (ActiveRecord: 96.6ms)
+
+
+Started GET "/admin/contacts" for 127.0.0.1 at 2013-06-17 12:02:58 +0800
+Processing by Admin::ContactsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT `contacts`.* FROM `contacts` [0m
+  Rendered admin/contacts/index.html.erb within layouts/admin (2.0ms)
+  Rendered admin/shared/_topnav.html.erb (6.6ms)
+Completed 200 OK in 43ms (Views: 33.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 12:06:02 +0800
+Processing by HomeController#index as HTML
+  [1m[35mContact Load (0.3ms)[0m  SELECT `contacts`.* FROM `contacts` LIMIT 1
+  [1m[36mContact Load (19.7ms)[0m  [1mSELECT `contacts`.* FROM `contacts` ORDER BY `contacts`.`id` DESC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.2ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (115.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (93.8ms)
+  Rendered home/index.html.erb within layouts/application (220.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (70.4ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_footer_nav.html.erb (1.2ms)
+  Rendered carts/_live.html.erb (0.9ms)
+Completed 200 OK in 404ms (Views: 364.2ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:06:08 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  Rendered contacts/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (2.1ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (1.0ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"contacts", :id=>nil}):
+  app/views/shared/_footer_nav.html.erb:4:in `_app_views_shared__footer_nav_html_erb__702872597099684055_45382380'
+  app/views/layouts/application.html.erb:64:in `_app_views_layouts_application_html_erb___3717977968325077068_44573700'
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:06:43 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContact Load (0.2ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (1.0ms)
+Completed 500 Internal Server Error in 53ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"contacts", :id=>nil}):
+  app/views/shared/_footer_nav.html.erb:4:in `_app_views_shared__footer_nav_html_erb__702872597099684055_45382380'
+  app/views/layouts/application.html.erb:64:in `_app_views_layouts_application_html_erb___3717977968325077068_44573700'
+  config/initializers/quiet_assets.rb:8:in `call_with_quiet_assets'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>:span, :class=>:hint} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:44)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>:span, :class=>:error} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:45)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:50)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:51)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:53)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"p", :class=>"help-block"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:54)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:60)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:61)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:62)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:63)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:66)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"control-label"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:72)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :hint, :wrap_with => {:tag=>"span", :class=>"help-block"} instead. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:73)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (2 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:74)
+DEPRECATION WARNING: Passing a block to use is deprecated. Please use wrapper instead of use. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:75)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :error, :wrap_with => {:tag=>"span", :class=>"help-inline"} instead. (called from block (3 levels) in <top (required)> at /home/wyh77/51duanlian/config/initializers/simple_form.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 12:08:45 +0800
+Processing by HomeController#index as HTML
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` LIMIT 1[0m
+  [1m[35mContact Load (0.3ms)[0m  SELECT `contacts`.* FROM `contacts` ORDER BY `contacts`.`id` DESC LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mArea Load (0.1ms)[0m  [1mSELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1[0m
+  [1m[35mVenueType Load (0.1ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  Rendered app/cells/venues/search.html.erb (107.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.1ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)[0m
+  Rendered home/_gyms.html.erb (90.1ms)
+  Rendered home/index.html.erb within layouts/application (236.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (49.0ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+  Rendered shared/_footer_nav.html.erb (1.1ms)
+  Rendered carts/_live.html.erb (0.8ms)
+Completed 200 OK in 429ms (Views: 349.8ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:08:50 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (10.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 29.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:08:53 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (2.5ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_footer_nav.html.erb (1.7ms)
+  Rendered carts/_live.html.erb (0.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:09:13 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:09:15 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.4ms)
+  Rendered shared/_nav.html.erb (29.0ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:09:18 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:09:41 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (64.0ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:09:49 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:09:51 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:10:36 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:11:05 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.8ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:11:48 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:11:49 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:11:50 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:11:51 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.4ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:11:52 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.9ms)
+  Rendered carts/_live.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:12:55 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:12:59 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:15:50 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:15:53 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.2ms)[0m  [1mSELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1[0m
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered shared/_user_nav.html.erb (1.6ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-06-17 12:16:06 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/gyms
+Filter chain halted as :check_current_gym rendered or redirected
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/gyms" for 127.0.0.1 at 2013-06-17 12:16:06 +0800
+Processing by Admin::GymsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  Rendered admin/gyms/_search.html.erb (19.1ms)
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT DISTINCT `gyms`.* FROM `gyms` LIMIT 15 OFFSET 0[0m
+  [1m[35mGym Load (1.0ms)[0m  SELECT DISTINCT `gyms`.* FROM `gyms` 
+  Rendered admin/gyms/index.html.erb within layouts/admin (78.9ms)
+  Rendered admin/shared/_topnav.html.erb (137.2ms)
+Completed 200 OK in 311ms (Views: 283.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/admin/contacts" for 127.0.0.1 at 2013-06-17 12:16:23 +0800
+Processing by Admin::ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT `contacts`.* FROM `contacts` 
+  Rendered admin/contacts/index.html.erb within layouts/admin (1.8ms)
+  Rendered admin/shared/_topnav.html.erb (5.6ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/contacts/2/edit" for 127.0.0.1 at 2013-06-17 12:16:26 +0800
+Processing by Admin::ContactsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.3ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1
+  Rendered admin/contacts/_form.html.erb (37.2ms)
+  Rendered admin/contacts/edit.html.erb within layouts/admin (38.5ms)
+  Rendered admin/shared/_topnav.html.erb (6.3ms)
+Completed 200 OK in 67ms (Views: 61.3ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/admin/contacts/2" for 127.0.0.1 at 2013-06-17 12:16:45 +0800
+Processing by Admin::ContactsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gfTRRncSqm8BfxJCUXlCpG4gYgoOprGgEt2o1LORzLs=", "contact"=>{"content"=>"<p>我要锻炼网（<a href=\"http://www.51duanlian.com\" target=\"_blank\">www.51duanlian.com</a>）的使命是&ldquo;生命在于运动，让您通过遥远的点击来组织好您的运动&rdquo;。我要锻炼网，致力于打造全中国首选的在线运动管理及服务平台。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>作为中国领先的在线运动场馆管理服务公司，我要锻炼网整合并提升了运动场馆的现场管理能力，并帮助锻炼人群有效快捷地搜寻到要锻炼场地实时信息。通过互联网与传统运动场馆的无缝结合，场馆管理者与锻炼者在全方位加强了彼此间的互动及了解。我要锻炼网为其所有会员打造更安全高效的网络管理、信息及交易平台的同时，也全心营造和倡导全民健身、健康生活的氛围。每位通过我要锻炼网进行管理、预定及交易的人，不但更迅速高效的解决运动场地供给与锻炼需求的矛盾，而且能够轻松地享受运动所带来的快乐生活！</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>电话： 400-801-5658</p>\r\n\r\n<p>电邮： <a href=\"mailto:info@remoteclick.com\" target=\"_blank\">info@remoteclick.com</a></p>\r\n"}, "commit"=>"更新联系我们", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (26.0ms)[0m  UPDATE `contacts` SET `content` = '<p>我要锻炼网（<a href=\"http://www.51duanlian.com\" target=\"_blank\">www.51duanlian.com</a>）的使命是&ldquo;生命在于运动，让您通过遥远的点击来组织好您的运动&rdquo;。我要锻炼网，致力于打造全中国首选的在线运动管理及服务平台。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>作为中国领先的在线运动场馆管理服务公司，我要锻炼网整合并提升了运动场馆的现场管理能力，并帮助锻炼人群有效快捷地搜寻到要锻炼场地实时信息。通过互联网与传统运动场馆的无缝结合，场馆管理者与锻炼者在全方位加强了彼此间的互动及了解。我要锻炼网为其所有会员打造更安全高效的网络管理、信息及交易平台的同时，也全心营造和倡导全民健身、健康生活的氛围。每位通过我要锻炼网进行管理、预定及交易的人，不但更迅速高效的解决运动场地供给与锻炼需求的矛盾，而且能够轻松地享受运动所带来的快乐生活！</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>电话： 400-801-5658</p>\r\n\r\n<p>电邮： <a href=\"mailto:info@remoteclick.com\" target=\"_blank\">info@remoteclick.com</a></p>\r\n' WHERE `contacts`.`id` = 2
+  [1m[36m (98.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/admin/contacts
+Completed 302 Found in 135ms (ActiveRecord: 125.3ms)
+
+
+Started GET "/admin/contacts" for 127.0.0.1 at 2013-06-17 12:16:45 +0800
+Processing by Admin::ContactsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT `contacts`.* FROM `contacts` [0m
+  Rendered admin/contacts/index.html.erb within layouts/admin (0.8ms)
+  Rendered admin/shared/_topnav.html.erb (6.5ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:16:50 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.7ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.8ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:16:54 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mContact Load (0.2ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.7ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-17 12:17:10 +0800
+Processing by HomeController#index as HTML
+  [1m[35mCity Load (0.4ms)[0m  SELECT `cities`.* FROM `cities` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `cities`.* FROM `cities` [0m
+  [1m[35mArea Load (0.2ms)[0m  SELECT `areas`.* FROM `areas` WHERE `areas`.`city_id` = 1
+  [1m[36mVenueType Load (0.1ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  Rendered app/cells/venues/search.html.erb (24.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `venue_types`.* FROM `venue_types` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `venue_types`.* FROM `venue_types` [0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 1 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.3ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 2 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.3ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 3 AND (confirmed_at IS NOT NULL)
+  [1m[36mGym Load (0.2ms)[0m  [1mSELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 4 AND (confirmed_at IS NOT NULL)[0m
+  [1m[35mGym Load (0.2ms)[0m  SELECT `gyms`.* FROM `gyms` INNER JOIN `venue_inventories` ON `gyms`.`id` = `venue_inventories`.`gym_id` WHERE `venue_inventories`.`venue_type_id` = 5 AND (confirmed_at IS NOT NULL)
+  Rendered home/_gyms.html.erb (20.3ms)
+  Rendered home/index.html.erb within layouts/application (51.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.9ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 97.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2013-06-17 12:17:19 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mContact Load (0.1ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 2 LIMIT 1
+  Rendered contacts/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2013-06-17 12:17:23 +0800
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContact Load (0.2ms)[0m  SELECT `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1
+  Rendered contacts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  Rendered shared/_user_nav.html.erb (1.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_footer_nav.html.erb (0.6ms)
+  Rendered carts/_live.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.4ms)
