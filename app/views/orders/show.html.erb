@@ -50,6 +50,10 @@
       <td><%= @order.verification_code %></td>
     </tr>
     <tr>
+      <th><%= Order.human_attribute_name(:created_at) %></th>
+      <td><%= l @order.created_at, format: :long%></td>
+    </tr>
+    <tr>
       <th><%= Order.human_attribute_name(:special_instructions) %></th>
       <td><%= @order.special_instructions %></td>
     </tr>

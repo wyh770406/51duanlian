@@ -6,6 +6,7 @@ class CardLineItem < ActiveRecord::Base
 
   validates :card, :amount, :validity, presence: true
   validates :validity, numericality: { greater_than_or_equal_to: 0 }
+  validates :amount, numericality: true
 
   default_value_for :validity, 0
   
@@ -18,3 +19,4 @@ class CardLineItem < ActiveRecord::Base
     card.increase_validity!(self.validity)
   end
 end
+

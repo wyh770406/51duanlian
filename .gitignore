@@ -6,3 +6,4 @@
 *.yml
 *.log.age
 tmp/
+public/

@@ -11,6 +11,7 @@
   <thead>
     <tr>
         <th><%= Order.human_attribute_name(:number) %></th>
+        <th><%= Order.human_attribute_name(:created_at) %></th>
         <th><%= Order.human_attribute_name(:total) %></th>
         <th><%= Order.human_attribute_name(:state) %></th>
         <th><%= Order.human_attribute_name(:payment_total) %></th>
@@ -24,13 +25,14 @@
     <% @orders.each do |order| %>
       <tr>
         <td><%= order.number %></td>
+        <td><%= l order.created_at, format: :long%></td>
         <td><%= order.payable? ? order.total : order.payment_total %></td>
         <td><%= order.human_state_name %></td>
         <td><%= order.payment_total %></td>
         <td><%= order.human_payment_state_name %></td>
         <td><%= order.username %></td>
         <td><%= order.mobile %></td>
-        <td class="control span4">
+        <td class="control span3">
           <% if order.can_check_in? %>
             <%= link_to t('check_in'), check_in_admin_order_path(order), confirm: t('check_in_order_confirmation', number: order.number), method: :post %>
           <% end -%>

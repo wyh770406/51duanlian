@@ -90,7 +90,7 @@ SimpleNavigation::Configuration.run do |navigation|
           sub_nav.item :payment_methods, t('nav.settings_nav.payment_methods'), admin_payment_methods_url
         end
         sub_nav.item :user_agreements, t('nav.user_agreements'), admin_user_agreements_url if can?(:manage, UserAgreement)
-        sub_nav.item :contacts, t('contact_us'), admin_contacts_url if can?(:manage, Contact)        
+        sub_nav.item :contacts, t('contact_us'), admin_contacts_url if can?(:manage, Contact)
       end
     end
     # You can also specify a condition-proc that needs to be fullfilled to display an item.

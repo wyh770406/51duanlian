@@ -15,7 +15,6 @@
                   该场馆目前尚未发布可预订的场次
                 <%end%>
               </font></span>
-
               <div class="gym-description">
                 <%= @gym.description %>
               </div>
@@ -29,18 +28,14 @@
               <%= bookmark_gym_button(@gym) %>
             </div>
             <div class="span6 gym-key-image">
-              <% key_image = @gym.key_image
-              unless key_image.blank? %>
-                <div class="pull-right">  
-                  <% @gym.images.each do |image| %>     
-                    <% if image == key_image %>        
-                      <a class="fancybox" rel="group" href='<%=key_image.image_url%>'><%= image_tag(@gym.key_image.image_url(:thumb).to_s) %></a>
-                    <%else%>
-                      <a class="fancybox" rel="group" href='<%=image.image_url%>'></a>
-                    <%end%>
-                  <%end%>
-                </div>
-              <% end -%>
+               <%key_image = @gym.key_image 
+                 @gym.images.each do |image| %>     
+                 <% if image == key_image %>        
+                   <a class="fancybox" rel="group" href='<%=key_image.image_url%>' title="点击后查看更多场馆图片"><%= image_tag(@gym.key_image.image_url(:thumb).to_s) %></a>
+                 <%else%>
+                   <a class="fancybox" rel="group" href='<%=image.image_url%>'></a>
+                 <%end%>
+               <%end%>            
             </div>
           </div>
         </div>
@@ -52,7 +47,7 @@
     <div class="span4">
       <div class="gym-venue-types">
         <h2><%= VenueType.model_name.human %></h2>
-        <p align=center><font color="red">由此进入场地预定</font></p>
+        <p align=center ><font color="red">由此进入场地预定</font></p>
         <ul class="nav nav-tabs nav-stacked">
           <% @gym.venue_types.each do |venue_type| %>
             <li><%= link_to venue_type.name, search_gym_venues_path(@gym, date: Date.today, venue_type_id: venue_type.id) %></li>
@@ -61,7 +56,7 @@
       </div>
       <div class="gym-map">
         <%= render '/shared/map', { location: @gym.location } %>
-      </div>      
+      </div>
     </div>
   </div>
 </div>

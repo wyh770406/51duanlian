@@ -40,7 +40,7 @@ Berlin::Application.routes.draw do
   end
 
   resources :user_agreements, only: [:index] 
-  resources :contacts, only: [:show]   
+  resources :contacts, only: [:show]
 
   resources :gyms, only: [:show] do
     member do
@@ -154,8 +154,8 @@ Berlin::Application.routes.draw do
     resources :payment_methods
 
     resources :user_agreements
-
-    resources :contacts    
+ 
+    resources :contacts   
   end
 
   match '/admin', to: 'admin/dashboard#index', as: :admin

@@ -5,8 +5,8 @@
     <div class="span8">
       <div class="venue-list">
         <div class="title">
-          <h1><%= link_to @gym.name, @gym %> - <%= @venue_type.name %></h1>
-          <span align=center><font color="red">
+          <span align="center"><h1><%= link_to @gym.name, @gym %> - <%= @venue_type.name %></h1>
+          <font color="red">
             <% if @activity && @activity.published_to%>
               该场馆预定场地发布至<%=l(@activity.published_to.to_date, format: :long)%>
             <%else%>
