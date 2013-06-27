@@ -1,0 +1,8 @@
+<%= simple_form_for([:admin, @csv_import], html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :csv, as: :file %>
+  <%= f.input :import_type, :as => :hidden, :input_html => { :value => @import_type } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,13 +1,13 @@
 Berlin::Application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor' 
+  mount Ckeditor::Engine => '/ckeditor'
 
   resource :mobile, only: [:edit, :update] do
     member do
       post 'send_verification_code'
     end
   end
-  
+
   resource :profile, only: [:edit, :update]
 
   resources :cards, only: [:index, :new, :create, :show] do
@@ -39,7 +39,7 @@ Berlin::Application.routes.draw do
     resources :line_items, only: [:update, :destroy]
   end
 
-  resources :user_agreements, only: [:index] 
+  resources :user_agreements, only: [:index]
   resources :contacts, only: [:show]
 
   resources :gyms, only: [:show] do
@@ -125,7 +125,11 @@ Berlin::Application.routes.draw do
       end
     end
 
-    resources :products, except: [:show]
+    resources :products, except: [:show] do
+      collection do
+        post 'clear_products'
+      end
+    end
 
     resources :card_line_items, only: [:index]
 
@@ -134,13 +138,19 @@ Berlin::Application.routes.draw do
         post 'charge'
       end
 
+      collection do
+        post 'clear_cards'
+      end
+
       resources :card_line_items, only: [:new, :create]
     end
 
+    resources :csv_imports
+
     resources :card_types, except: [:show]
-    
+
     resources :card_charges
-    
+
     # Independence
 
     resources :users
@@ -154,8 +164,8 @@ Berlin::Application.routes.draw do
     resources :payment_methods
 
     resources :user_agreements
- 
-    resources :contacts   
+
+    resources :contacts
   end
 
   match '/admin', to: 'admin/dashboard#index', as: :admin

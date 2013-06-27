@@ -5,6 +5,10 @@
     <%= link_to t('crud.listing', model: t('card_line_items_without_order')), admin_card_line_items_path, class: 'btn' %>
   <% end -%>
   <%= link_to t('crud.new'), new_admin_card_path, class: 'btn btn-primary' %>
+  <% if can?(:manage, CsvImport) %>
+    <%= link_to t('crud.import'), new_admin_csv_import_path(:import_type=>Card.model_name.human), class: 'btn btn-primary' %>
+    <%= link_to t('crud.clear_cards'), clear_cards_admin_cards_path, confirm: t('crud.destroy_confirmation'), method: :clear_cards, class: 'btn btn-primary' %>
+  <% end %>
 </div>
 <% end %>
 

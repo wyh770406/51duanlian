@@ -2,6 +2,10 @@
 <h1><%= t 'crud.listing', model: Product.model_name.human %></h1>
 <div class="toolbar">
   <%= link_to t('crud.new'), new_admin_product_path, class: 'btn btn-primary' %>
+  <% if can?(:manage, CsvImport) %>
+    <%= link_to t('crud.import'), new_admin_csv_import_path(:import_type=>Product.model_name.human), class: 'btn btn-primary' %>
+    <%= link_to t('crud.clear_products'), clear_products_admin_products_path, confirm: t('crud.destroy_confirmation'), method: :clear_products, class: 'btn btn-primary' %>
+  <% end %>
 </div>
 <% end %>
 

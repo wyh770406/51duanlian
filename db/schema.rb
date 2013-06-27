@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130617030938) do
+ActiveRecord::Schema.define(:version => 20130627024828) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -139,6 +139,16 @@ ActiveRecord::Schema.define(:version => 20130617030938) do
     t.string "title"
     t.text   "content"
   end
+
+  create_table "csv_imports", :force => true do |t|
+    t.integer  "gym_id"
+    t.string   "csv"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "import_type"
+  end
+
+  add_index "csv_imports", ["gym_id"], :name => "index_csv_imports_on_gym_id"
 
   create_table "gateway_bills", :force => true do |t|
     t.string   "notification_id"

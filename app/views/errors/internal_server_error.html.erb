@@ -1,0 +1,11 @@
+         <% if @errors.any? %>
+           <div id="error_explanation">
+             <h2> 发现了如下<%= pluralize(@errors.count, "个错误") %>：</h2>
+
+             <ul>
+             <% @errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+             <% end %>
+             </ul>
+           </div>
+         <% end %>

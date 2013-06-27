@@ -1,6 +1,6 @@
 module Admin
   class ProductsController < Admin::BaseController
-    
+
     before_filter :merge_current_gym, only: [:create, :update]
 
     def index
@@ -41,6 +41,13 @@ module Admin
       @product = current_gym.products.find(params[:id])
       @product.destroy
 
+      redirect_to admin_products_url
+    end
+
+    def clear_products
+      current_gym.products.each do |product|
+        product.destroy
+      end
       redirect_to admin_products_url
     end
 

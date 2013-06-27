@@ -20,7 +20,7 @@ zh-CN:
       venue: '场地'
       venue_type: '场地类型'
       venue_inventory: '场地标准数量'
-      user_agreement: '用户协议'       
+      user_agreement: '用户协议'
       contact: '联系我们'
       city: '城市'
       area: '区县'
@@ -44,6 +44,7 @@ zh-CN:
       card_type: '会员卡类型'
       card_line_item: '会员卡记录'
       card_charge: '会员卡充值'
+      csv_import: '导入CSV信息'
     attributes:
       user:
         login: '邮箱/用户名'
@@ -63,6 +64,8 @@ zh-CN:
         name: 名称
         address: 地址
         phone: 联系电话
+      csv_import:
+        csv: 请选择CSV文件
       gym:
         name: '名称'
         description: '描述'
@@ -106,7 +109,7 @@ zh-CN:
         venue_type: '场地类型'
       city:
         name: '城市名'
-      user_agreement: 
+      user_agreement:
         content: '协议内容'
       area:
         name: '区县名'
@@ -281,6 +284,7 @@ zh-CN:
     editing: '编辑%{model}'
     showing: '%{model}详细信息'
     creating: '新增%{model}'
+    importing: '导入%{model}信息'
     new: '新增'
     show: '查看'
     edit: '编辑'
@@ -293,6 +297,9 @@ zh-CN:
     deny: '不批准'
     upload: '上传'
     enter: '进入'
+    import: '导入'
+    clear_cards: '清空会员卡列表'
+    clear_products: '清空商品列表'
   notice:
     enable_confirmation: '确定要启用吗？'
     disable_confirmation: '确定要禁用吗？'
@@ -330,7 +337,7 @@ zh-CN:
     time_rule: '时间重复规则'
     time:
       minutely_rule: '每分钟重复规则'
-  
+
   flash:
     base:
       current_gym:

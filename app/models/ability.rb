@@ -30,7 +30,8 @@ class Ability
       cannot :manage, Area
       cannot :manage, PaymentMethod
       cannot :manage, UserAgreement
-      cannot :manage, Contact 
+      cannot :manage, Contact
+      cannot :manage, CsvImport
     elsif user.is? :manager
       can :manage, :all
 
@@ -43,7 +44,7 @@ class Ability
 
       cannot :manage, Gym
       can :read, Gym
-      
+
       cannot :destroy, User
       cannot :manage, VenueType
       cannot :manage, City
@@ -51,6 +52,7 @@ class Ability
       cannot :manage, PaymentMethod
       cannot :manage, UserAgreement
       cannot :manage, Contact
+      cannot :manage, CsvImport
     else
       can [:read, :create, :update], Gym
       can :manage, GymImage

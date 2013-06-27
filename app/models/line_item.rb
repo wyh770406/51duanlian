@@ -27,7 +27,7 @@ class LineItem < ActiveRecord::Base
   end
 
   def restock_item!
-    self.purchasable.restock! self.quantity
+    self.purchasable.restock! self.quantity if self.purchasable
   end
 
 end

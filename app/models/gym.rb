@@ -12,6 +12,7 @@ class Gym < ActiveRecord::Base
   has_many :venues, through: :activities
   has_many :products, dependent: :destroy
   has_many :orders, dependent: :destroy
+  has_many :csv_imports, dependent: :destroy
   has_and_belongs_to_many :users
 
   accepts_nested_attributes_for :location

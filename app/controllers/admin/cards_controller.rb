@@ -55,6 +55,13 @@ module Admin
       redirect_to admin_cards_url
     end
 
+    def clear_cards
+      current_gym.cards.each do |card|
+        card.destroy
+      end
+      redirect_to admin_cards_url
+    end
+
     def charge
       @card_charge = CardCharge.find(params[:card_charge_id])
       @card = current_gym.cards.find(params[:id])
