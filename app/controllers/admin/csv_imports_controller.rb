@@ -77,20 +77,22 @@ module Admin
 	      		:company   => gym.company
 	      	}
 
-          card = Card.new(card_info)
+	      	card = Card.new(card_info)
 	        card.current_gym = gym
-	        if card.save
-            creates += 1
-            card_line_item_info = {
-            	:reason      => "初次建卡",
-            	:amount      => balance || 0.00,
-            	:validity    => 0
-            }
-            card.card_line_items.create(card_line_item_info)
-	        else
-	        	@errors = card.errors
-	        	raise "异常错误，会员卡保存失败."
-	        end
+
+          begin
+          	logger.info("#{card_info}")
+          	card.save!
+          rescue ActiveRecord::RecordInvalid => invalid
+            @errors = invalid.record.errors
+          end
+          card_line_item_info = {
+          	:reason      => "初次建卡",
+          	:amount      => balance || 0.00,
+          	:validity    => 0
+          }
+          card.card_line_items.create(card_line_item_info)
+          creates += 1
 	      end
 	      logger.info("共创建记录数#{creates}")
 	    ensure
