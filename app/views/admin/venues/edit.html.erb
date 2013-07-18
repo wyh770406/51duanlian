@@ -1,0 +1,52 @@
+<% content_for :title do %>
+<h1><%= t 'crud.editing', model: Venue.model_name.human %></h1>
+<div class="toolbar">
+  <%= link_to t('crud.back'), admin_activity_path(@activity), class: 'btn' %>
+</div>
+<% end %>
+
+<%= render 'form' %>
+
+<hr>
+
+<% if @orders.size > 0 %>
+
+  <h3>
+    该场地的活跃订单
+    <small>如果想禁用该场地，需要先取消它们</small>
+  </h3>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+          <th><%= Order.human_attribute_name(:number) %></th>
+          <th><%= Order.human_attribute_name(:total) %></th>
+          <th><%= Order.human_attribute_name(:state) %></th>
+          <th><%= Order.human_attribute_name(:payment_total) %></th>
+          <th><%= Order.human_attribute_name(:payment_state) %></th>
+          <th><%= Order.human_attribute_name(:username) %></th>
+          <th><%= Order.human_attribute_name(:mobile) %></th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.number %></td>
+          <td><%= order.payable? ? order.total : order.payment_total %></td>
+          <td><%= order.human_state_name %></td>
+          <td><%= order.payment_total %></td>
+          <td><%= order.human_payment_state_name %></td>
+          <td><%= order.username %></td>
+          <td><%= order.mobile %></td>
+          <td class="control span4">
+            <%= link_to t('crud.show'), admin_order_path(order), target: '_blank' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+  <%= link_to '禁用', disable_admin_activity_venue_path(@activity, @venue), class: 'btn btn-danger', confirm: '确定要禁用本场地吗？场地禁用后，不能再次启用。', method: :post %>
+<% end -%>

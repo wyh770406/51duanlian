@@ -12,7 +12,7 @@ class Order::VenueOrder < Order
 
   def populate(items_attributes)
     items_attributes.each do |attrs|
-      venue = self.gym.venues.find(attrs[:id])
+      venue = self.gym.venues.available.find(attrs[:id])
       purchasable = attrs[:real_venue_id] ? venue.real_venues.find(attrs[:real_venue_id]) : venue
       line_item = LineItem.find_or_initialize_by_order_id_and_purchasable_type_and_purchasable_id(
         self.id,

@@ -56,6 +56,11 @@ module Admin
       redirect_to admin_activity_path(@activity)
     end
 
+    def try_disable
+      @activity = current_gym.activities.find(params[:id])
+      @orders = @activity.future_orders
+    end
+
     def disable
       @activity = current_gym.activities.find(params[:id])
       @activity.disable

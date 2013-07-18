@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Admin
   class OrdersController < Admin::BaseController
     before_filter :merge_current_gym, only: [:update]
@@ -11,9 +12,59 @@ module Admin
         params[:q][:created_at_lteq] = Date.parse(params[:q][:created_at_lteq]).end_of_day unless params[:q][:created_at_lteq].blank?
       rescue
       end
+
+      @q_condition = params[:q]
       
       @q = current_gym.orders.without_state(:cart).search(params[:q])
       @orders = @q.result(distinct: true).order("updated_at DESC").page(params[:page]).per(15)
+    end
+
+    def export_pdf
+      @order_klass = params[:order_klass] || params[:q].try(:[], :type_eq) || 'Order::VenueOrder'
+      @order_klass = Order.subclasses.first.to_s unless Order.subclasses.map(&:to_s).include?(@order_klass)
+      params[:q] = { state_eq: 'completed' } if params[:q].nil?
+      params[:q][:type_eq] = @order_klass
+
+      begin
+        params[:q][:created_at_gteq] = Date.parse(params[:q][:created_at_gteq]).beginning_of_day unless params[:q][:created_at_gteq].blank?
+        params[:q][:created_at_lteq] = Date.parse(params[:q][:created_at_lteq]).end_of_day unless params[:q][:created_at_lteq].blank?
+      rescue
+      end
+
+      start_date = params[:q][:created_at_gteq].blank? ? "空" : params[:q][:created_at_gteq].strftime('%Y-%m-%d')
+      end_date = params[:q][:created_at_lteq].blank? ? "空" : params[:q][:created_at_lteq].strftime('%Y-%m-%d')
+
+      order_number = params[:q][:number_cont].blank? ? "空" : params[:q][:number_cont]
+      order_state = params[:q][:state_eq].blank? ? "全部" : Order.send("human_state_name", params[:q][:state_eq])
+      order_mobile = params[:q][:mobile_cont].blank? ? "空" : params[:q][:mobile_cont]
+      order_payment_state = params[:q][:payment_state_eq].blank? ? "全部" : Order.send("human_payment_state_name", params[:q][:payment_state_eq])
+      order_payment_method = params[:q][:payment_method_id_eq].blank? ? "全部" :
+        ([[t('all'), '']] + PaymentMethod.available.map { |m| [m.name, m.id] }).find{|payment_method| payment_method[1]==params[:q][:payment_method_id_eq].to_i}[0]
+
+      @q_condition_date_range = "下单时间范围: #{start_date}(起始日期) / #{end_date}(终止日期)"
+      @q_condition_number = "订单号: #{order_number}"
+      @q_condition_state = "状态: #{order_state}"
+      @q_condition_mobile = "手机号: #{order_mobile}"
+      @q_condition_payment_state = "支付状态: #{order_payment_state}"
+      @q_condition_payment_method = "支付方式: #{order_payment_method}"
+
+      @q = current_gym.orders.without_state(:cart).search(params[:q])
+      @orders = @q.result(distinct: true).order("updated_at DESC")
+
+      @order_totals = 0
+      @orders.each do |order|
+        order_total = order.payable? ? order.total : order.payment_total
+        @order_totals += order_total
+      end
+
+      @order_payment_totals = @orders.map(&:payment_total).sum
+
+      respond_to do |format|
+        format.pdf do
+          render :pdf => "test.pdf",
+                 :template => "admin/orders/export_pdf.pdf.erb"
+        end
+      end
     end
 
     def show

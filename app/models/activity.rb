@@ -2,6 +2,8 @@ class Activity < ActiveRecord::Base
   DISPLAY = [:both, :front_end, :back_end]
   has_ancestry
 
+  default_value_for :is_available, true 
+
   belongs_to :gym
   belongs_to :venue_type
   has_many :venues, dependent: :destroy
@@ -63,13 +65,17 @@ class Activity < ActiveRecord::Base
 
   def disable
     if self.active
-      self.venues.clear
+      self.venues.each do |v|
+        v.disable!
+      end
 
       self.descendants.each do |a|
         a.active = false
+        a.is_available = false 
         a.save
       end
       self.active = false
+      self.is_available = false 
       self.save
 
       true
@@ -101,4 +107,8 @@ class Activity < ActiveRecord::Base
   def published_to
     venue = venues.active.order(:stop_at).last.try(:stop_at)
   end
+
+  def future_orders
+    self.venues.future.map(&:related_orders).flatten.compact.uniq.select { |o| o.state?(:completed) }
+  end  
 end

@@ -18,4 +18,11 @@ class VenueRule::PerCapitaRule < VenueRule
     venue
   end
 
+  def build_from_params(params)
+    venue = Venue.new(params)
+    venue.count_on_hand = venue.capacity
+    venue.capacity.times { venue.real_venues.build(count_on_hand: self.max_people, max_people: self.max_people) }
+    venue
+  end
+
 end

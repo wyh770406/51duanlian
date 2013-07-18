@@ -43,8 +43,10 @@
         <td><%= l(activity.published_to.to_date, format: :long) if activity.published_to %></td>
         <td class="control span4">
           <%= activity.link_to_show %>
-          <%= activity.link_to_edit %>
-          <%= activity.link_to_destroy %>
+          <% if activity.is_available %>
+            <%= activity.link_to_edit %>
+            <%= activity.link_to_destroy %>
+          <% end -%>
         </td>
       </tr>
     <% end %>

@@ -15,4 +15,10 @@ class VenueRule::PerVenueRule < VenueRule
     )
   end
 
+  def build_from_params(params)
+    venue = Venue.new(params)
+    venue.count_on_hand = venue.capacity
+    venue
+  end  
+
 end

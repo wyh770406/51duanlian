@@ -292,12 +292,14 @@ zh-CN:
     destroy_confirmation: '确定要删除吗？'
     back: '返回'
     enable: '启用'
+    try_disable: '禁用'     
     disable: '禁用'
     confirm: '批准'
     deny: '不批准'
     upload: '上传'
     enter: '进入'
     import: '导入'
+    export: '导出'
     clear_cards: '清空会员卡列表'
     clear_products: '清空商品列表'
   notice:
@@ -390,6 +392,9 @@ zh-CN:
       venues:
         publish:
           success: '场地发布至 %{date}'
+        disable:
+          success: '场地禁用成功'
+          failure: '场地禁用失败'          
 
   'true': '是'
   'false': '否'
@@ -489,7 +494,7 @@ zh-CN:
   welcome: '欢迎您，%{name}'
   website_help:
     title: '如何使用我要锻炼网？'
-    description: '<p>是一个免费的运动场地管理系统现在您只需注册登录就可以在网上预定适合您的运动场地。</p><p>预定成功即有温磬短信提示，并告知您现场验证码。</p><p>如果您熟悉的运动场馆还不在我们的管理系统内，您还可以推荐他们加入我们，具体实施办法请参看。</p>'
+    description: '<p>我要锻炼网是一个免费的运动场地预订系统现在您只需注册登录就可以在网上预定运用该平台进行场地管理的运动场馆。</p><p>预定场地，支付成功后即有温磬短信提示，并告知您现场验证码。</p><p>如果您熟悉的运动场馆还不在我们的管理系统内，您还可以推荐他们加入我们！</p>'
   hot_gyms: '最热门的预定场地'
   go_to_cart: '去购物车结算'
   added_to_cart: '成功加入购物车，您可以继续购物，或马上去购物车结算。'
@@ -525,3 +530,6 @@ zh-CN:
   unbookmark_gym: 取消收藏
   default_gym_group_name: 默认
   card_line_items_without_order: 自定义充值
+  unavailable_venue: 已禁用的场地
+  manually_venues: 手动修改的场地
+  new_manually_venue: 手动添加场地

@@ -1,6 +1,7 @@
 <% content_for :title do %>
 <h1><%= t 'crud.listing', model: Order.model_name.human %></h1>
 <div class="toolbar">
+<%= link_to t('crud.export'), export_pdf_admin_orders_path(order_klass: @order_klass, q: @q_condition, :format => "pdf"), class: 'btn btn-primary' %>
 </div>
 <% end %>
 

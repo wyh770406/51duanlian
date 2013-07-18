@@ -1,0 +1,77 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%#= wicked_pdf_stylesheet_link_tag "admin/application" %>
+    <style>
+table{ font-family: arial;  font-size:14px; border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;}
+th,td{border-right:1px solid #888;border-bottom:1px solid #888;}
+th{font-weight:bold;}
+p{ font-family: arial;  font-size:16px;}
+    </style>
+  </head>
+  <body >
+
+    <div id="content">
+      <div>
+        <center><h3><%=current_gym.name%>(
+          <% Order.subclasses.each do |order_klass|
+               if order_klass.to_s == @order_klass %>
+                 <%= order_klass.model_name.human %>
+          <%   end
+             end %>)</h3></center>
+
+        <p><%=@q_condition_date_range%></p>
+        <p><%=@q_condition_number%></p>
+        <p><%=@q_condition_state%></p>
+        <p><%=@q_condition_mobile%></p>
+        <p><%=@q_condition_payment_state%></p>
+        <p><%=@q_condition_payment_method%></p>
+      </div>
+
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+              <th><%= Order.human_attribute_name(:number) %></th>
+              <th><%= Order.human_attribute_name(:created_at) %></th>
+              <th><%= Order.human_attribute_name(:total) %></th>
+              <th><%= Order.human_attribute_name(:state) %></th>
+              <th><%= Order.human_attribute_name(:payment_total) %></th>
+              <th><%= Order.human_attribute_name(:payment_state) %></th>
+              <th><%= Order.human_attribute_name(:username) %></th>
+              <th><%= Order.human_attribute_name(:mobile) %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @orders.each do |order| %>
+            <tr>
+              <td><%= order.number %></td>
+              <td><%= l order.created_at, format: :long%></td>
+              <td><%= order.payable? ? order.total : order.payment_total %></td>
+              <td><%= order.human_state_name %></td>
+              <td><%= order.payment_total %></td>
+              <td><%= order.human_payment_state_name %></td>
+              <td><%= order.username %></td>
+              <td><%= order.mobile %></td>
+            </tr>
+          <% end %>
+            <tr>
+              <td>总计</td>
+              <td></td>
+              <td><%= @order_totals %></td>
+              <td></td>
+              <td><%= @order_payment_totals %></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </body>
+</html>
+
+<%#= wicked_pdf_stylesheet_link_tag "application" -%>
+
+

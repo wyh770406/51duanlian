@@ -4,16 +4,21 @@ class Venue < ActiveRecord::Base
   has_many :line_items, as: :purchasable
 
   default_value_for :active, false
+  default_value_for :is_available, true
+  default_value_for :is_manually, false  
 
-  validates :start_at, :stop_at, :capacity, :count_on_hand, :activity, presence: true
+  validates :start_at, :stop_at, :capacity, :count_on_hand, :activity, :price, :member_price, presence: true
   validates :capacity, :count_on_hand, numericality: { only_integer: true }
 
   delegate :gym, :venue_type, to: :activity
 
   scope :by_venue_type, lambda { |venue_type| includes(:activity).where("activities.venue_type_id = ?", venue_type.id) }
-  scope :active, lambda { where(active: true) }
-  scope :inactive, lambda { where(active: false) }
+  scope :active, lambda { where("(#{table_name}.active is true) and (#{table_name}.is_available is true)") }
+  scope :inactive, lambda { where("(#{table_name}.active is false) or (#{table_name}.is_available is false)") }
+  scope :available, lambda { where(is_available: true) }
   scope :in_range, lambda { |start, stop| where("#{table_name}.start_at >= ? AND #{table_name}.stop_at <= ?", start, stop) }
+  scope :future, lambda { where("#{table_name}.start_at >= ?", Time.zone.now) }
+  scope :manually, lambda { where(is_manually: true) }
 
   def self.around_times(target_time, backward_time, forward_time, max_backward, max_forward)
     {
@@ -95,7 +100,23 @@ class Venue < ActiveRecord::Base
     end
   end
 
+  def related_orders
+    self.related_line_items.map(&:order).uniq
+  end
+
+  def related_completed_orders
+    self.related_orders.select { |o| o.state?(:completed) }
+  end
+
   def publish!
     self.update_attributes(active: true)
   end
+
+  def can_disable?
+    related_completed_orders.blank?
+  end
+
+  def disable!(manually = false)
+    self.update_attributes(is_available: false, is_manually: manually)
+  end  
 end

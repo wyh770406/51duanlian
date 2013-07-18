@@ -85,6 +85,11 @@ Berlin::Application.routes.draw do
         get 'new_refund'
         post 'refund'
       end
+
+      collection do
+        get 'export_pdf'
+      end
+
       resources :payments do
         member do
           get 'pay'
@@ -114,8 +119,19 @@ Berlin::Application.routes.draw do
     resources :activities do
       member do
         post 'enable'
+        get 'try_disable'
         post 'disable'
       end
+
+      resources :venues, only: [:new, :create, :edit, :update] do
+        member do
+          post 'disable'
+        end
+
+        collection do
+          get 'manually'
+        end
+      end      
     end
 
     resources :venue_inventories, only: [] do

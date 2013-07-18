@@ -1,0 +1,47 @@
+<% content_for :title do %>
+  <h1><%= @activity.name %></h1>
+  <div class="toolbar">
+    <%= link_to t('crud.back'), admin_activity_path(@activity), class: 'btn' %>
+  </div>
+<% end %>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th><%= Venue.human_attribute_name(:date) %></th>
+      <th><%= Venue.human_attribute_name(:start_at) %></th>
+      <th><%= Venue.human_attribute_name(:stop_at) %></th>
+      <th><%= Venue.human_attribute_name(:capacity) %></th>
+      <th><%= Venue.human_attribute_name(:count_on_hand) %></th>
+      <th><%= Venue.human_attribute_name(:price) %></th>
+      <th><%= Venue.human_attribute_name(:member_price) %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% VenueDecorator.decorate(@venues).each do |venue| %>
+      <tr>
+        <td>
+          <%= venue.on_date %>
+          <% unless venue.active %>
+            <span class="label label-warning"><%= t('private_venue') %></span>
+          <% end -%>
+          <% unless venue.is_available %>
+            <span class="label"><%= t('unavailable_venue') %></span>
+          <% end -%>
+        </td>
+        <td><%= venue.start_at %></td>
+        <td><%= venue.stop_at %></td>
+        <td><%= venue.capacity %></td>
+        <td><%= venue.count_on_hand %></td>
+        <td><%= number_to_currency venue.price %></td>
+        <td><%= number_to_currency venue.member_price %></td>
+        <td>
+          <% if venue.is_available %>
+            <%= link_to t('crud.edit'), edit_admin_activity_venue_path(@activity, venue) %>
+          <% end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

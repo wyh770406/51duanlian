@@ -52,9 +52,9 @@ class ActivityDecorator < ApplicationDecorator
   def switch_of_active
     if model.can_switch_active?
       if model.active
-        h.link_to h.disable_admin_activity_path(model), class: 'btn btn-danger', confirm: h.t('notice.disable_confirmation'), method: :post do
+        h.link_to h.try_disable_admin_activity_path(model), class: 'btn btn-danger' do
           h.content_tag(:i, nil, class: "icon-remove icon-white") +
-          h.t('crud.disable')
+          h.t('crud.try_disable')
         end
       else
         h.link_to h.enable_admin_activity_path(model), class: 'btn btn-success', confirm: h.t('notice.enable_confirmation'), method: :post do

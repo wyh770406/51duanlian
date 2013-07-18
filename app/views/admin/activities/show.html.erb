@@ -1,9 +1,13 @@
 <% content_for :title do %>
   <h1><%= @activity.name %></h1>
   <div class="toolbar">
-    <%= @activity.switch_of_active %>
-    <%= @activity.button_to_edit %>
-    <%= @activity.button_to_destroy %>
+    <% if @activity.is_available %>
+      <%= @activity.switch_of_active %>
+      <%= @activity.button_to_edit %>
+      <%= @activity.button_to_destroy %>
+    <% end -%>
+    <%= link_to t('new_manually_venue'), new_admin_activity_venue_path(@activity), class: 'btn btn-primary' %>
+    <%= link_to t('manually_venues'), manually_admin_activity_venues_path(@activity), class: 'btn' %>
     <%= link_to t('crud.back'), admin_activities_path, class: 'btn' %>
   </div>
 <% end %>
@@ -41,7 +45,7 @@
   </div>
 </div>
 
-<% activity_root_venues = @activity.root.venues%>
+<% activity_root_venues = @activity.root.venues.order(:start_at)%>
 共<%= activity_root_venues.count%>条场地记录
 <table class="table table-bordered table-striped">
   <thead>
@@ -51,6 +55,7 @@
       <th><%= Venue.human_attribute_name(:stop_at) %></th>
       <th><%= Venue.human_attribute_name(:capacity) %></th>
       <th><%= Venue.human_attribute_name(:count_on_hand) %></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -61,11 +66,19 @@
           <% unless venue.active %>
             <span class="label label-warning"><%= t('private_venue') %></span>
           <% end -%>
+          <% unless venue.is_available %>
+            <span class="label"><%= t('unavailable_venue') %></span>
+          <% end -%>          
         </td>
         <td><%= venue.start_at %></td>
         <td><%= venue.stop_at %></td>
         <td><%= venue.capacity %></td>
         <td><%= venue.count_on_hand %></td>
+        <td>
+          <% if venue.is_available %>
+            <%= link_to t('crud.edit'), edit_admin_activity_venue_path(@activity, venue) %>
+          <% end -%>
+        </td>        
       </tr>
     <% end %>
   </tbody>
