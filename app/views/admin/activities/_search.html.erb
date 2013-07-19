@@ -1,0 +1,12 @@
+
+<%= form_tag("/admin/activities/#{@activity.id}", method: "get", class: "well form-inline form-horizontal") do%>
+
+  <div class="control-line">
+    <div class="control-group-inline">
+      <%= "日期" %>
+      <%= text_field_tag 'begin_date', params[:begin_date], class: "date-input" %> - <%= text_field_tag 'end_date', params[:end_date], class: "date-input" %>
+    </div>
+    <%= submit_tag t('helpers.submit.search'), class: 'btn btn-primary pull-right' %>
+  </div>
+
+<% end %>

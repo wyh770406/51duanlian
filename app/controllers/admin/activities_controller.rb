@@ -7,8 +7,18 @@ module Admin
       @activities = ActivityDecorator.decorate current_gym.activities.roots.includes(:venue_type, :date_rule, :time_rule).page(params[:page]).per(15)
     end
 
-    def show
+    def show      
       @activity = ActivityDecorator.decorate current_gym.activities.includes(:venue_type, :date_rule, :time_rule).find(params[:id])
+      if params[:begin_date].nil? || params[:begin_date].blank?
+        @activity_root_venues = @activity.root.venues.order(:start_at)
+      else
+        begin_date = Date.parse(params[:begin_date]).beginning_of_day unless params[:begin_date].blank?
+        end_date = Date.parse(params[:end_date]).end_of_day unless params[:end_date].blank?
+        end_date = Date.parse("2999-12-31").end_of_day if end_date.nil?
+
+        @activity_root_venues = @activity.root.venues.where(:start_at=>begin_date..end_date).order(:start_at)
+      end
+
     end
 
     def new

@@ -71,6 +71,19 @@ module Admin
       end
     end
 
+    def disable_all
+      @activity = current_gym.activities.find(params[:activity_id])
+      params.each do |key, value|
+        if key =~ /venue/
+          venue = @activity.venues.find(value)
+          if venue.can_disable?
+            venue.disable!(true)
+          end
+        end
+      end
+      redirect_to admin_activity_path(@activity, begin_date: params[:begin_date], end_date: params[:end_date]), notice: t("flash.admin.venues.disable.success")
+    end    
+
     def manually
       @venues = @activity.venues.manually
     end

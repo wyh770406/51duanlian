@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627024828) do
+ActiveRecord::Schema.define(:version => 20130709114438) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -24,10 +24,12 @@ ActiveRecord::Schema.define(:version => 20130627024828) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.string   "ancestry"
+    t.boolean  "is_available"
   end
 
   add_index "activities", ["ancestry"], :name => "index_activities_on_ancestry"
   add_index "activities", ["gym_id"], :name => "index_activities_on_gym_id"
+  add_index "activities", ["is_available"], :name => "index_activities_on_is_available"
   add_index "activities", ["venue_type_id"], :name => "index_activities_on_venue_type_id"
 
   create_table "areas", :force => true do |t|
@@ -415,9 +417,13 @@ ActiveRecord::Schema.define(:version => 20130627024828) do
     t.decimal  "price",         :precision => 8, :scale => 2
     t.decimal  "member_price",  :precision => 8, :scale => 2
     t.boolean  "active"
+    t.boolean  "is_available"
+    t.boolean  "is_manually"
   end
 
   add_index "venues", ["active"], :name => "index_venues_on_active"
   add_index "venues", ["activity_id"], :name => "index_venues_on_activity_id"
+  add_index "venues", ["is_available"], :name => "index_venues_on_is_available"
+  add_index "venues", ["is_manually"], :name => "index_venues_on_is_manually"
 
 end

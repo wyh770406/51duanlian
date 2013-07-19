@@ -113,6 +113,11 @@ Berlin::Application.routes.draw do
       collection do
         post 'publish'
       end
+
+      collection do
+        get 'search'
+      end
+
       resources :real_venues, only: [:index]
     end
 
@@ -130,6 +135,7 @@ Berlin::Application.routes.draw do
 
         collection do
           get 'manually'
+          post 'disable_all'
         end
       end      
     end

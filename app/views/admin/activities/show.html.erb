@@ -44,12 +44,31 @@
     </table>
   </div>
 </div>
+ <script type="text/javascript">
+   function select_any(){
 
-<% activity_root_venues = @activity.root.venues.order(:start_at)%>
-共<%= activity_root_venues.count%>条场地记录
+    var aElems = document.getElementsByTagName("input");
+
+    for (var i=0; i<aElems.length; i++){
+      if (aElems[i].type=="checkbox")
+        if (aElems[i].checked == true)
+          return true;
+    }
+     alert("请选择至少一个场地");
+     return false;
+   }
+ </script>
+<%= render 'search' %>
+ <%= link_to '批量禁用', "#", class: 'btn btn-danger', :onclick=>"javascript:if( select_any() && confirm('确定要禁用选中场地吗？场地禁用后，不能再次启用。')) $('#activity_venues').submit();"%><br/>
+
+共<%= @activity_root_venues.count%>条场地记录
+<%= form_tag("/admin/activities/#{@activity.id}/venues/disable_all", method: "post", :id=>"activity_venues") do %>
+<%=hidden_field_tag "begin_date", params[:begin_date]%>
+<%=hidden_field_tag "end_date", params[:end_date]%>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
+      <th>选中</th>
       <th><%= Venue.human_attribute_name(:date) %></th>
       <th><%= Venue.human_attribute_name(:start_at) %></th>
       <th><%= Venue.human_attribute_name(:stop_at) %></th>
@@ -59,8 +78,15 @@
     </tr>
   </thead>
   <tbody>
-    <% VenueDecorator.decorate(activity_root_venues).each do |venue| %>
+    <% VenueDecorator.decorate(@activity_root_venues).each do |venue| %>
       <tr>
+        <td>
+          <% if venue.is_available && venue.related_completed_orders.size <= 0%>
+            <%= check_box_tag "venue#{venue.id}", venue.id.to_s, false%>
+          <%else%>
+            <span class="label"><%= "不可选中" %></span>
+          <% end -%> 
+        </td>        
         <td>
           <%= venue.on_date %>
           <% unless venue.active %>
@@ -83,3 +109,4 @@
     <% end %>
   </tbody>
 </table>
+<%end%>
