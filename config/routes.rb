@@ -69,6 +69,10 @@ Berlin::Application.routes.draw do
         post 'confirm'
         post 'deny'
       end
+
+      collection do
+        post 'send_sms'
+      end 
       resources :gym_images, only: [:new, :create, :destroy]
     end
 
@@ -113,11 +117,6 @@ Berlin::Application.routes.draw do
       collection do
         post 'publish'
       end
-
-      collection do
-        get 'search'
-      end
-
       resources :real_venues, only: [:index]
     end
 

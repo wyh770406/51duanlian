@@ -1,19 +1,12 @@
-login: &login
+production:
   adapter: mysql2
   encoding: utf8
-  host: localhost
-  username: root
-  password:
-
-development: &development
-  database: berlin_development
-  <<: *login
-
-test: &test
+  reconnect: false
   database: berlin_test
-  <<: *login
-
-production: &production
-  database: berlin
-  <<: *login
+  pool: 5
+  username: dl
+  password: remoteclick2009
+  host: duanlian.mysql.rds.aliyuncs.com  
+  port: 3306
+  socket: /var/run/mysqld/mysqld.sock
  

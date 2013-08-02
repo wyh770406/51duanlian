@@ -71,6 +71,21 @@ module Admin
       end
     end
 
+    def send_sms
+      venue_message_info = {
+        :mobile=>params[:mobile]
+      }
+      venue_message = VenueMessage.new(venue_message_info)
+      venue_message.gym = current_gym
+      begin
+        logger.info("#{venue_message_info}")
+        venue_message.save!
+      rescue ActiveRecord::RecordInvalid => invalid
+        @errors = invalid.record.errors
+      end
+      render :nothing => true
+    end
+
     protected
 
     def find_gym_groups

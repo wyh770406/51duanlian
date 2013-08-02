@@ -49,7 +49,7 @@ module Admin
       @q_condition_payment_method = "支付方式: #{order_payment_method}"
 
       @q = current_gym.orders.without_state(:cart).search(params[:q])
-      @orders = @q.result(distinct: true).order("updated_at DESC")
+      @orders = @q.result(distinct: true).order("created_at DESC")
 
       @order_totals = 0
       @orders.each do |order|

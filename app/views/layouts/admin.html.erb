@@ -5,6 +5,20 @@
   <%= stylesheet_link_tag    "admin/application" %>
   <%= javascript_include_tag "admin/application" %>
   <%= csrf_meta_tags %>
+<script type="text/javascript">
+  function checkPhone(phone)   
+  {
+  //验证电话号码手机号码，包含至今所有号段   
+  var ab=/^(13[0-9]|15[0-9]|18[7|8|9])\d{8}$/;
+
+    if(ab.test(phone) == false)
+    {
+      alert("请正确填写手机号码!");
+      return false;
+    }
+   return true;
+  }
+</script>
 </head>
 <body>
   <div id="wrapper">
@@ -46,8 +60,21 @@
   
         <footer>
           <div class="pull-right">
+            <span style="margin-bottom: 0px;">手机号码</span>&nbsp;&nbsp;
+            <%= text_field_tag 'mobile_no', "", :style=>"margin-bottom: 0px; width: 100px;" %>&nbsp;&nbsp; <%= link_to '发送邀请短信', "#", class: 'btn btn-danger', :style=>"margin-bottom: 0px;margin-right:50px", :onclick=>"javascript:mobile_no = $('#mobile_no').val();if( checkPhone(mobile_no) && confirm('确定要发送短信吗？')) {
+                $.ajax({
+                      url : 'gyms/send_sms',
+                      type: 'POST',
+                      data: 'mobile=' + mobile_no,
+                   success: function(){alert('发送短信成功'); $('#mobile_no').val('');},
+                      error: function(jqXHR, textStatus, errorThrown) {
+                        alert('Error: ' + errorThrown);
+                        return false;
+                      }
+                    });          
+              }"%>
             <%= link_to '/' do %>
-              <%= image_tag "powered_by.png" %>
+              <%= image_tag "powered_by.png", :style=>"margin-bottom: 10px;" %>
             <% end -%>
           </div>
           <p class="links">

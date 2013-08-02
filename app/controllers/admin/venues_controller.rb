@@ -1,6 +1,6 @@
 module Admin
   class VenuesController < Admin::BaseController
-    before_filter :load_activity, only: [:new, :create, :edit, :update, :disable, :manually]
+    before_filter :load_activity, only: [:new, :create, :edit, :update, :disable, :manually, :disable_all]
 
     def index
       @on_date = begin
@@ -72,7 +72,6 @@ module Admin
     end
 
     def disable_all
-      @activity = current_gym.activities.find(params[:activity_id])
       params.each do |key, value|
         if key =~ /venue/
           venue = @activity.venues.find(value)
@@ -82,7 +81,7 @@ module Admin
         end
       end
       redirect_to admin_activity_path(@activity, begin_date: params[:begin_date], end_date: params[:end_date]), notice: t("flash.admin.venues.disable.success")
-    end    
+    end
 
     def manually
       @venues = @activity.venues.manually

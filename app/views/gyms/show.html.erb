@@ -50,7 +50,32 @@
         <p align=center ><font color="red">由此进入场地预定</font></p>
         <ul class="nav nav-tabs nav-stacked">
           <% @gym.venue_types.each do |venue_type| %>
-            <li><%= link_to venue_type.name, search_gym_venues_path(@gym, date: Date.today, venue_type_id: venue_type.id) %></li>
+            <li>
+              <% image_name = case venue_type.name
+               when "羽毛球"
+                'badminton.jpg'
+               when "足球"
+                'football.jpg'
+               when "篮球"
+                'basketball.jpg'
+               when "网球"
+                'tennis.jpg'
+               when "游泳"
+                "swimming.jpg"
+               when "乒乓球"
+                "tabletennis.jpg"
+               when "排球"
+                "volleyball.jpg"
+               when "跆拳道"
+                "taekwondo.jpg"     
+               when "舞蹈"
+                "dancing.jpg"
+               else
+                'badminton.jpg'
+               end%> 
+     
+              <%= link_to image_tag(image_name)+" "+venue_type.name, search_gym_venues_path(@gym, date: Date.today, venue_type_id: venue_type.id) %>
+            </li>
           <% end -%>
         </ul>
       </div>

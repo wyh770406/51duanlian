@@ -26,6 +26,7 @@ gem 'gmaps4rails', '~> 1.5.2'
 gem 'ancestry', '~> 1.3.0'
 gem 'ckeditor'
 gem 'wicked_pdf'
+gem 'gon'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'

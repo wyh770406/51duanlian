@@ -18,7 +18,7 @@ class Ability
       can :manage, GymGroup
 
       cannot :manage, Gym
-      can [:read, :create, :update], Gym
+      can [:read, :create, :update, :send_sms], Gym
 
       can :manage, User, User.all do |u|
         user.company.users.include?(u)
@@ -43,7 +43,7 @@ class Ability
       cannot :manage, CardLineItem
 
       cannot :manage, Gym
-      can :read, Gym
+      can [:read, :send_sms], Gym
 
       cannot :destroy, User
       cannot :manage, VenueType
@@ -59,3 +59,4 @@ class Ability
     end
   end
 end
+
