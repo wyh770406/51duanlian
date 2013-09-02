@@ -7,41 +7,9 @@
 
 <%= render 'tabs' %>
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th><%= Venue.human_attribute_name(:start_at) %> - <%= Venue.human_attribute_name(:stop_at) %></th>
-      <th><%= Venue.human_attribute_name(:count_ordered) %></th>
-      <th><%= Venue.human_attribute_name(:count_on_hand) %></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @venues.each do |venue| %>
-    <tr>
-      <td>
-        <%= l venue.start_at, format: :time %> - <%= l venue.stop_at, format: :time %>
-      </td>
-      <td>
-        <%= venue.count_ordered %>
-        <%= render 'orders', { venue: venue } %>
-      </td>
-      <td><%= venue.count_on_hand %></td>
-      <td class="control span4">
-        <% if venue.expired? %>
-          <span class="label"><%= t('expired') %></span>
-        <% elsif venue.out_of_stock? %>
-          <span class="label"><%= t('out_of_stock') %></span>
-        <% elsif venue.real_venues.count > 0 %>
-          <%= link_to t('select_real_venue'), admin_venue_real_venues_path(venue) %>
-        <% else %>
-          <%= link_to populate_admin_cart_path(type: 'Order::VenueOrder', items_attributes: [ venue.to_line_item ], back_to_url: request.url), method: :post do %>
-            <i class="icon-plus"></i>
-            <%= t('add_to_cart') %>
-          <% end %>
-        <% end %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<% case @view_type %>
+<% when 'grid' %>
+  <%= render 'grid', { venue_groups: @venue_groups } %>
+<% else %>
+  <%= render 'list', { venues: @venues } %>
+<% end -%>

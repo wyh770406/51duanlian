@@ -1,0 +1,27 @@
+<div id='<%= "#{dom_id(real_venue)}_grid_modal" %>' class="modal hide fade">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3><%= Venue.model_name.human %></h3>
+  </div>
+  <div class="modal-body">
+    <p><%= real_venue.to_s %></p>
+    <ul>
+      <% real_venue.line_items.map(&:order).uniq.each do |order| %>
+        <li>
+          <%= link_to order.number, admin_order_path(order) %>
+          <%= order.human_state_name %>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <% unless real_venue.venue.expired? %>
+      <%= link_to t('add_to_cart'), populate_admin_cart_path(type: 'Order::VenueOrder', items_attributes: [ real_venue.to_line_item ], back_to_url: request.url), method: :post, class: 'btn btn-primary' %>
+    <% end -%>
+    <a href="#" class="btn" data-dismiss="modal"><%= t("close") %></a>
+  </div>
+</div>
+
+<%= link_to "##{dom_id(real_venue)}_grid_modal", data: { toggle: "modal" } do %>
+  <%= t("venue_no", index: real_venue.id) %>(<%= real_venue.count_on_hand %>/<%= real_venue.max_people %>)
+<% end -%>

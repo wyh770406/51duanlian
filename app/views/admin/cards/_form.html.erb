@@ -13,6 +13,12 @@
   <% end %>
 
   <%= f.association :card_type, collection: current_gym.card_types %>
+  <%total_gyms = []
+    current_gym.card_types.each do |card_type|
+      total_gyms |= card_type.gyms
+    end
+  %>
+  <%= f.input :gym_id, collection: total_gyms %>
   <%= f.input :number %>
   
   <% if @card.new_record? %>

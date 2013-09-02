@@ -20,7 +20,7 @@ class GymsController < BaseController
 
   def show
     @gym = Gym.find(params[:id])
-    @activity = @gym.activities.first unless @gym.activities.empty?
+    @activity_max_published_to = @gym.activities.map{|activity| activity.published_to}.compact.max unless @gym.activities.empty?
   end
 
   def bookmark

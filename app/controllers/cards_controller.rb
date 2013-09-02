@@ -23,7 +23,7 @@ class CardsController < BaseController
     if @card
       redirect_to card_path(@card)
     else
-      redirect_to new_card_path(card_type_id: @card_type), alert: t("flash.cards.create.failure")
+      redirect_to new_card_path(card_type_id: @card_type, gym_id: params[:card][:gym_id]), alert: t("flash.cards.create.failure")
     end
   end
 

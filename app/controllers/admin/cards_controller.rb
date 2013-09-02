@@ -14,7 +14,7 @@ module Admin
     end
 
     def new
-      @card = Card.new
+      @card = Card.new(:gym_id=>current_gym.id)
     end
 
     def edit
@@ -41,7 +41,11 @@ module Admin
     def update
       @card = current_gym.cards.find(params[:id])
 
-      if @card.update_attributes(params[:card])
+      params[:card].each do |key, value|
+        @card[key] = value
+      end
+      @card.current_gym = current_gym
+      if @card.save
         redirect_to admin_card_path(@card)
       else
         render action: "edit"

@@ -1,0 +1,10 @@
+class HomeController < BaseController
+  skip_before_filter :authenticate_user!
+  
+  def index
+    now =Time.now
+    venue_type_ids = VenueType.all.map(&:id)
+    venues = Venue.includes(:activity).active.available.where('count_on_hand > 0').where('activities.venue_type_id' => venue_type_ids).where(["stop_at >= ?",now]).order(:start_at, :stop_at).group('activities.gym_id, activities.venue_type_id').limit(20)
+    @venues = venues.all
+  end
+end

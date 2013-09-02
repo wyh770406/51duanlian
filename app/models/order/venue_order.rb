@@ -12,18 +12,20 @@ class Order::VenueOrder < Order
 
   def populate(items_attributes)
     items_attributes.each do |attrs|
-      venue = self.gym.venues.available.find(attrs[:id])
-      purchasable = attrs[:real_venue_id] ? venue.real_venues.find(attrs[:real_venue_id]) : venue
-      line_item = LineItem.find_or_initialize_by_order_id_and_purchasable_type_and_purchasable_id(
-        self.id,
-        purchasable.class.to_s,
-        purchasable.id
-      )
-      line_item.quantity ||= 0
-      line_item.quantity += attrs[:quantity].to_i
-      line_item.price = venue.price
-      line_item.member_price = venue.member_price
-      line_item.save!
+      if attrs[:quantity].to_i > 0
+        venue = self.gym.venues.available.find(attrs[:id])
+        purchasable = attrs[:real_venue_id] ? venue.real_venues.find(attrs[:real_venue_id]) : venue
+        line_item = LineItem.find_or_initialize_by_order_id_and_purchasable_type_and_purchasable_id(
+          self.id,
+          purchasable.class.to_s,
+          purchasable.id
+        )
+        line_item.quantity ||= 0
+        line_item.quantity += attrs[:quantity].to_i
+        line_item.price = venue.price
+        line_item.member_price = venue.member_price
+        line_item.save!
+      end    
     end
   end
 

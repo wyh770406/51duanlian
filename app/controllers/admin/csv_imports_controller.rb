@@ -74,6 +74,7 @@ module Admin
 	      		:mobile       => mobile || "",
 	      		:start_on     => start_on || Date.today,
 	      		:validity     => validity || 0,
+                        :gym_id       => gym.id,
 	      		:company   => gym.company
 	      	}
 

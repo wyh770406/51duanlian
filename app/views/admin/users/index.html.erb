@@ -21,7 +21,7 @@
 <% @users.each do |user| %>
     <tr>
       <td><%= user.login_name %></td>
-      <td><%= user.name %></td>
+      <td class="control span1"><%= user.name %></td>
       <td>
         <% user.gyms.each do |gym| %>
           <%= link_to(gym.name, admin_gym_session_path(gym), method: :put, title: t('crud.enter') ) %>

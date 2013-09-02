@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725011203) do
+ActiveRecord::Schema.define(:version => 20130820025857) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -95,11 +95,13 @@ ActiveRecord::Schema.define(:version => 20130725011203) do
     t.date     "stop_on"
     t.datetime "sold_at"
     t.integer  "company_id"
+    t.integer  "gym_id"
   end
 
   add_index "cards", ["card_type_id"], :name => "index_cards_on_card_type_id"
   add_index "cards", ["company_id"], :name => "index_cards_on_company_id"
   add_index "cards", ["email"], :name => "index_cards_on_email"
+  add_index "cards", ["gym_id"], :name => "index_cards_on_gym_id"
   add_index "cards", ["mobile"], :name => "index_cards_on_mobile"
   add_index "cards", ["number"], :name => "index_cards_on_number"
   add_index "cards", ["sold_at"], :name => "index_cards_on_sold_at"

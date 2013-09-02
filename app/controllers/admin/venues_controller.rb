@@ -3,6 +3,7 @@ module Admin
     before_filter :load_activity, only: [:new, :create, :edit, :update, :disable, :manually, :disable_all]
 
     def index
+      @view_type = params[:view_type] || 'grid' 
       @on_date = begin
         Date.parse(params[:on_date])
       rescue
@@ -14,7 +15,7 @@ module Admin
         current_gym.venue_types.first
       end
       @venues = current_gym.venues.includes(:activity).available.where('activities.venue_type_id' => @venue_type.id, start_at: @on_date.to_time.all_day, stop_at: @on_date.to_time.all_day).order(:start_at, :stop_at)
-      # TODO: group venues by start_at and stop_at
+      @venue_groups = @venues.group_by { |v| { start_at: v.start_at, stop_at: v.stop_at } }
     end
 
     def publish

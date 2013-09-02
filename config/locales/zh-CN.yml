@@ -220,6 +220,7 @@ zh-CN:
         stop_on: '失效日期'
         validity: '有效期'
         gyms: '可用场馆'
+        gym_id: '来源'
       card_type:
         name: '名称'
         description: '描述'
@@ -516,6 +517,8 @@ zh-CN:
   card_charge_for: '管理员为%{user}充值，手机号：%{mobile}'
   refund_order: '退款'
   refund_to: '退款到'
+  view_by_list: 列表视图
+  view_by_grid: 网格视图
   amount: '金额'
   cash: '现金'
   refunded_from_order: '从订单%{number}退款'

@@ -33,7 +33,7 @@
         <td><%= order.human_payment_state_name %></td>
         <td><%= order.username %></td>
         <td><%= order.mobile %></td>
-        <td class="control span3">
+        <td class="control span2">
           <% if order.can_check_in? %>
             <%= link_to t('check_in'), check_in_admin_order_path(order), confirm: t('check_in_order_confirmation', number: order.number), method: :post %>
           <% end -%>

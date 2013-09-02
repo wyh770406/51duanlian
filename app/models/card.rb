@@ -13,7 +13,7 @@ class Card < ActiveRecord::Base
   validates :number, uniqueness: { scope: :company_id }, format: { with: /^\S+$/ }
   validates :balance, numericality: { greater_than_or_equal_to: 0 }
 
-  attr_accessible :company, :number, :username, :email, :mobile, :card_type_id, :card_type, :start_on, :stop_on, :validity, :user_id, :user
+  attr_accessible :company, :number, :username, :email, :mobile, :card_type_id, :card_type, :start_on, :stop_on, :validity, :user_id, :user, :gym_id
 
   attr_accessor :current_gym
 
@@ -72,7 +72,13 @@ class Card < ActiveRecord::Base
       card = card_type.cards.on_sale.first
       return nil if card.blank?
 
-      card.update_attributes(contact_attrs)
+      current_gym = Gym.find(contact_attrs[:gym_id])
+
+      card.user = contact_attrs[:user]
+      card.username = contact_attrs[:username]
+      card.email = contact_attrs[:email]
+      card.mobile = contact_attrs[:mobile]
+      card.current_gym = current_gym
       if card.save
         return card
       else

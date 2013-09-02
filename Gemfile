@@ -27,6 +27,7 @@ gem 'ancestry', '~> 1.3.0'
 gem 'ckeditor'
 gem 'wicked_pdf'
 gem 'gon'
+gem 'referer-parser'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'

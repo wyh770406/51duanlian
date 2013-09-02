@@ -1,0 +1,67 @@
+<%= form_tag(populate_admin_cart_path, method: :post, class: 'form-horizontal') do |f| %>
+  <%= hidden_field_tag 'type', 'Order::VenueOrder' %>
+  <%= hidden_field_tag 'back_to_url', request.url %>
+
+  <div class="venue-grid-container" style="background: #CCC;">
+    <table class="venue-grid">
+      <tbody>
+        <% venue_groups.each do |period, venues| %>
+          <tr class="period <%= 'expired' if period[:start_at] < Time.now %>">
+            <td class="time">
+              <%= l(period[:start_at], format: :time) %> - <%= l(period[:stop_at], format: :time) %>
+            </td>
+            <% index = 0 %>
+            <% venues.each do |venue| %>
+              <% if venue.real_venues.count > 0 %>
+                <% venue.real_venues.each do |real_venue| %>
+                  <td class="item <%= 'item-ordered' unless real_venue.in_stock? %>">
+                    <%= hidden_field_tag 'items_attributes[][id]', venue.id, class: 'span1' %>
+                    <%= hidden_field_tag 'items_attributes[][real_venue_id]', real_venue.id, class: 'span1' %>
+                    <%= hidden_field_tag 'items_attributes[][quantity]', 0, class: 'span1', id: "#{dom_id(real_venue)}_quantity" %>
+                    <% unless venue.expired? or real_venue.out_of_stock? %>
+                      <%= check_box_tag "#{dom_id(real_venue)}_#{index}", '1', false, class: "check-venue-cell check-real-venue-cell check_box_#{dom_id(real_venue)}", rel: "#{dom_id(real_venue)}" %>
+                    <% end -%>
+
+                    <%= render 'ordered_real_venue_cell', { real_venue: real_venue } %>
+                  </td>
+                <% end -%>
+              <% else %>
+                <%= hidden_field_tag 'items_attributes[][id]', venue.id, class: 'span1' %>
+                <%= hidden_field_tag 'items_attributes[][quantity]', 0, class: 'span1', id: "#{dom_id(venue)}_quantity" %>
+
+                <% venue.count_on_hand.times do |i| %>
+                  <% index += 1 %>
+                  <td class="item">
+                    <% unless venue.expired? %>
+                      <%= check_box_tag "#{dom_id(venue)}_#{index}", '1', false, class: "check-venue-cell check_box_#{dom_id(venue)}", rel: "#{dom_id(venue)}" %>
+                    <% end -%>
+                    <%= render 'ordered_venue_cell', { venue: venue, index: index } %>
+                  </td>
+                <% end -%>
+                <% venue.count_ordered.times do |i| %>
+                  <% index += 1 %>
+                  <td class="item item-ordered">
+                    <%= render 'ordered_venue_cell', { venue: venue, index: index } %>
+                  </td>
+                <% end -%>
+              
+              <% end -%>
+            <% end -%>
+          </tr>
+        <% end -%>
+      </tbody>
+    </table>
+  </div>
+
+  <%= submit_tag t('add_to_cart'), class: 'btn btn-primary pull-right' %>
+<% end -%>
+
+<%= javascript_tag do %>
+  $('.check-venue-cell').change(function() {
+    var venue_id = $(this).attr("rel");
+    var field_quantity = $('#' + venue_id + '_quantity');
+    var quantity = $('.check_box_' + venue_id + ':checked').size();
+
+    $(field_quantity).val(quantity);
+  });
+<% end -%>

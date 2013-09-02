@@ -8,6 +8,6 @@ class VenuesController < BaseController
 
     @venues = Venue.includes(:activity).active.where("activities.gym_id" => @gym.id, "activities.venue_type_id" => @venue_type.id, :start_at => @date.beginning_of_day..@date.end_of_day).order(:start_at)
     @venue_groups = @venues.group_by { |v| { start_at: v.start_at, stop_at: v.stop_at } }
-    @activity = @gym.activities.first unless @gym.activities.empty?
+    @activity_max_published_to = @gym.activities.map{|activity| activity.published_to}.compact.max unless @gym.activities.empty?
   end
 end

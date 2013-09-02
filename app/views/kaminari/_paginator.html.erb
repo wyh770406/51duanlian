@@ -17,8 +17,25 @@
           <%= gap_tag %>
         <% end -%>
       <% end -%>
-      <%= next_page_tag %>
+      <%= next_page_tag %>&nbsp;<%= last_page_tag %>
       &nbsp;共<%= num_pages%>页
     </ul>
   </div>
 <% end -%>
+<script type="text/javascript">
+  function goUrl(url) {
+      if ((url.indexOf("?") < 0)&&(url.indexOf("&") >= 0)){
+        final_url = url.replace("&","?");
+      }else{
+        final_url = url
+      }
+      window.location.href = final_url;
+      window.event.returnValue =false;
+  }
+</script>
+
+<div align=right style="margin-top:-20px;">
+  转到第&nbsp;<input type=text id="pagegoto" name="pagegoto" style="width:30px;margin-top:10px;" value=<%=params[:page]%> >&nbsp;页
+  <% request_url = request.url%>
+  <%= link_to "Go", "#", class: 'btn btn-primary', :onclick=>"javascript: pagego_no = parseInt($('#pagegoto').val()) || 1;newpage = '&page='.concat(pagego_no);url_goto = '"+request_url+"';goUrl(url_goto.concat(newpage))" %>
+</div>

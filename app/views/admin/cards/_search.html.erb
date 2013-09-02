@@ -7,10 +7,15 @@
     <%= f.label :username %>
     <%= f.text_field :username_cont, class: "span2" %>
   </div>
-  <div class="control-group-inline">
-    <%= f.label :email %>
-    <%= f.text_field :email_cont, class: "span2" %>
-  </div>
+  <%total_gyms = []
+    current_gym.card_types.each do |card_type|
+      total_gyms |= card_type.gyms
+    end
+  %>
+  <div class="control-group-inline" >
+    <%= f.label :gym_id %>
+    <%= f.select :gym_id_eq, ([[t('all'), '']] + total_gyms.map { |m| [m.name, m.id] }) %>
+  </div>  
   <div class="control-group-inline">
     <%= f.label :mobile %>
     <%= f.text_field :mobile_cont, class: "span2" %>

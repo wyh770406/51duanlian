@@ -1,0 +1,111 @@
+<style type="text/css">
+table{ font-family: arial;  font-size:13.4px; border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;}
+th,td{border-right:1px solid #888;border-bottom:1px solid #888;}
+th{font-weight:bold;}
+
+/* scrollDiv */
+.scrollDiv{height:150px;/* 必要元素 */line-height:25px;overflow:hidden;/* 必要元素 */}
+.scrollDiv li{height:150px;}
+#s2{height:150px;}
+</style>
+
+<% content_for :banner do %>
+  <div class="content banner-<%= rand(6) + 1 %>">
+    <%= link_to new_registration_path('user'), class: "btn-sign-up" do %>
+      <%= image_tag('button_sign_up.jpg') %>
+    <% end -%>
+  </div>
+<% end -%>
+
+<%= render_cell(:venues, :search) %>
+
+<div id="home-content">
+  <div class="row-fluid">
+    <div class="span6">
+<div class="help">
+        <div class="scrollDiv" id="s2" style="margin-left:-20px">
+
+          <ul style="list-style-type:none;">
+          <% venues_count = @venues.size
+             frames_count, last_frame_count = venues_count.divmod(5)
+             frames_count += 1 if last_frame_count > 0
+            frames_count.times do |frame| %>
+              <li style="list-style-type:none;">
+                <table>
+                  <tr>
+                    <th>场馆名称</th>
+                    <th>运动类型</th>
+                    <th>时间</th>
+                    <th>状态</th>
+                  </tr>
+                  <% start_pos = frame*5
+                     end_pos = (frame+1)*5 - 1
+                     end_pos = venues_count - 1 if end_pos >= venues_count
+                   @venues[start_pos..end_pos].each do |venue|%>
+                    <tr>
+                      <td><%=venue.activity.gym.name%></td>
+                      <td><%=venue.activity.venue_type.name%></td>
+                      <td><%=venue.start_at.strftime("%Y-%m-%d")%>&nbsp;&nbsp;<%= l venue.start_at, format: :time %> - <%= l venue.stop_at, format: :time %></td>
+                      <td><%=link_to "可预定", search_gym_venues_path(venue.activity.gym, date: venue.start_at.to_date, venue_type_id: venue.activity.venue_type.id) %></td>
+                    </tr>
+                  <%end%>
+
+                </table>
+              </li>
+            <%
+            end%>
+          </ul>
+        </div>
+      </div>
+      <div class="help">
+        <h2 style="margin-top: -40px;"><%= t("website_help.title") %></h2>
+        <%== t("website_help.description") %>
+        <%=image_tag('viewer.jpg')%>
+      </div>
+    </div>
+    <div class="span6">
+      <%= render "gyms" %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  //滚动插件
+  (function($){
+    $.fn.extend({
+      Scroll:function(opt,callback){
+          //参数初始化
+          if(!opt) var opt={};
+          var _this=this.eq(0).find("ul:first");
+          var lineH=_this.find("li:first").height(), //获取行高
+            line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
+            speed=opt.speed?parseInt(opt.speed,10):500, //卷动速度，数值越大，速度越慢（毫秒）
+            timer=opt.timer?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+          if(line==0) line=1;
+          var upHeight=0-line*lineH;
+          //滚动函数
+          scrollUp=function(){
+              _this.animate({
+                  marginTop:upHeight
+              },speed,function(){
+                  for(i=1;i<=line;i++){
+                      _this.find("li:first").appendTo(_this);
+                  }
+                  _this.css({marginTop:0});
+              });
+          }
+          //鼠标事件绑定
+          _this.hover(function(){
+              clearInterval(timerID);
+          },function(){
+              timerID=setInterval("scrollUp()",timer);
+          }).mouseout();
+      }
+    });
+  })(jQuery);
+
+  $(document).ready(function(){
+    $("#s2").Scroll({line:1,speed:500,timer:5000});
+  });
+</script>
+

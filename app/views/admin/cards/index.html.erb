@@ -21,24 +21,32 @@
         <th><%= Card.human_attribute_name(:username) %></th>
         <th><%= Card.human_attribute_name(:email) %></th>
         <th><%= Card.human_attribute_name(:mobile) %></th>
+        <th><%= Card.human_attribute_name(:gym_id) %></th>
         <th class="price"><%= Card.human_attribute_name(:balance) %></th>
         <th></th>
     </tr>
   </thead>
   <tbody>
-<% @cards.each do |card| %>
+<% @cards.each do |card| 
+  begin
+    gym = Gym.find(card.gym_id)
+  rescue ActiveRecord::RecordNotFound
+    gym = nil
+  end
+%>
     <tr>
-      <td>
+      <td class="control span1">
         <%= card.number %>
         <% if card.on_sale? %>
           <span class="label"><%= t("on_sale") %></span>
         <% end -%>
       </td>
-      <td><%= card.username %></td>
-      <td><%= card.email %></td>
-      <td><%= card.mobile %></td>
-      <td class="price"><%= number_to_currency card.balance %></td>
-      <td class="control span4">
+      <td class="control span1"><%= card.username %></td>
+      <td style="width:100px;"><%= card.email %></td>
+      <td class="control span1"><%= card.mobile %></td>
+      <td class="control span2"><%= gym.name if gym%></td>
+      <td class="price" style="width:60px;"><%= number_to_currency card.balance %></td>
+      <td class="control span2">
         <%= link_to t('crud.show'), admin_card_path(card) %>
         <%= link_to t('crud.edit'), edit_admin_card_path(card) %>
         <%= link_to t('crud.destroy'), admin_card_path(card), confirm: t('crud.destroy_confirmation'), method: :delete %>

@@ -1,7 +1,22 @@
-<ul class="nav nav-tabs">
-  <% current_gym.venue_types.each do |venue_type| %>
-    <li class="<%= 'active' if venue_type == @venue_type %>">
-      <%= link_to venue_type.name, admin_venues_path(venue_type_id: venue_type.id, on_date: @on_date) %>
-    </li>
-  <% end %>
-</ul>
+<div class="clearfix">
+  <div class="pull-left">
+    <ul class="nav nav-pills">
+      <% current_gym.venue_types.each do |venue_type| %>
+        <li class="<%= 'active' if venue_type == @venue_type %>">
+          <%= link_to venue_type.name, admin_venues_path(venue_type_id: venue_type.id, on_date: @on_date, view_type: @view_type) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="pull-right">
+    <ul class="nav nav-pills">
+      <li class="<%= 'active' if @view_type == 'grid' %>">
+        <%= link_to t('view_by_grid'), admin_venues_path(venue_type_id: @venue_type.id, on_date: @on_date, view_type: 'grid') %>
+      </li>
+      <li class="<%= 'active' if @view_type == 'list' %>">
+        <%= link_to t('view_by_list'), admin_venues_path(venue_type_id: @venue_type.id, on_date: @on_date, view_type: 'list') %>
+      </li>
+    </ul>
+  </div>
+</div>

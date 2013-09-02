@@ -23,4 +23,9 @@ $(function() {
   }).on('changeDate', function(ev) {
       $(this).parent('form').submit();
   });
+
+  $('.venue-grid .item a').popover({
+    'trigger': 'hover',
+    'placement': 'top'
+  });
 });
